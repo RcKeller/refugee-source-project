@@ -91,7 +91,7 @@ var Home = React.createClass ({
         return (    
             <Row>
                 <Col sm={12}>
-                    <Tabs style={{direction: 'ltr'}} isRtl={false}>
+                    <Tabs style={{direction: 'ltr'}}>
                         <Tab label={this.state.content.map.title}>
                             <Col sm={12}>
                                 <Paper style={adaptiveDirection}>
