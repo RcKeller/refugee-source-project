@@ -132,8 +132,7 @@ var Initialize = React.createClass ({
         var ref = firebase.database().ref(path);
         this.bindAsObject(ref, 'content');
         this.setState({
-            lang: language,
-            isRTL: (language == 'ar')
+            lang: language
         });
     },
     setRTL:function() {
@@ -169,13 +168,12 @@ var Initialize = React.createClass ({
         as clones with additional props. This allows us to pass data down routes.
         Think this is weird? It's actually from the React docs...
         */
-        console.log (document.documentElement.dir);
-        var containerStyle = {paddingTop: 100};
-        if (this.state.isRTL) {
-            containerStyle.paddingRight = this.state.nav ? styles.drawer.width : 20;
-        } else {
-            containerStyle.paddingLeft = this.state.nav ? styles.drawer.width : 20;
-        }
+        console.log("STATE:", this.state);
+        var containerStyle = {
+            paddingTop: 100,
+            paddingLeft: ((this.state.nav & !this.state.isRTL) ? styles.drawer.width : 20),
+            paddingRight: ((this.state.nav & this.state.isRTL) ? styles.drawer.width : 20)
+        };
         return (
             <MuiThemeProvider muiTheme={muiTheme}>
                 {!this.state.lang ?
@@ -197,7 +195,6 @@ var Initialize = React.createClass ({
                         open={this.state.nav}
                         docked={true}
                         containerStyle={styles.drawer}
-                        openSecondary={this.state.isRTL}
                         zDepth={1}
                         >
 
