@@ -85,16 +85,13 @@ var Home = React.createClass ({
     
     render:function() {
         //Tabs are overriden inline, Material-UI is not RTL compatible.
-        var adaptiveDirection = {
-            direction: (this.props.isRTL ? 'rtl' : 'inherit')
-        };
         return (    
             <Row>
                 <Col sm={12}>
                     <Tabs style={{direction: 'ltr'}}>
                         <Tab label={this.state.content.map.title}>
                             <Col sm={12}>
-                                <Paper style={adaptiveDirection}>
+                                <Paper>
                                     <ServiceMap 
                                         lang={this.props.lang}
                                         isRTL={this.props.isRTL}
@@ -105,7 +102,7 @@ var Home = React.createClass ({
                         </Tab>
                         <Tab label={this.state.content.directory.title}>
                             <Col sm={12}>
-                                <Paper style={adaptiveDirection}>
+                                <Paper>
                                     <Directory 
                                         lang={this.props.lang}
                                         isRTL={this.props.isRTL}

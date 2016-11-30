@@ -42,6 +42,8 @@ import {
 const muiTheme = getMuiTheme({
     spacing: spacing,
     fontFamily: 'Roboto, sans-serif',
+    direction: 'rtl',
+    isRtl: true,
     palette: {
         primary1Color: green500,
         primary2Color: green700,
