@@ -51,19 +51,18 @@ const muiTheme = getMuiTheme({
 
 import './index.css';
 
+import Gateway from './Gateway';
 import App from './App';
 import Home from './Home';
 import About from './About';
 
 ReactDOM.render(
-    <MuiThemeProvider muiTheme={muiTheme}>
         <Router history={hashHistory}>
-            <Route path="/" component={App}>
+            <Route path="/" component={Gateway}>
                 <IndexRoute component={Home}/>
                 <Route path="about" component={About}/>
             </Route>
-        </Router>
-    </MuiThemeProvider>,
+        </Router>,
     document.getElementById('root')
 );
 

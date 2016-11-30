@@ -12,6 +12,13 @@ document:false, window:false, console:false, alert:false, user:false
 //    IMPORT DEPENDENCIES
 //    /////
 import React from 'react';
+import firebase from 'firebase';
+
+import ReactFireMixin from 'reactfire';
+
+import FirebaseConfig from './FirebaseConfig';
+firebase.initializeApp(FirebaseConfig);
+
 
 //    /////
 //    MATERIAL-UI COMPONENTS
@@ -38,8 +45,8 @@ import {
 var theme = getMuiTheme({
     spacing: spacing,
     fontFamily: 'Roboto, sans-serif',
-    direction: 'rtl',
-    isRtl: true,
+    direction: 'ltr',
+    isRtl: false,
     palette: {
         primary1Color: green500,
         primary2Color: green700,
@@ -103,10 +110,20 @@ const styles = {
     
 };
 var Gateway = React.createClass ({
+    mixins: [ReactFireMixin],
+
     getInitialState:function() {
+        var mobileView = (window.innerWidth < 768);
         return({
             lang: '',
-            isRTL: ''
+            isRTL: '',
+            mobile: mobileView,
+            nav: !mobileView,
+            content: {
+                header: '...',
+                disclaimer: '...',
+                nav: {}
+            }
         });
     },
     /*
@@ -187,20 +204,20 @@ var Gateway = React.createClass ({
                     <CardTitle title="Language" />
                     <CardActions>
                         <RaisedButton secondary={true} label="English"
-                            onTouchTap={() => this.props.setLang('en')} />
+                            onTouchTap={() => this.setLang('en')} />
                         <RaisedButton secondary={true} label="العربية"
                             onTouchTap={function() {
-                                this.props.setLang('ar');
-                                this.props.setRTL();
+                                this.setLang('ar');
+                                this.setRTL();
                             }.bind(this)}/>
                         <RaisedButton secondary={true} label="Language-C" disabled={true}
-                            onTouchTap={() => this.props.setLang('cc')} />
+                            onTouchTap={() => this.setLang('cc')} />
                         <RaisedButton secondary={true} label="Language-D" disabled={true}
-                            onTouchTap={() => this.props.setLang('dd')} />
+                            onTouchTap={() => this.setLang('dd')} />
                         <RaisedButton secondary={true} id='fr' label="français" disabled={true}
-                            onTouchTap={() => this.props.setLang('fr')} />
+                            onTouchTap={() => this.setLang('fr')} />
                         <RaisedButton secondary={true} id='sp' label="español" disabled={true}
-                            onTouchTap={() => this.props.setLang('sp')} />
+                            onTouchTap={() => this.setLang('sp')} />
 
                     </CardActions>
                 </Card>

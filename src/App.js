@@ -15,8 +15,6 @@ import React from 'react';
 import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
-import FirebaseConfig from './FirebaseConfig';
-firebase.initializeApp(FirebaseConfig);
 
 //    /////
 //    MATERIAL-UI COMPONENTS
