@@ -39,33 +39,6 @@ import {
     white, darkBlack, fullBlack, fullWhite
 } from 'material-ui/styles/colors';
 
-const muiTheme = getMuiTheme({
-    spacing: spacing,
-    fontFamily: 'Roboto, sans-serif',
-    direction: 'rtl',
-    isRtl: true,
-    palette: {
-        primary1Color: green500,
-        primary2Color: green700,
-        primary3Color: grey400,
-        accent1Color: blueA200,
-        accent2Color: blueA400,
-        accent3Color: blueA100,
-        textColor: darkBlack,
-        secondaryTextColor: (0, fade)(darkBlack, 0.54),
-        alternateTextColor: white,
-        canvasColor: white,
-        borderColor: grey300,
-        disabledColor: (0, fade)(darkBlack, 0.3),
-        pickerHeaderColor: green500,
-        clockCircleColor: (0, fade)(darkBlack, 0.07),
-        shadowColor: fullBlack
-    }
-});
-
-
-
-
 
 //    /////
 //    MISC COMPONENTS
@@ -73,6 +46,8 @@ const muiTheme = getMuiTheme({
 //  Grid System:
 import {Container} from 'react-grid-system';
 //  Custom Components:
+import BaseTheme from './BaseTheme';
+var theme = getMuiTheme(BaseTheme);
 import Gateway from './Gateway';
 import Nav from './Nav';
 
@@ -113,12 +88,15 @@ const styles = {
 var Initialize = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
+//        var theme = getMuiTheme(BaseTheme);
         var mobileView = (window.innerWidth < 768);
         return {
             mobile: mobileView,
             nav: !mobileView,
             lang: '',
             isRTL: '',
+            theme: BaseTheme,
+            processedTheme: false,
             content: {
                 header: '...',
                 disclaimer: '...',
@@ -159,6 +137,16 @@ var Initialize = React.createClass ({
             mobile: mobileView,
             nav: !mobileView,
         });
+    },
+    
+    componentWillUpdate:function() {
+        if (!this.state.themeProcessed) {
+            var temp = this.state.theme;
+            temp.isRtl = (this.state.isRTL ? true : false);
+            temp.direction = (this.state.isRTL ? 'rtl' : 'ltr');
+            this.setState
+            var theme = getMuiTheme(BaseTheme);
+        }
     },
     
     render:function() {
