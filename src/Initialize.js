@@ -88,14 +88,15 @@ const styles = {
 var Initialize = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
-//        var theme = getMuiTheme(BaseTheme);
+        var theme = getMuiTheme(BaseTheme);
         var mobileView = (window.innerWidth < 768);
         return {
             mobile: mobileView,
             nav: !mobileView,
             lang: '',
             isRTL: '',
-            theme: BaseTheme,
+            baseTheme: BaseTheme,
+            theme: theme,
             processedTheme: false,
             content: {
                 header: '...',
@@ -144,8 +145,12 @@ var Initialize = React.createClass ({
             var temp = this.state.theme;
             temp.isRtl = (this.state.isRTL ? true : false);
             temp.direction = (this.state.isRTL ? 'rtl' : 'ltr');
-            this.setState
-            var theme = getMuiTheme(BaseTheme);
+            var theme = getMuiTheme(temp);
+            this.setState({
+                baseTheme: temp,
+                theme: theme,
+                themeProcessed: true
+            });
         }
     },
     
@@ -163,7 +168,7 @@ var Initialize = React.createClass ({
             paddingRight: ((this.state.nav & this.state.isRTL) ? styles.drawer.width : 20)
         };
         return (
-            <MuiThemeProvider muiTheme={muiTheme}>
+            <MuiThemeProvider muiTheme={this.state.theme}>
                 {!this.state.lang ?
                     <Container>
                         <Gateway
