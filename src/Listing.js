@@ -27,15 +27,12 @@ const styles = {
     //Adding margin props to cards make their containers responsive to expanding.
     card: {
         margin: 10
-    },
-    languageAdaptive: {
-        direction: 'inherit'
     }
 };
 var Listing = React.createClass ({
     render:function() {
         return (
-            <Card style={styles.languageAdaptive}>
+            <Card style={styles.card}>
                 <CardHeader
                     title={this.props.listing.name}
                     subtitle={this.props.listing.address}

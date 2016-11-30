@@ -44,7 +44,6 @@ var Directory = React.createClass ({
                 </p>
                 {listings.map((listing, i) =>
                     <Listing key={i}
-                        isRTL={this.props.isRTL}
                         listing={listing}
                         phoneTitle={this.props.content.phone + ": "}
                         websiteTitle={this.props.content.website}

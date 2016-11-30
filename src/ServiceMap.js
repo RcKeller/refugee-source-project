@@ -28,8 +28,7 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 const styles = {
     card: {
         marginBottom: 10,
-        marginTop: 10,
-        direction: 'inherit'
+        marginTop: 10
     },
     header: {
         textAlign: 'center'
