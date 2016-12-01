@@ -8,6 +8,13 @@ Materialize:false,
 document:false, window:false, console:false, alert:false, user:false
 */
 
+/*
+Initializes:
+* Firebase
+* Language Selection and Routing
+* Mobile Listeners
+*/
+
 //    /////
 //    IMPORT DEPENDENCIES
 //    /////
@@ -58,35 +65,7 @@ import App from './App';
 //    /////
 //    COMPONENT
 //    /////
-const styles = {
-    //The following appBar styles could not be applied by MUItheme.
-    appBar: {
-        height: 65,
-        position: 'fixed',
-        top: 0
-    },
-    header: {
-        //For bidi/rtl support
-        paddingRight: 10,
-        paddingLeft: 10
-    },
-    drawer: {
-        width: 200,
-        marginTop: 65
-    },
-    container: {
-        paddingTop: 100
-    },
-    footer: {
-        width: "100%",
-        position: "fixed",
-        bottom: 65,
-        textAlign: "center"
-    }
-};   //Right-to-Left
-
 var Initialize = React.createClass ({
-    mixins: [ReactFireMixin],
     getInitialState:function() {
         var theme = getMuiTheme(BaseTheme);
         var mobileView = (window.innerWidth < 768);
@@ -97,25 +76,18 @@ var Initialize = React.createClass ({
             isRTL: '',
             baseTheme: BaseTheme,
             theme: theme,
-            processedTheme: false,
-            content: {
-                header: '...',
-                disclaimer: '...',
-                nav: {}
-            }
+            processedTheme: false
         };
     },
     
     setLang:function(language) {
-        var path = 'main/' + language + '/app';
-        var ref = firebase.database().ref(path);
-        this.bindAsObject(ref, 'content');
         this.setState({
-            lang: language
+            lang: language,
+            isRTL: ((language == 'ar') ? true : false)
         });
     },
     setRTL:function() {
-        document.documentElement.dir = 'rtl';
+        document.documentElement.dir = 'rtl';   //IE9 compatibility.
         this.setState({
             isRTL: true
         });
@@ -161,12 +133,7 @@ var Initialize = React.createClass ({
         as clones with additional props. This allows us to pass data down routes.
         Think this is weird? It's actually from the React docs...
         */
-        console.log("STATE:", this.state);
-        var containerStyle = {
-            paddingTop: 100,
-            paddingLeft: ((this.state.nav & !this.state.isRTL) ? styles.drawer.width : 20),
-            paddingRight: ((this.state.nav & this.state.isRTL) ? styles.drawer.width : 20)
-        };
+//        console.log("STATE:", this.state);
         return (
             <MuiThemeProvider muiTheme={this.state.theme}>
                 {!this.state.lang ?
@@ -176,45 +143,13 @@ var Initialize = React.createClass ({
                             setRTL={this.setRTL}/>
                     </Container>
                 :
-                <div>
-                    <AppBar
-                        title={<span style={styles.header}>{this.state.content.header}</span>}
-                        onTouchTap={this.navToggle}
-                        style={styles.appBar}
-                        zDepth={2}
-                        />
-                
-                    <Drawer
-                        open={this.state.nav}
-                        docked={true}
-                        containerStyle={styles.drawer}
-                        zDepth={1}
-                        >
-
-                        <Nav 
-                            lang={this.state.lang}
-                            content={this.state.content.nav}/>
-
-                        <Paper zDepth={5} style={styles.footer}>
-                            <em>
-                                {this.state.content.disclaimer}
-                            </em>
-                        </Paper>
-                    </Drawer>
-
-                    <Container style={containerStyle}>
-                        {
-                        React.cloneElement(
-                            this.props.children, {
-                                lang: this.state.lang,
-                                isRTL: this.state.isRTL,
-                                content: this.state.content
-                            })
-                        }
-                        
-                    </Container>
-
-                </div>
+                <App
+                    mobile={this.state.mobile}
+                    nav={this.state.nav}
+                    navToggle={this.navToggle}
+                    lang={this.state.lang}
+                    isRTL={this.state.isRTL}
+                    />
                 }
             </MuiThemeProvider>
         );

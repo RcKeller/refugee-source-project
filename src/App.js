@@ -67,54 +67,26 @@ const styles = {
 var App = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
-        var mobileView = (window.innerWidth < 768);
         return {
-            mobile: mobileView,
-            nav: !mobileView,
-            lang: '',
-            isRTL: '',
+//            mobile: mobileView,
+//            nav: !mobileView,
+//            lang: '',
+//            isRTL: '',
             content: {
-                header: '...',
-                disclaimer: '...',
-                nav: {}
+                app: {
+                    header: '...',
+                    disclaimer: '...',
+                    nav: {}
+                }
             }
         };
     },
-    
-    setLang:function(language) {
-        var path = 'main/' + language + '/app';
+    componentWillMount: function() {
+        var path = "main/" + this.props.lang;
         var ref = firebase.database().ref(path);
         this.bindAsObject(ref, 'content');
-        this.setState({
-            lang: language,
-            isRTL: (language == 'ar')
-        });
-    },
-    setRTL:function() {
-        document.documentElement.dir = 'rtl';
-        this.setState({
-            isRTL: true
-        });
     },
     
-    /*
-    Material-UI Drawers are consistent w/ guidelines, but do not operate like
-    traditional side-navs. I've overriden basic styles and added listeners
-    for mobile view to adapt this component.
-    */
-    navToggle:function() {
-        this.setState({nav: !this.state.nav});
-    },
-    componentWillMount:function() {
-        window.addEventListener('resize', this.resize);
-    },
-    resize:function() {
-        var mobileView = (window.innerWidth < 768);
-        this.setState({
-            mobile: mobileView,
-            nav: !mobileView,
-        });
-    },
     
     render:function() {
         //  FOR DEVELOPMENT:
@@ -123,45 +95,34 @@ var App = React.createClass ({
         as clones with additional props. This allows us to pass data down routes.
         Think this is weird? It's actually from the React docs...
         */
-        console.log (document.documentElement.dir);
-        var containerStyle = {paddingTop: 100};
-        if (this.state.isRTL) {
-            containerStyle.paddingRight = this.state.nav ? styles.drawer.width : 20;
-        } else {
-            containerStyle.paddingLeft = this.state.nav ? styles.drawer.width : 20;
-        }
+        var containerStyle = {
+            paddingTop: 100,
+            paddingLeft: ((this.props.nav & !this.props.isRTL) ? styles.drawer.width : 20),
+            paddingRight: ((this.props.nav & this.props.isRTL) ? styles.drawer.width : 20)
+        };
         return (
             <div>
-                {!this.state.lang ?
-                    <Container>
-                        <Gateway
-                            setLang={this.setLang}
-                            setRTL={this.setRTL}/>
-                    </Container>
-                :
-                <div>
                     <AppBar
-                        title={<span style={styles.header}>{this.state.content.header}</span>}
-                        onTouchTap={this.navToggle}
+                        title={<span style={styles.header}>{this.state.content.app.header}</span>}
+                        onTouchTap={this.props.navToggle}
                         style={styles.appBar}
                         zDepth={2}
                         />
                 
                     <Drawer
-                        open={this.state.nav}
+                        open={this.props.nav}
                         docked={true}
                         containerStyle={styles.drawer}
-                        openSecondary={this.state.isRTL}
                         zDepth={1}
                         >
 
                         <Nav 
-                            lang={this.state.lang}
-                            content={this.state.content.nav}/>
+                            lang={this.props.lang}
+                            content={this.state.content.app.nav}/>
 
                         <Paper zDepth={5} style={styles.footer}>
                             <em>
-                                {this.state.content.disclaimer}
+                                {this.state.content.app.disclaimer}
                             </em>
                         </Paper>
                     </Drawer>
@@ -175,14 +136,13 @@ var App = React.createClass ({
                                 content: this.state.content
                             })
                         }
-                        
                     </Container>
 
-                </div>
-                }
             </div>
         );
     }
 });
+
+//openSecondary={this.props.isRTL}
 
 export default App;
