@@ -98,17 +98,7 @@ var App = React.createClass ({
         };
     },
     
-    setRTL:function() {
-        document.documentElement.dir = 'rtl';   //IE9 compatibility.
-        this.setState({
-            isRTL: true
-        });
-    },
     
-    select:function(i) {
-        this.setState({selectedIndex: i});
-    },
-
     
     /*
     Material-UI Drawers are consistent w/ guidelines, but do not operate like
@@ -118,12 +108,10 @@ var App = React.createClass ({
     navToggle:function() {
         this.setState({nav: !this.state.nav});
     },
+    
     componentWillMount:function() {
         window.addEventListener('resize', this.resize);
-        
-        var path = 'main/' + this.state.lang + '/app';
-        var ref = firebase.database().ref(path);
-        this.bindAsObject(ref, 'content');
+        this.connectFirebase();
     },
     resize:function() {
         var mobileView = (window.innerWidth < 768);
@@ -132,6 +120,37 @@ var App = React.createClass ({
             nav: !mobileView,
         });
     },
+    
+    connectFirebase:function() {
+        var path = 'main/' + this.state.lang + '/app';
+        var ref = firebase.database().ref(path);
+        
+        this.bindAsObject(ref, 'content');
+    },
+    
+    selectLang:function(lang) {
+        if (lang !== this.state.lang) {
+            if (lang == 'en') {
+                document.documentElement.dir = 'ltr';   //IE9 compatibility.
+                this.setState({
+                    lang: lang,
+                    isRTL: true,
+                    selectedIndex: 1
+                });
+                this.connectFirebase();
+            }
+            if (lang == 'ar') {
+                document.documentElement.dir = 'rtl';   //IE9 compatibility.
+                this.setState({
+                    lang: lang,
+                    isRTL: true,
+                    selectedIndex: 1
+                });
+                this.connectFirebase();
+            }
+        }
+    },
+
     
     render:function() {
         //  FOR DEVELOPMENT:
@@ -151,9 +170,6 @@ var App = React.createClass ({
         } else {
             containerStyle.paddingLeft = this.state.nav ? styles.drawer.width : 20;
         }
-        var footerStyle = containerStyle;
-        footerStyle.display = 'fixed';
-        footerStyle.bottom = 0;
         return (
             <div>
                 <AppBar
@@ -203,12 +219,12 @@ var App = React.createClass ({
                         <BottomNavigationItem
                             label="English"
                             icon={nearbyIcon}
-                            onTouchTap={()=>this.select(0)}
+                            onTouchTap={()=>this.selectLang('en')}
                             />
                         <BottomNavigationItem
                             label="Arabic"
                             icon={nearbyIcon}
-                            onTouchTap={()=>this.select(1)}
+                            onTouchTap={()=>this.selectLang('ar')}
                             />
                     </BottomNavigation>
                 </Paper>
