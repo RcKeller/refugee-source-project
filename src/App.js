@@ -25,6 +25,13 @@ import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import Paper from 'material-ui/Paper';
 
+import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
+
+import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
+const nearbyIcon = <IconLocationOn />;
+
+
+
 //    /////
 //    MISC COMPONENTS
 //    /////
@@ -75,6 +82,7 @@ var App = React.createClass ({
             nav: !mobileView,
             lang: 'en',
             isRTL: false,
+            selectedIndex: 0,
             content: {
                 header: '...',
                 disclaimer: '...',
@@ -89,6 +97,11 @@ var App = React.createClass ({
             isRTL: true
         });
     },
+    
+    select:function(i) {
+        this.setState({selectedIndex: i});
+    },
+
     
     /*
     Material-UI Drawers are consistent w/ guidelines, but do not operate like
@@ -129,7 +142,11 @@ var App = React.createClass ({
         } else {
             containerStyle.paddingLeft = this.state.nav ? styles.drawer.width : 20;
         }
+        var enIndex = 0;
+        var arIndex = 0;
         return (
+            
+            
             <div>
                 <AppBar
                     title={<span style={styles.header}>{this.state.content.header}</span>}
@@ -167,6 +184,23 @@ var App = React.createClass ({
                             })
                     }
                 </Container>
+                
+                <Paper zDepth={1}>
+                    <BottomNavigation
+                        selectedIndex={this.state.selectedIndex}
+                    >
+                        <BottomNavigationItem
+                            label="English"
+                            icon={nearbyIcon}
+                            onTouchTap={()=>this.select(0)}
+                            />
+                        <BottomNavigationItem
+                            label="Arabic"
+                            icon={nearbyIcon}
+                            onTouchTap={()=>this.select(1)}
+                            />
+                    </BottomNavigation>
+                </Paper>
 
             </div>
         );
