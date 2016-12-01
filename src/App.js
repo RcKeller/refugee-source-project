@@ -73,8 +73,8 @@ var App = React.createClass ({
         return {
             mobile: mobileView,
             nav: !mobileView,
-            lang: '',
-            isRTL: '',
+            lang: 'en',
+            isRTL: false,
             content: {
                 header: '...',
                 disclaimer: '...',
@@ -134,56 +134,48 @@ var App = React.createClass ({
         }
         return (
             <div>
-                {!this.state.lang ?
-                    <Container>
-                        <Gateway
-                            setLang={this.setLang}
-                            setRTL={this.setRTL}/>
-                    </Container>
-                :
-                <div>
-                    <AppBar
-                        title={<span style={styles.header}>{this.state.content.header}</span>}
-                        onTouchTap={this.navToggle}
-                        style={styles.appBar}
-                        zDepth={2}
-                        />
-                
-                    <Drawer
-                        open={this.state.nav}
-                        docked={true}
-                        containerStyle={styles.drawer}
-                        openSecondary={this.state.isRTL}
-                        zDepth={1}
-                        >
+                <AppBar
+                    title={<span style={styles.header}>{this.state.content.header}</span>}
+                    onTouchTap={this.navToggle}
+                    style={styles.appBar}
+                    zDepth={2}
+                    />
 
-                        <Nav 
-                            lang={this.state.lang}
-                            content={this.state.content.nav}/>
+                <Drawer
+                    open={this.state.nav}
+                    docked={true}
+                    containerStyle={styles.drawer}
+                    openSecondary={this.state.isRTL}
+                    zDepth={1}
+                    >
 
-                        <Paper zDepth={5} style={styles.footer}>
-                            <em>
-                                {this.state.content.disclaimer}
-                            </em>
-                        </Paper>
-                    </Drawer>
+                    <Nav 
+                        lang={this.state.lang}
+                        content={this.state.content.nav}/>
 
-                    <Container style={containerStyle}>
-                        {
-                            React.cloneElement(
-                                this.props.children, {
-                                    lang: this.state.lang,
-                                    isRTL: this.state.isRTL,
-                                    content: this.state.content
-                                })
-                        }
-                    </Container>
+                    <Paper zDepth={5} style={styles.footer}>
+                        <em>
+                            {this.state.content.disclaimer}
+                        </em>
+                    </Paper>
+                </Drawer>
 
-                </div>
-                }
+                <Container style={containerStyle}>
+                    <span>PLACEHOLDER</span>
+                </Container>
+
             </div>
         );
     }
 });
+
+//{
+//    React.cloneElement(
+//        this.props.children, {
+//            lang: this.state.lang,
+//            isRTL: this.state.isRTL,
+//            content: this.state.content
+//        })
+//}
 
 export default App;

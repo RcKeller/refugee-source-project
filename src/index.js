@@ -55,12 +55,24 @@ import App from './App';
 import Home from './Home';
 import About from './About';
 
+function userRedirect(nextState, replace) {
+    var defaultLanguage = 'en';
+    var redirectPath = defaultLanguage + nextState.location.pathname;
+    replace({
+        pathname: redirectPath,
+    });
+}
+
+
 ReactDOM.render(
     <MuiThemeProvider muiTheme={muiTheme}>
         <Router history={hashHistory}>
             <Route path="/" component={App}>
-                <IndexRoute component={Home}/>
-                <Route path="about" component={About}/>
+                <Route path=":lang/" >
+                    <IndexRoute component={Home}/>
+                    <Route path="about" component={About}/>
+                </Route>
+                <Route path="*" onEnter={userRedirect} />
             </Route>
         </Router>
     </MuiThemeProvider>,

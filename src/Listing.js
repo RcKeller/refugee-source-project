@@ -31,7 +31,6 @@ const styles = {
     },
 };
 var Listing = React.createClass ({
-    
     render:function() {
         var adaptiveDirection = {
             direction: (this.props.isRTL ? 'rtl' : 'inherit')
@@ -41,7 +40,7 @@ var Listing = React.createClass ({
                 <CardHeader
                     title={this.props.listing.name}
                     subtitle={
-                        <span style={{direction: 'ltr'}}> {this.props.listing.address}
+                        <span style={{direction: 'ltr !important'}}> {this.props.listing.address}
                         </span>
                     }
                     showExpandableButton={true}
