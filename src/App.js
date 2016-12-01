@@ -158,7 +158,6 @@ var App = React.createClass ({
                 </Drawer>
 
                 <Container style={containerStyle}>
-                    <span>PLACEHOLDER</span>
                     {
                         React.cloneElement(
                             this.props.children, {
@@ -173,14 +172,5 @@ var App = React.createClass ({
         );
     }
 });
-
-//{
-//    React.cloneElement(
-//        this.props.children, {
-//            lang: this.state.lang,
-//            isRTL: this.state.isRTL,
-//            content: this.state.content
-//        })
-//}
 
 export default App;
