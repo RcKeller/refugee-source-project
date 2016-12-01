@@ -60,16 +60,23 @@ const styles = {
     },
     drawer: {
         width: 200,
-        marginTop: 65
+        marginTop: 65,
+        height: (window.innerHeight - 125)
     },
     container: {
         paddingTop: 100
     },
-    footer: {
+    disclaimer: {
         width: "100%",
         position: "fixed",
-        bottom: 65,
+        bottom: 0,
         textAlign: "center"
+    },
+    footer: {
+        position: 'absolute',
+        width: '100%',
+        bottom: 0,
+        marginTop: 10
     }
 };
 
@@ -136,17 +143,18 @@ var App = React.createClass ({
         console.log("PROPS", this.props);
         console.log("ROUTE PATH", this.props.location);
         console.log("STATE", this.state);
-        var containerStyle = {paddingTop: 100};
+        var containerStyle = {
+            marginTop: 100
+        };
         if (this.state.isRTL) {
             containerStyle.paddingRight = this.state.nav ? styles.drawer.width : 20;
         } else {
             containerStyle.paddingLeft = this.state.nav ? styles.drawer.width : 20;
         }
-        var enIndex = 0;
-        var arIndex = 0;
+        var footerStyle = containerStyle;
+        footerStyle.display = 'fixed';
+        footerStyle.bottom = 0;
         return (
-            
-            
             <div>
                 <AppBar
                     title={<span style={styles.header}>{this.state.content.header}</span>}
@@ -167,11 +175,11 @@ var App = React.createClass ({
                         lang={this.state.lang}
                         content={this.state.content.nav}/>
 
-                    <Paper zDepth={5} style={styles.footer}>
+                    <div style={styles.disclaimer}>
                         <em>
                             {this.state.content.disclaimer}
                         </em>
-                    </Paper>
+                    </div>
                 </Drawer>
 
                 <Container style={containerStyle}>
@@ -185,10 +193,13 @@ var App = React.createClass ({
                     }
                 </Container>
                 
-                <Paper zDepth={1}>
+                <Paper
+                    style={styles.footer}
+                    zDepth={2}
+                >
                     <BottomNavigation
                         selectedIndex={this.state.selectedIndex}
-                    >
+                        >
                         <BottomNavigationItem
                             label="English"
                             icon={nearbyIcon}
@@ -201,6 +212,8 @@ var App = React.createClass ({
                             />
                     </BottomNavigation>
                 </Paper>
+                
+                
 
             </div>
         );
