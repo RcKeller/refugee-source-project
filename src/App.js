@@ -120,6 +120,9 @@ var App = React.createClass ({
         as clones with additional props. This allows us to pass data down routes.
         Think this is weird? It's actually from the React docs...
         */
+        console.log("PROPS", this.props);
+        console.log("ROUTE PATH", this.props.location.pathname);
+        console.log("STATE", this.state);
         var containerStyle = {paddingTop: 100};
         if (this.state.isRTL) {
             containerStyle.paddingRight = this.state.nav ? styles.drawer.width : 20;
