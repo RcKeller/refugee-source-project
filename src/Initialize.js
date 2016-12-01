@@ -113,7 +113,7 @@ var Initialize = React.createClass ({
     },
     
     componentWillUpdate:function() {
-        if (!this.state.themeProcessed) {
+        if (!this.state.themeProcessed & this.state.isRTL !== '') {
             var temp = this.state.theme;
             temp.isRtl = (this.state.isRTL ? true : false);
             temp.direction = (this.state.isRTL ? 'rtl' : 'ltr');
@@ -143,13 +143,16 @@ var Initialize = React.createClass ({
                             setRTL={this.setRTL}/>
                     </Container>
                 :
-                <App
-                    mobile={this.state.mobile}
-                    nav={this.state.nav}
-                    navToggle={this.navToggle}
-                    lang={this.state.lang}
-                    isRTL={this.state.isRTL}
-                    />
+                    <div>
+                    {
+                        React.cloneElement(
+                            this.props.children, {
+                            lang: this.state.lang,
+                            isRTL: this.state.isRTL,
+                            content: this.state.content
+                        })
+                    }
+                    </div>
                 }
             </MuiThemeProvider>
         );
