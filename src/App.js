@@ -83,16 +83,6 @@ var App = React.createClass ({
         };
     },
     
-    setLang:function(language) {
-        this.setState({
-            lang: language,
-            isRTL: (language == 'ar')
-        });
-        //Bind App Menu Text
-        var path = 'main/' + language + '/app';
-        var ref = firebase.database().ref(path);
-        this.bindAsObject(ref, 'content');
-    },
     setRTL:function() {
         document.documentElement.dir = 'rtl';   //IE9 compatibility.
         this.setState({
@@ -110,6 +100,10 @@ var App = React.createClass ({
     },
     componentWillMount:function() {
         window.addEventListener('resize', this.resize);
+        
+        var path = 'main/' + this.state.lang + '/app';
+        var ref = firebase.database().ref(path);
+        this.bindAsObject(ref, 'content');
     },
     resize:function() {
         var mobileView = (window.innerWidth < 768);
