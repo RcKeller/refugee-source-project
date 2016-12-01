@@ -124,7 +124,6 @@ var App = React.createClass ({
     connectFirebase:function() {
         var path = 'main/' + this.state.lang + '/app';
         var ref = firebase.database().ref(path);
-        
         this.bindAsObject(ref, 'content');
     },
     
