@@ -121,7 +121,7 @@ var App = React.createClass ({
         Think this is weird? It's actually from the React docs...
         */
         console.log("PROPS", this.props);
-        console.log("ROUTE PATH", this.props.location.pathname);
+        console.log("ROUTE PATH", this.props.location);
         console.log("STATE", this.state);
         var containerStyle = {paddingTop: 100};
         if (this.state.isRTL) {
@@ -159,6 +159,14 @@ var App = React.createClass ({
 
                 <Container style={containerStyle}>
                     <span>PLACEHOLDER</span>
+                    {
+                        React.cloneElement(
+                            this.props.children, {
+                                lang: this.state.lang,
+                                isRTL: this.state.isRTL,
+                                content: this.state.content
+                            })
+                    }
                 </Container>
 
             </div>

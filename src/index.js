@@ -63,16 +63,25 @@ function userRedirect(nextState, replace) {
     });
 }
 
+const langs = ['en', 'ar'];
+const subRoutes = (
+    <Route>
+        <IndexRoute component={Home}/>
+        <Route path="about" component={About}/>
+    </Route>
+);
+//<Route path="*" onEnter={userRedirect}/>
 
 ReactDOM.render(
     <MuiThemeProvider muiTheme={muiTheme}>
         <Router history={hashHistory}>
             <Route path="/" component={App}>
-                <Route path=":lang/" >
-                    <IndexRoute component={Home}/>
-                    <Route path="about" component={About}/>
-                </Route>
-                <Route path="*" onEnter={userRedirect} />
+                {langs.map(lang => (
+                    <Route key={lang} path={lang}>
+                        {subRoutes}
+                    </Route>
+                ))}
+                {subRoutes}
             </Route>
         </Router>
     </MuiThemeProvider>,
