@@ -130,7 +130,6 @@ var App = React.createClass ({
     selectLang:function(lang) {
         if (lang !== this.state.lang) {
             if (lang == 'en') {
-                document.documentElement.dir = 'ltr';   //IE9 compatibility.
                 this.setState({
                     lang: lang,
                     isRTL: true,
@@ -139,7 +138,6 @@ var App = React.createClass ({
                 this.connectFirebase();
             }
             if (lang == 'ar') {
-                document.documentElement.dir = 'rtl';   //IE9 compatibility.
                 this.setState({
                     lang: lang,
                     isRTL: true,
@@ -162,13 +160,9 @@ var App = React.createClass ({
         console.log("ROUTE PATH", this.props.location);
         console.log("STATE", this.state);
         var containerStyle = {
-            marginTop: 100
+            marginTop: 100,
+            paddingLeft: (this.state.nav ? styles.drawer.width : 20)
         };
-        if (this.state.isRTL) {
-            containerStyle.paddingRight = this.state.nav ? styles.drawer.width : 20;
-        } else {
-            containerStyle.paddingLeft = this.state.nav ? styles.drawer.width : 20;
-        }
         return (
             <div>
                 <AppBar
@@ -182,7 +176,6 @@ var App = React.createClass ({
                     open={this.state.nav}
                     docked={true}
                     containerStyle={styles.drawer}
-                    openSecondary={this.state.isRTL}
                     zDepth={1}
                     >
 
