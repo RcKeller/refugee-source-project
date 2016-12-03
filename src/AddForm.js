@@ -97,11 +97,18 @@ var AddForm = React.createClass ({
     },
     /////
     checkServices:function(e) {
-        if (e.target.value.length > 60) {
-            this.setState( previousState=>{
-                previousState.form.services=e.target.value;
-                return previousState;
-            });
+//        var previousState = this.state;
+//        if (e.target.value.length > 6) {
+//            this.setState( previousState=>{
+//                previousState.form.services=e.target.value;
+//                return previousState;
+//            });
+//        }
+
+        var temp = this.state.form;
+        if (e.target.value.length > 6) {
+            temp.services = e.target.value;
+            this.setState({form: temp});
         }
     },
 //    checkHours:function(e) {
