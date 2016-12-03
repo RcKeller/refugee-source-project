@@ -38,7 +38,7 @@ var AddForm = React.createClass ({
         return({
             errorName: 'Required',
             errorAddress: 'Required',
-            errorDesc: 'Required (60 character minimum)',
+            errorDescription: 'Required (60 character minimum)',
             form: {
                 name: '',
                 address: '',
@@ -74,66 +74,71 @@ var AddForm = React.createClass ({
         console.log("TARGET:", e.target);
         if (e.target.id === 'name'
             & e.target.value.length > 8) {
-            this.setState({ errorName: '' });
+            var temp = this.state.form;
+            temp.name = e.target.value;
+            this.setState({
+                errorName: '',
+                form: temp
+            });
         } else {
-            this.setState({ errorName: 'Required' });
+            this.setState({errorName: 'Required' });
         }
     },
     checkAddress:function(e) {
         if (e.target.id === 'address'
             & e.target.value.split(' ').length > 4) {
-            this.setState({ errorAddress: '' });
+            var temp = this.state.form;
+            temp.address = e.target.value;
+            this.setState({
+                errorAddress: '',
+                form: temp
+            });
         } else {
             this.setState({ errorAddress: 'Required' });
         }
     },
-    checkDesc:function(e) {
+    checkDescription:function(e) {
         if (e.target.id === 'description'
                 & e.target.value.length > 60) {
-            this.setState({ errorDesc: '' });
+            var temp = this.state.form;
+            temp.description = e.target.value;
+            this.setState({
+                errorDescription: '',
+                form: temp
+            });
         } else {
             this.setState({ errorDesc: 'Required (60 character minimum)' });
         }
     },
     /////
     checkServices:function(e) {
-//        var previousState = this.state;
-//        if (e.target.value.length > 6) {
-//            this.setState( previousState=>{
-//                previousState.form.services=e.target.value;
-//                return previousState;
-//            });
-//        }
-
         var temp = this.state.form;
         if (e.target.value.length > 6) {
             temp.services = e.target.value;
             this.setState({form: temp});
         }
     },
-//    checkHours:function(e) {
-//        if e.target.value.length > 3) {
-//            this.setState({ errorDesc: '' });
-//        } else {
-//            this.setState({ errorDesc: 'Required (60 character minimum)' });
-//        }
-//    },
-//    checkLink:function(e) {
-//        if (e.target.id === 'description'
-//            & e.target.value.length > 60) {
-//            this.setState({ errorDesc: '' });
-//        } else {
-//            this.setState({ errorDesc: 'Required (60 character minimum)' });
-//        }
-//    },
-//    checkPhone:function(e) {
-//        if (e.target.id === 'description'
-//            & e.target.value.length > 60) {
-//            this.setState({ ph: '' });
-//        } else {
-//            this.setState({ errorDesc: 'Required (60 character minimum)' });
-//        }
-//    },
+    checkHours:function(e) {
+        var temp = this.state.form;
+        if (e.target.value.length > 4) {
+            temp.hours = e.target.value;
+            this.setState({form: temp});
+        }
+    },
+    checkLink:function(e) {
+        var temp = this.state.form;
+        if (e.target.value.length > 8) {
+            temp.link = e.target.value;
+            this.setState({form: temp});
+        }
+    },
+    checkPhone:function(e) {
+        var temp = this.state.form;
+        if (e.target.value.phone >= 9) {
+            temp.phone = e.target.value;
+            this.setState({form: temp});
+        }
+    },
     
 
     render:function() {
@@ -163,9 +168,9 @@ var AddForm = React.createClass ({
                     <Col sm={12}>
                         <TextField
                             id="name"
+                            onChange={this.checkName}
                             floatingLabelText="Service Name"
                             errorText={this.state.errorName}
-                            onChange={this.checkName}
                             fullWidth={true}
                             />
                         <br></br>
@@ -173,9 +178,9 @@ var AddForm = React.createClass ({
                     <Col sm={12}>
                         <TextField
                             id="address"
+                            onChange={this.checkAddress}
                             floatingLabelText="Address"
                             errorText={this.state.errorAddress}
-                            onChange={this.checkAddress}
                             fullWidth={true}
                             />
                         <br></br>
@@ -183,9 +188,9 @@ var AddForm = React.createClass ({
                     <Col sm={12}>
                         <TextField
                             id="description"
+                            onChange={this.checkDescription}
                             floatingLabelText="Description (1 paragraph)"
-                            errorText={this.state.errorDesc}
-                            onChange={this.checkDesc}
+                            errorText={this.state.errorDescription}
                             multiLine={true}
                             rows={2}
                             fullWidth={true}
@@ -209,6 +214,7 @@ var AddForm = React.createClass ({
                 <Row>
                     <Col sm={12}>
                         <TextField
+                            onChange={this.checkHours}
                             floatingLabelText="Hours"
                             hintText="Optional"
                             fullWidth={true}
@@ -217,6 +223,7 @@ var AddForm = React.createClass ({
                     </Col>
                     <Col sm={12}>
                         <TextField
+                            onChange={this.checkLink}
                             floatingLabelText="Web Link"
                             hintText="Optional"
                             fullWidth={true}
@@ -225,6 +232,7 @@ var AddForm = React.createClass ({
                     </Col>
                     <Col sm={12}>
                         <TextField
+                            onChange={this.checkPhone}
                             floatingLabelText="Phone"
                             hintText="Optional"
                             fullWidth={true}
