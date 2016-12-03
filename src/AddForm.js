@@ -32,7 +32,7 @@ const styles = {
         textAlign: 'center'
     }
 };
-var Form = React.createClass ({
+var AddForm = React.createClass ({
     getInitialState:function() {
         return({
             content: {
@@ -83,4 +83,4 @@ services:
 "Resettlement, Education"
 */
 
-export default Form;
+export default AddForm;

@@ -17,13 +17,14 @@ import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
 
+
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
 import Paper from 'material-ui/Paper';
 import {Card, CardTitle, CardText} from 'material-ui/Card';
 
-import Form from './Form';
+import AddForm from './AddForm';
 
 //    /////
 //    COMPONENT
@@ -62,7 +63,9 @@ var Submit = React.createClass ({
                     style={styles.center}/>
                 <CardText>
                     {this.state.content.description}
-                    <Form />
+                    <Paper>
+                        <AddForm />
+                    </Paper>
                 </CardText>
             </Card>
         );
