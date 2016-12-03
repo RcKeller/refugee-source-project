@@ -39,6 +39,9 @@ const styles = {
 var AddForm = React.createClass ({
     getInitialState:function() {
         return({
+            errorService: 'Required',
+            errorAddress: 'Required',
+            errorDesc: 'Required (60 character minimum)',
             content: {
                 title: '',
                 description: '',
@@ -49,11 +52,36 @@ var AddForm = React.createClass ({
         });
     },
 
-//    componentWillMount:function() {
-//        var path = 'main/' + this.props.lang + '/submit';
-//        var ref = firebase.database().ref(path);
-//        this.bindAsObject(ref, 'content');
-//    },
+    /*
+    Every field has a custom error and validation.
+    Seems long and redundant, but it's more readable
+    and extensible this way. Why have a dozen separate field components?
+    */
+    checkService:function(event) {
+        console.log("TARGET:", event.target);
+        if (event.target.id === 'service'
+            & event.target.value.length > 8) {
+            this.setState({ errorService: '' });
+        } else {
+            this.setState({ errorService: 'Required' });
+        }
+    },
+    checkAddress:function(event) {
+        if (event.target.id === 'address'
+            & event.target.value.split(' ').length > 4) {
+            this.setState({ errorAddress: '' });
+        } else {
+            this.setState({ errorAddress: 'Required' });
+        }
+    },
+    checkDesc:function(event) {
+        if (event.target.id === 'description'
+                & event.target.value.length > 60) {
+            this.setState({ errorDesc: '' });
+        } else {
+            this.setState({ errorDesc: 'Required (60 character minimum)' });
+        }
+    },
 
     render:function() {
         return (
@@ -61,24 +89,30 @@ var AddForm = React.createClass ({
                 <Row>
                     <Col sm={12}>
                         <TextField
+                            id="service"
                             floatingLabelText="Service Name"
-                            errorText="Required"
+                            errorText={this.state.errorService}
+                            onChange={this.checkService}
                             fullWidth={true}
                             />
                         <br></br>
                     </Col>
                     <Col sm={12}>
                         <TextField
+                            id="address"
                             floatingLabelText="Address"
-                            errorText="Required"
+                            errorText={this.state.errorAddress}
+                            onChange={this.checkAddress}
                             fullWidth={true}
                             />
                         <br></br>
                     </Col>
                     <Col sm={12}>
                         <TextField
+                            id="description"
                             floatingLabelText="Description (1 paragraph)"
-                            errorText="Required"
+                            errorText={this.state.errorDesc}
+                            onChange={this.checkDesc}
                             multiLine={true}
                             rows={2}
                             fullWidth={true}
@@ -86,7 +120,7 @@ var AddForm = React.createClass ({
                         <br></br>
                     </Col>
                 </Row>
-                <Divider />
+                
                 <Row>
                     <Col sm={12}>
                         <TextField
@@ -105,7 +139,7 @@ var AddForm = React.createClass ({
                         <br></br>
                     </Col>
                 </Row>
-                <Divider />
+                
                 <Row>
                     <Col sm={12}>
                         <TextField
