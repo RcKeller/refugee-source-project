@@ -14,9 +14,8 @@ document:false, window:false, console:false, alert:false, user:false
 import React from 'react';
 import {Container, Row, Col} from 'react-grid-system';
 
-
-//import firebase from 'firebase';
-//import ReactFireMixin from 'reactfire';
+import firebase from 'firebase';
+import ReactFireMixin from 'reactfire';
 
 
 //    /////
@@ -29,11 +28,16 @@ import TextField from 'material-ui/TextField';
 //    COMPONENT
 //    /////
 const styles = {
+    form: {
+        margin: 30
+    },
     radioButton: {
         margin: 15,
     },
 };
 var AddForm = React.createClass ({
+    mixins: [ReactFireMixin],
+
     getInitialState:function() {
         return({
             errorName: 'Required',
@@ -60,11 +64,11 @@ var AddForm = React.createClass ({
     },
 
     /*
-    Every field has a custom error and validation.
-    Seems long and redundant, but it's more readable
-    and extensible this way. Why have a dozen separate field components?
+    Every field has a function for processing
+    Seems long and redundant, but it's more readable and extensible this way. Why have a dozen separate field components?
     */
     checkLang:function(e) {
+        //Radio buttons don't need validation
         this.setState({ formLanguage: e.target.value });
     },
     
@@ -124,14 +128,10 @@ var AddForm = React.createClass ({
         temp.services = e.target.value;
         this.setState({form: temp});
     },
+    
     checkHours:function(e) {
         var temp = this.state.form;
         temp.hours = e.target.value;
-        this.setState({form: temp});
-    },
-    checkLink:function(e) {
-        var temp = this.state.form;
-        temp.link = e.target.value;
         this.setState({form: temp});
     },
     checkPhone:function(e) {
@@ -139,12 +139,17 @@ var AddForm = React.createClass ({
         temp.phone = e.target.value;
         this.setState({form: temp});
     },
+    checkLink:function(e) {
+        var temp = this.state.form;
+        temp.link = e.target.value;
+        this.setState({form: temp});
+    },
     
 
     render:function() {
         console.log("FORM STATE:", this.state);
         return (
-            <Container>
+            <Container style={styles.form}>
                 <Row>
                     <Col sm={12}>
                         <RadioButtonGroup name="Language" 
@@ -165,7 +170,7 @@ var AddForm = React.createClass ({
                 </Row>
                 
                 <Row>
-                    <Col sm={12}>
+                    <Col sm={12} md={6}>
                         <TextField
                             id="name"
                             onChange={this.checkName}
@@ -175,7 +180,7 @@ var AddForm = React.createClass ({
                             />
                         <br></br>
                     </Col>
-                    <Col sm={12}>
+                    <Col sm={12} md={6}>
                         <TextField
                             id="address"
                             onChange={this.checkAddress}
@@ -185,26 +190,26 @@ var AddForm = React.createClass ({
                             />
                         <br></br>
                     </Col>
-                    <Col sm={12}>
+                <Row>
+                    
+                </Row>
+                    <Col sm={12} md={6}>
                         <TextField
                             id="description"
                             onChange={this.checkDescription}
                             floatingLabelText="Description (1 paragraph)"
                             errorText={this.state.errorDescription}
                             multiLine={true}
-                            rows={2}
                             fullWidth={true}
                             />
                         <br></br>
                     </Col>
-                </Row>
-                
-                <Row>
-                    <Col sm={12}>
+                    <Col sm={12} md={6}>
                         <TextField
                             onChange={this.checkServices}
                             floatingLabelText="All Services Offered"
                             hintText="Optional"
+                            multiLine={true}
                             fullWidth={true}
                             />
                         <br></br>
@@ -212,7 +217,7 @@ var AddForm = React.createClass ({
                 </Row>
                 
                 <Row>
-                    <Col sm={12}>
+                    <Col sm={12} md={6} lg={4}>
                         <TextField
                             onChange={this.checkHours}
                             floatingLabelText="Hours"
@@ -221,19 +226,19 @@ var AddForm = React.createClass ({
                             />
                         <br></br>
                     </Col>
-                    <Col sm={12}>
+                    <Col sm={12} md={6} lg={4}>
                         <TextField
-                            onChange={this.checkLink}
-                            floatingLabelText="Web Link"
+                            onChange={this.checkPhone}
+                            floatingLabelText="Phone"
                             hintText="Optional"
                             fullWidth={true}
                             />
                         <br></br>
                     </Col>
-                    <Col sm={12}>
+                    <Col sm={12} lg={4}>
                         <TextField
-                            onChange={this.checkPhone}
-                            floatingLabelText="Phone"
+                            onChange={this.checkLink}
+                            floatingLabelText="Web Link"
                             hintText="Optional"
                             fullWidth={true}
                             />
