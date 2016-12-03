@@ -173,8 +173,7 @@ var App = React.createClass ({
                             React.cloneElement(
                                 this.props.children, {
                                     lang: this.state.lang,
-                                    isRTL: this.state.isRTL,
-                                    content: this.state.content
+                                    isRTL: this.state.isRTL
                                 })
                         }
                     </Container>

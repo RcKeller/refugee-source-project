@@ -48,7 +48,7 @@ var Submit = React.createClass ({
     },
     
     ComponentWillMount:function() {
-        var path = 'main/' + this.props.lang + '/about';
+        var path = 'main/' + this.props.lang + '/submit';
         var ref = firebase.database().ref(path);
         this.bindAsObject(ref, 'content');
     },
@@ -56,7 +56,7 @@ var Submit = React.createClass ({
     render:function() {
         return(
         <Card style={styles.card}>
-            <CardTitle title="Placeholder" subtitle="About"/>
+            <CardTitle title="Placeholder" subtitle="Submit"/>
             <CardText>
                 Language: {this.props.lang}
             </CardText>
