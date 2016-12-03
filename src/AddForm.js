@@ -22,26 +22,34 @@ import {Container, Row, Col} from 'react-grid-system';
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
+import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import TextField from 'material-ui/TextField';
-import Divider from 'material-ui/Divider';
 
 //    /////
 //    COMPONENT
 //    /////
 const styles = {
-    center: {
-        display: 'inline-block',
-        marginLeft: 'auto',
-        marginRight: 'auto'
-//        textAlign: 'center'
-    }
+    radioButton: {
+        margin: 15,
+    },
 };
 var AddForm = React.createClass ({
     getInitialState:function() {
         return({
-            errorService: 'Required',
+            errorName: 'Required',
             errorAddress: 'Required',
             errorDesc: 'Required (60 character minimum)',
+            form: {
+                name: '',
+                address: '',
+                description: '',
+                services: '',
+                primary: '',
+                hours: '',
+                link: '',
+                phone: ''
+            },
+            formLanguage: 'en',
             content: {
                 title: '',
                 description: '',
@@ -57,42 +65,100 @@ var AddForm = React.createClass ({
     Seems long and redundant, but it's more readable
     and extensible this way. Why have a dozen separate field components?
     */
-    checkService:function(event) {
-        console.log("TARGET:", event.target);
-        if (event.target.id === 'service'
-            & event.target.value.length > 8) {
-            this.setState({ errorService: '' });
+    checkLang:function(e) {
+        this.setState({ formLanguage: e.target.value });
+    },
+    
+    //  The next 3 required fields are validated:
+    checkName:function(e) {
+        console.log("TARGET:", e.target);
+        if (e.target.id === 'name'
+            & e.target.value.length > 8) {
+            this.setState({ errorName: '' });
         } else {
-            this.setState({ errorService: 'Required' });
+            this.setState({ errorName: 'Required' });
         }
     },
-    checkAddress:function(event) {
-        if (event.target.id === 'address'
-            & event.target.value.split(' ').length > 4) {
+    checkAddress:function(e) {
+        if (e.target.id === 'address'
+            & e.target.value.split(' ').length > 4) {
             this.setState({ errorAddress: '' });
         } else {
             this.setState({ errorAddress: 'Required' });
         }
     },
-    checkDesc:function(event) {
-        if (event.target.id === 'description'
-                & event.target.value.length > 60) {
+    checkDesc:function(e) {
+        if (e.target.id === 'description'
+                & e.target.value.length > 60) {
             this.setState({ errorDesc: '' });
         } else {
             this.setState({ errorDesc: 'Required (60 character minimum)' });
         }
     },
+    /////
+    checkServices:function(e) {
+        if (e.target.value.length > 60) {
+            this.setState( previousState=>{
+                previousState.form.services=e.target.value;
+                return previousState;
+            });
+        }
+    },
+//    checkHours:function(e) {
+//        if e.target.value.length > 3) {
+//            this.setState({ errorDesc: '' });
+//        } else {
+//            this.setState({ errorDesc: 'Required (60 character minimum)' });
+//        }
+//    },
+//    checkLink:function(e) {
+//        if (e.target.id === 'description'
+//            & e.target.value.length > 60) {
+//            this.setState({ errorDesc: '' });
+//        } else {
+//            this.setState({ errorDesc: 'Required (60 character minimum)' });
+//        }
+//    },
+//    checkPhone:function(e) {
+//        if (e.target.id === 'description'
+//            & e.target.value.length > 60) {
+//            this.setState({ ph: '' });
+//        } else {
+//            this.setState({ errorDesc: 'Required (60 character minimum)' });
+//        }
+//    },
+    
 
     render:function() {
+        console.log("FORM STATE:", this.state);
         return (
             <Container>
                 <Row>
                     <Col sm={12}>
+                        <RadioButtonGroup name="Language" 
+                            defaultSelected="en"
+                            onChange={this.checkLang}>
+                            <RadioButton
+                                value="en"
+                                label="English"
+                                style={styles.radioButton}
+                                />
+                            <RadioButton
+                                value="ar"
+                                label="Arabic"
+                                style={styles.radioButton}
+                                />
+                        </RadioButtonGroup>
+                    </Col>
+                </Row>
+                
+                <Row>
+                    <Col sm={12}>
                         <TextField
-                            id="service"
+                            id="name"
                             floatingLabelText="Service Name"
-                            errorText={this.state.errorService}
-                            onChange={this.checkService}
+                            errorText={this.state.errorName}
+                            onChange={this.checkName}
                             fullWidth={true}
                             />
                         <br></br>
@@ -124,16 +190,9 @@ var AddForm = React.createClass ({
                 <Row>
                     <Col sm={12}>
                         <TextField
+                            onChange={this.checkServices}
                             floatingLabelText="All Services Offered"
                             hintText="Optional"
-                            fullWidth={true}
-                            />
-                        <br></br>
-                    </Col>
-                    <Col sm={12}>
-                        <TextField
-                            floatingLabelText="Primary Service"
-                            hintText="One only (Optional)"
                             fullWidth={true}
                             />
                         <br></br>
