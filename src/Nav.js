@@ -12,7 +12,7 @@
 //    IMPORT DEPENDENCIES
 //    /////
 import React from 'react';
-import {Link} from 'react-router';
+import {Router, Link} from 'react-router';
 import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
@@ -25,6 +25,7 @@ import {blueA400} from 'material-ui/styles/colors';
 
 import QuestionAnswer from 'material-ui/svg-icons/action/question-answer';
 import StoreMallDirectory from 'material-ui/svg-icons/maps/store-mall-directory';
+import Language from 'material-ui/svg-icons/action/language';
 
 //    /////
 //    COMPONENT
@@ -41,6 +42,10 @@ const styles = {
 const iconColor = blueA400;
 
 var Nav = React.createClass ({
+    refresh: function () {
+        window.location.reload();
+      },
+    
     render:function() {
         return (
             <List style={styles.list}>
@@ -52,6 +57,9 @@ var Nav = React.createClass ({
                     <ListItem primaryText={this.props.content.about}
                         leftIcon={<QuestionAnswer color={iconColor}/>} />
                 </Link>
+                <ListItem primaryText={this.props.content.language}
+                        leftIcon={<Language color={iconColor}/>}
+                    onTouchTap={this.refresh}/>
             </List>
         );
     }
