@@ -113,31 +113,23 @@ var AddForm = React.createClass ({
     /////
     checkServices:function(e) {
         var temp = this.state.form;
-        if (e.target.value.length > 6) {
-            temp.services = e.target.value;
-            this.setState({form: temp});
-        }
+        temp.services = e.target.value;
+        this.setState({form: temp});
     },
     checkHours:function(e) {
         var temp = this.state.form;
-        if (e.target.value.length > 4) {
-            temp.hours = e.target.value;
-            this.setState({form: temp});
-        }
+        temp.hours = e.target.value;
+        this.setState({form: temp});
     },
     checkLink:function(e) {
         var temp = this.state.form;
-        if (e.target.value.length > 8) {
-            temp.link = e.target.value;
-            this.setState({form: temp});
-        }
+        temp.link = e.target.value;
+        this.setState({form: temp});
     },
     checkPhone:function(e) {
         var temp = this.state.form;
-        if (e.target.value.phone >= 9) {
-            temp.phone = e.target.value;
-            this.setState({form: temp});
-        }
+        temp.phone = e.target.value;
+        this.setState({form: temp});
     },
     
 
