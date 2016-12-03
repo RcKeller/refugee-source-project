@@ -24,8 +24,10 @@ import {List, ListItem} from 'material-ui/List';
 import {blueA400} from 'material-ui/styles/colors';
 
 import QuestionAnswer from 'material-ui/svg-icons/action/question-answer';
-import StoreMallDirectory from 'material-ui/svg-icons/maps/store-mall-directory';
+import Home from 'material-ui/svg-icons/action/home';
+import ContentPaste from 'material-ui/svg-icons/content/content-paste';
 import Language from 'material-ui/svg-icons/action/language';
+import Portrait from 'material-ui/svg-icons/image/portrait';
 
 //    /////
 //    COMPONENT
@@ -49,17 +51,26 @@ var Nav = React.createClass ({
     render:function() {
         return (
             <List style={styles.list}>
+                <ListItem primaryText={this.props.content.language}
+                    leftIcon={<Language color={iconColor}/>}
+                    onTouchTap={this.refresh}
+                    />
+            
                 <Link to="/" style={styles.link}>
                     <ListItem primaryText={this.props.content.home}
-                        leftIcon={<StoreMallDirectory color={iconColor}/>}/>
+                        leftIcon={<Home color={iconColor}/>}
+                        />
+                </Link>
+                <Link to="/submit" style={styles.link}>
+                    <ListItem primaryText={this.props.content.submission}
+                        leftIcon={<ContentPaste color={iconColor}/>}
+                        />
                 </Link>
                 <Link to="/about" style={styles.link}>
                     <ListItem primaryText={this.props.content.about}
-                        leftIcon={<QuestionAnswer color={iconColor}/>} />
+                        leftIcon={<Portrait color={iconColor}/>} />
                 </Link>
-                <ListItem primaryText={this.props.content.language}
-                        leftIcon={<Language color={iconColor}/>}
-                    onTouchTap={this.refresh}/>
+            
             </List>
         );
     }
