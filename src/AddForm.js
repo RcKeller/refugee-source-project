@@ -12,7 +12,7 @@ document:false, window:false, console:false, alert:false, user:false
 //    IMPORT DEPENDENCIES
 //    /////
 import React from 'react';
-import {Row, Col} from 'react-grid-system';
+import {Container, Row, Col} from 'react-grid-system';
 
 
 //import firebase from 'firebase';
@@ -22,14 +22,18 @@ import {Row, Col} from 'react-grid-system';
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import TextField from 'material-ui/TextField';
+import Divider from 'material-ui/Divider';
 
 //    /////
 //    COMPONENT
 //    /////
 const styles = {
     center: {
-        textAlign: 'center'
+        display: 'inline-block',
+        marginLeft: 'auto',
+        marginRight: 'auto'
+//        textAlign: 'center'
     }
 };
 var AddForm = React.createClass ({
@@ -53,13 +57,83 @@ var AddForm = React.createClass ({
 
     render:function() {
         return (
-            <Card>
-                <CardTitle title={this.state.content.title}
-                    style={styles.center}/>
-                <CardText>
-                    {this.state.content.description}
-                </CardText>
-            </Card>
+            <Container>
+                <Row>
+                    <Col sm={12}>
+                        <TextField
+                            floatingLabelText="Service Name"
+                            errorText="Required"
+                            fullWidth={true}
+                            />
+                        <br></br>
+                    </Col>
+                    <Col sm={12}>
+                        <TextField
+                            floatingLabelText="Address"
+                            errorText="Required"
+                            fullWidth={true}
+                            />
+                        <br></br>
+                    </Col>
+                    <Col sm={12}>
+                        <TextField
+                            floatingLabelText="Description (1 paragraph)"
+                            errorText="Required"
+                            multiLine={true}
+                            rows={2}
+                            fullWidth={true}
+                            />
+                        <br></br>
+                    </Col>
+                </Row>
+                <Divider />
+                <Row>
+                    <Col sm={12}>
+                        <TextField
+                            floatingLabelText="All Services Offered"
+                            hintText="Optional"
+                            fullWidth={true}
+                            />
+                        <br></br>
+                    </Col>
+                    <Col sm={12}>
+                        <TextField
+                            floatingLabelText="Primary Service"
+                            hintText="One only (Optional)"
+                            fullWidth={true}
+                            />
+                        <br></br>
+                    </Col>
+                </Row>
+                <Divider />
+                <Row>
+                    <Col sm={12}>
+                        <TextField
+                            floatingLabelText="Hours"
+                            hintText="Optional"
+                            fullWidth={true}
+                            />
+                        <br></br>
+                    </Col>
+                    <Col sm={12}>
+                        <TextField
+                            floatingLabelText="Web Link"
+                            hintText="Optional"
+                            fullWidth={true}
+                            />
+                        <br></br>
+                    </Col>
+                    <Col sm={12}>
+                        <TextField
+                            floatingLabelText="Phone"
+                            hintText="Optional"
+                            fullWidth={true}
+                            />
+                        <br></br>
+                    </Col>
+                </Row>
+                
+            </Container>
         );
     }
 });
