@@ -43,24 +43,34 @@ var Submit = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
         return({
-            content: {}
+            content: {
+                title: '',
+                description: '',
+                image: {
+                    source: '',
+                    title: '',
+                    description: ''
+                }
+            }
         });
     },
-    
-    ComponentWillMount:function() {
+
+    componentWillMount:function() {
         var path = 'main/' + this.props.lang + '/submit';
         var ref = firebase.database().ref(path);
         this.bindAsObject(ref, 'content');
     },
 
     render:function() {
-        return(
-        <Card style={styles.card}>
-            <CardTitle title="Placeholder" subtitle="Submit"/>
-            <CardText>
-                Language: {this.props.lang}
-            </CardText>
-        </Card>
+        console.log("FORM STATE", this.state);
+        console.log("FORM PROPS:", this.props);
+        return (
+            <Card>
+                <CardTitle title={this.state.content.title} />
+                <CardText>
+                    {this.state.content.description}
+                </CardText>
+            </Card>
         );
     }
 });
