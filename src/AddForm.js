@@ -44,7 +44,6 @@ var AddForm = React.createClass ({
                 address: '',
                 description: '',
                 services: '',
-                primary: '',
                 hours: '',
                 link: '',
                 phone: ''
@@ -71,46 +70,55 @@ var AddForm = React.createClass ({
     
     //  The next 3 required fields are validated:
     checkName:function(e) {
-        console.log("TARGET:", e.target);
-        if (e.target.id === 'name'
-            & e.target.value.length > 8) {
-            var temp = this.state.form;
+        var temp = this.state.form;
+        if (e.target.value.length > 8) {
+            
             temp.name = e.target.value;
             this.setState({
                 errorName: '',
                 form: temp
             });
         } else {
-            this.setState({errorName: 'Required' });
+            this.setState({
+                errorName: 'Required',
+                form: temp
+            });
         }
     },
     checkAddress:function(e) {
-        if (e.target.id === 'address'
-            & e.target.value.split(' ').length > 4) {
-            var temp = this.state.form;
+        var temp = this.state.form;
+        if (e.target.value.split(' ').length > 4) {
             temp.address = e.target.value;
             this.setState({
                 errorAddress: '',
                 form: temp
             });
         } else {
-            this.setState({ errorAddress: 'Required' });
+            this.setState({
+                errorAddress: 'Required',
+                form: temp
+            });
         }
     },
     checkDescription:function(e) {
-        if (e.target.id === 'description'
-                & e.target.value.length > 60) {
-            var temp = this.state.form;
+        var temp = this.state.form;
+        if (e.target.value.length > 60) {
             temp.description = e.target.value;
             this.setState({
                 errorDescription: '',
                 form: temp
             });
         } else {
-            this.setState({ errorDesc: 'Required (60 character minimum)' });
+            this.setState({
+                errorDesc: 'Required (60 character minimum)',
+                form: temp
+            });
         }
     },
-    /////
+    /*
+    The following fields are optional and don't undergo validation.
+    This is because an admin will review them, and to reduce code overhead.
+    */
     checkServices:function(e) {
         var temp = this.state.form;
         temp.services = e.target.value;
@@ -237,24 +245,5 @@ var AddForm = React.createClass ({
         );
     }
 });
-/*
-Catholic Community Services of Western Washingtonaddclose
-address: 
-"1610 South King Street, Seattle, WA 98144"
-description: 
-"Catholic services available in King County"
-hours: 
-"M-F 10am-4pm"
-link: 
-"http://www.dioceserroseattle.org/"
-name: 
-"Catholic Community Services of Western Washington"
-phone: 
-2063233152
-primary: 
-"Resettlement"
-services: 
-"Resettlement, Education"
-*/
 
 export default AddForm;
