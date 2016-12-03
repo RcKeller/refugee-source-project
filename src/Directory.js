@@ -16,7 +16,6 @@ import React from 'react';
 import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
-
 import Listing from './Listing';
 
 

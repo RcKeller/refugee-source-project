@@ -12,23 +12,34 @@ document:false, window:false, console:false, alert:false, user:false
 //    IMPORT DEPENDENCIES
 //    /////
 import React from 'react';
+import {Row, Col} from 'react-grid-system';
+
 
 import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
+
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
+import {Tabs, Tab} from 'material-ui/Tabs';
+import SwipeableViews from 'react-swipeable-views';
+import Paper from 'material-ui/Paper';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+
+import ServiceMap from './ServiceMap';
+import Directory from './Directory';
+
 
 //    /////
 //    COMPONENT
 //    /////
 const styles = {
-    card: {
+    views: {
+        padding: 10
     }
 };
-var About = React.createClass ({
+var Submit = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
         return({
@@ -43,15 +54,15 @@ var About = React.createClass ({
     },
 
     render:function() {
-        return (
-            <Card style={styles.card}>
-                <CardTitle title="Placeholder" subtitle="About"/>
-                <CardText>
-                    Language: {this.props.lang}
-                </CardText>
-            </Card>
+        return(
+        <Card style={styles.card}>
+            <CardTitle title="Placeholder" subtitle="About"/>
+            <CardText>
+                Language: {this.props.lang}
+            </CardText>
+        </Card>
         );
     }
 });
 
-export default About;
+export default Submit;

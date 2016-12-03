@@ -53,6 +53,7 @@ import './index.css';
 
 import App from './App';
 import Home from './Home';
+import Submit from './Submit';
 import About from './About';
 
 ReactDOM.render(
@@ -60,6 +61,7 @@ ReactDOM.render(
         <Router history={hashHistory}>
             <Route path="/" component={App}>
                 <IndexRoute component={Home}/>
+                <Route path="submit" component={Submit}/>
                 <Route path="about" component={About}/>
             </Route>
         </Router>
