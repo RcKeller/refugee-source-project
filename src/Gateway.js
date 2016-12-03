@@ -16,8 +16,7 @@ import React from 'react';
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import Paper from 'material-ui/Paper';
+import {Card, CardActions, CardTitle} from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 
 //    /////

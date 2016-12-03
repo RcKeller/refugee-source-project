@@ -16,7 +16,7 @@ import React from 'react';
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import Divider from 'material-ui/Divider';
 
@@ -29,12 +29,6 @@ import Phone from 'material-ui/svg-icons/communication/phone';
 //    /////
 //    COMPONENT
 //    /////
-const styles = {
-    //Adding margin props to cards make their containers responsive to expanding.
-    card: {
-        margin: 10
-    },
-};
 var Listing = React.createClass ({
     
     render:function() {

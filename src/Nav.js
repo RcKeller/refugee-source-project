@@ -12,9 +12,7 @@
 //    IMPORT DEPENDENCIES
 //    /////
 import React from 'react';
-import {Router, Link} from 'react-router';
-import firebase from 'firebase';
-import ReactFireMixin from 'reactfire';
+import {Link} from 'react-router';
 
 //    /////
 //    MATERIAL-UI COMPONENTS
@@ -23,7 +21,6 @@ import {List, ListItem} from 'material-ui/List';
 
 import {blueA400} from 'material-ui/styles/colors';
 
-import QuestionAnswer from 'material-ui/svg-icons/action/question-answer';
 import Home from 'material-ui/svg-icons/action/home';
 import ContentPaste from 'material-ui/svg-icons/content/content-paste';
 import Language from 'material-ui/svg-icons/action/language';

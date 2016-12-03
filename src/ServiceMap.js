@@ -12,14 +12,12 @@ document:false, window:false, console:false, alert:false, user:false
 //    IMPORT DEPENDENCIES
 //    /////
 import React from 'react';
-import {Row, Col} from 'react-grid-system';
 
 
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
-import Paper from 'material-ui/Paper';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {Card, CardTitle, CardText} from 'material-ui/Card';
 
 
 //    /////

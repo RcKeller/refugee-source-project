@@ -12,18 +12,17 @@ document:false, window:false, console:false, alert:false, user:false
 //    IMPORT DEPENDENCIES
 //    /////
 import React from 'react';
+import {Row, Col} from 'react-grid-system';
 
-import firebase from 'firebase';
-import ReactFireMixin from 'reactfire';
+
+//import firebase from 'firebase';
+//import ReactFireMixin from 'reactfire';
 
 
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
-import Paper from 'material-ui/Paper';
-import {Card, CardTitle, CardText} from 'material-ui/Card';
-
-import Form from './Form';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 
 //    /////
 //    COMPONENT
@@ -33,8 +32,7 @@ const styles = {
         textAlign: 'center'
     }
 };
-var Submit = React.createClass ({
-    mixins: [ReactFireMixin],
+var Form = React.createClass ({
     getInitialState:function() {
         return({
             content: {
@@ -47,22 +45,19 @@ var Submit = React.createClass ({
         });
     },
 
-    componentWillMount:function() {
-        var path = 'main/' + this.props.lang + '/submit';
-        var ref = firebase.database().ref(path);
-        this.bindAsObject(ref, 'content');
-    },
+//    componentWillMount:function() {
+//        var path = 'main/' + this.props.lang + '/submit';
+//        var ref = firebase.database().ref(path);
+//        this.bindAsObject(ref, 'content');
+//    },
 
     render:function() {
-        console.log("FORM STATE", this.state);
-        console.log("FORM PROPS:", this.props);
         return (
             <Card>
                 <CardTitle title={this.state.content.title}
                     style={styles.center}/>
                 <CardText>
                     {this.state.content.description}
-                    <Form />
                 </CardText>
             </Card>
         );
@@ -88,4 +83,4 @@ services:
 "Resettlement, Education"
 */
 
-export default Submit;
+export default Form;

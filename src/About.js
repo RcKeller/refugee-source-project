@@ -19,11 +19,16 @@ import ReactFireMixin from 'reactfire';
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {Card, CardTitle, CardText} from 'material-ui/Card';
 
 //    /////
 //    COMPONENT
 //    /////
+const styles = {
+    center: {
+        textAlign: 'center'
+    }
+};
 var About = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
@@ -51,7 +56,8 @@ var About = React.createClass ({
         console.log("ABOUT PROPS:", this.props);
         return (
             <Card>
-                <CardTitle title={this.state.content.title} />
+                <CardTitle title={this.state.content.title}
+                    style={styles.center}/>
                 <CardText>
                     {this.state.content.description}
                 </CardText>

@@ -86,7 +86,7 @@ var App = React.createClass ({
     setLang:function(language) {
         this.setState({
             lang: language,
-            isRTL: (language == 'ar')
+            isRTL: (language === 'ar')
         });
         //Bind App Menu Text
         var path = 'main/' + language + '/app';

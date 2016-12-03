@@ -23,9 +23,8 @@ import ReactFireMixin from 'reactfire';
 //    MATERIAL-UI COMPONENTS
 //    /////
 import {Tabs, Tab} from 'material-ui/Tabs';
-import SwipeableViews from 'react-swipeable-views';
+//  Removed Swipeable Views for compatibility.
 import Paper from 'material-ui/Paper';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 
 import ServiceMap from './ServiceMap';
 import Directory from './Directory';
@@ -34,11 +33,6 @@ import Directory from './Directory';
 //    /////
 //    COMPONENT
 //    /////
-const styles = {
-    views: {
-        padding: 10
-    }
-};
 var Home = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
