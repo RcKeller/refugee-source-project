@@ -55,8 +55,6 @@ var Submit = React.createClass ({
     },
 
     render:function() {
-        console.log("FORM STATE", this.state);
-        console.log("FORM PROPS:", this.props);
         return (
             <Card>
                 <CardTitle title={this.state.content.title}
@@ -71,24 +69,5 @@ var Submit = React.createClass ({
         );
     }
 });
-/*
-Catholic Community Services of Western Washingtonaddclose
-address: 
-"1610 South King Street, Seattle, WA 98144"
-description: 
-"Catholic services available in King County"
-hours: 
-"M-F 10am-4pm"
-link: 
-"http://www.dioceserroseattle.org/"
-name: 
-"Catholic Community Services of Western Washington"
-phone: 
-2063233152
-primary: 
-"Resettlement"
-services: 
-"Resettlement, Education"
-*/
 
 export default Submit;

@@ -15,14 +15,15 @@ import React from 'react';
 import {Container, Row, Col} from 'react-grid-system';
 
 import firebase from 'firebase';
-import ReactFireMixin from 'reactfire';
-
+// Reactfire is used for binding content references, but since this component is push-only, we don't need the reactfire mixin - firebase methods suffice.
 
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
+
 
 //    /////
 //    COMPONENT
@@ -34,9 +35,12 @@ const styles = {
     radioButton: {
         margin: 15,
     },
+    submit: {
+        marginTop: 30,
+        marginBottom: 30
+    }
 };
 var AddForm = React.createClass ({
-    mixins: [ReactFireMixin],
 
     getInitialState:function() {
         return({
@@ -61,6 +65,14 @@ var AddForm = React.createClass ({
                 }
             }
         });
+    },
+    
+    submit:function() {
+        console.log("Submitting:", this.state.form);
+        console.log("Selected Lang:", this.state.formLanguage);
+        var path = "submissions/" + this.state.formLanguage;
+        var ref = firebase.database().ref(path);
+        ref.push(this.state.form);
     },
 
     /*
@@ -147,7 +159,6 @@ var AddForm = React.createClass ({
     
 
     render:function() {
-        console.log("FORM STATE:", this.state);
         return (
             <Container style={styles.form}>
                 <Row>
@@ -245,6 +256,14 @@ var AddForm = React.createClass ({
                         <br></br>
                     </Col>
                 </Row>
+                
+                <RaisedButton
+                    label="Submit Directory Entry"
+                    onTouchTap={this.submit}
+                    primary={true}
+                    fullWidth={true}
+                    style={styles.submit}/>
+
                 
             </Container>
         );
