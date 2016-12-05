@@ -54,6 +54,10 @@ var Submit = React.createClass ({
         var ref = firebase.database().ref(path);
         this.bindAsObject(ref, 'content');
     },
+  
+  login:function(credentials) {
+    console.log("CREDS:", credentials);
+  },
 
     render:function() {
         return (
@@ -70,7 +74,7 @@ var Submit = React.createClass ({
             </Card>
             <Card>
               <CardText>
-                <LoginForm />
+                <LoginForm login={this.login}/>
               </CardText>
             </Card>
           </div>
