@@ -29,73 +29,57 @@ import Listing from './Listing';
 //    COMPONENT
 //    /////
 var Admin = React.createClass ({
-    mixins: [ReactFireMixin],
-    getInitialState:function() {
-        return {
-            submissions: []
-        };
-    },
-    componentWillMount: function() {
-        var ref = firebase.database().ref('submissions/' + this.props.lang);
-        this.bindAsArray(ref, 'submissions');
-    },
+  mixins: [ReactFireMixin],
+  getInitialState:function() {
+    return {
+      submissions: []
+    };
+  },
+  componentWillMount: function() {
+    var ref = firebase.database().ref('submissions/' + this.props.lang);
+    this.bindAsArray(ref, 'submissions');
+  },
   
-    approve: function(e) {
-      console.log(e.target.id);
-    },
-    delete: function(e) {
-      console.log(e.target.id);
-    },
-  
-//  https://github.com/firebase/reactfire/issues/37
-// We will have to bind this as an object, not array, and then iterate through all keys.  
-  // Wait!: https://firebase.googleblog.com/2015/07/reactfire-050_74.html
-    
-    render:function() {
-        var listings = this.state.submissions;
-        return (
-            <div>
-            {listings.map((listing, i) => (
-              <div>
-                      <span>KEY: "{listing['.key']}"</span>
-                      <br></br>
-                      <hr></hr>
-                    </div>
-                    )
-                  )
-                }
-            </div>
-        );
-    }
+  approve: function(key) {
+    console.log(key);
+  },
+  delete: function(key) {
+    console.log(key);
+  },
+
+  render:function() {
+    var listings = this.state.submissions;
+    return (
+      <div>
+        <p>
+          Admin View
+        </p>
+        {listings.map((listing, i) => (
+          <Card key={i}>
+            <CardText>
+              <Listing key={i}
+                isRTL={false}
+                listing={listing}
+                phoneTitle={": "}
+                websiteTitle={'Website:'}
+                />
+            </CardText>
+            <CardActions>
+              <FlatButton
+                icon={<CheckCircle color={'green'} />}
+                onTouchTap={this.approve.bind(this, listing['.key'])}
+                />
+              <FlatButton
+                icon={<Delete color={'red'} />}
+                onTouchTap={this.delete.bind(this, listing['.key'])}
+                />
+            </CardActions>
+          </Card>
+        )
+                     )}
+      </div>
+    );
+  }
 });
-
-//  <span>KEY: "{listing['.key']}"</span>
-
-//  Object.keys(obj).map((e) => console.log(`key=${e}  value=${obj[e]}`));
-//                {Object.keys.map((listing, i) => (
-
-//<Card>
-//  <CardText>
-//    <Listing key={i}
-//      isRTL={false}
-//      listing={listing}
-//      phoneTitle={": "}
-//      websiteTitle={'Website:'}
-//      />
-//  </CardText>
-//  <CardActions>
-//    <FlatButton
-//      icon={<CheckCircle color={'green'} />}
-//      onTouchTap={this.approve}
-//      id={listing.key}
-//      />
-//    <FlatButton
-//      icon={<Delete color={'red'} />}
-//      onTouchTap={this.delete}
-//      id={listing.key}
-//      />
-//  </CardActions>
-//</Card>
-
 
 export default Admin;
