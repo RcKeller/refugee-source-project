@@ -92,7 +92,6 @@ var Submit = React.createClass ({
             </div>
             :
             <div>
-              <span>LOGGED IN</span>
               <Admin lang={this.props.lang}/>
             </div>
             }
