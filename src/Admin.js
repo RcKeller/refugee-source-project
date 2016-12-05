@@ -39,6 +39,16 @@ var Admin = React.createClass ({
         var ref = firebase.database().ref('submissions/' + this.props.lang);
         this.bindAsArray(ref, 'submissions');
     },
+  
+    approve: function(e) {
+      console.log(e.target.id);
+    },
+    delete: function(e) {
+      console.log(e.target.id);
+    },
+  
+//  https://github.com/firebase/reactfire/issues/37
+// We will have to bind this as an object, not array, and then iterate through all keys.  
     
     render:function() {
         var listings = this.state.submissions;
@@ -60,9 +70,13 @@ var Admin = React.createClass ({
                       <CardActions>
                         <FlatButton
                           icon={<CheckCircle color={'green'} />}
+                          onTouchTap={this.approve}
+                          id={listing.key}
                         />
                         <FlatButton
                           icon={<Delete color={'red'} />}
+                          onTouchTap={this.delete}
+                          id={listing.key}
                         />
                       </CardActions>
                     </Card>

@@ -54,7 +54,6 @@ var Listing = React.createClass ({
                     {this.props.listing.link &&
                         <FlatButton secondary={true}
                             icon={<Link />}
-                            label={this.props.listing.link}
                             href={this.props.listing.link}/>
                     }
                     {this.props.listing.phone &&
