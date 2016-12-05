@@ -26,6 +26,7 @@ import {Card, CardTitle, CardText} from 'material-ui/Card';
 
 import AddForm from './AddForm';
 import LoginForm from './LoginForm';
+import Admin from './Admin';
 
 //    /////
 //    COMPONENT
@@ -90,7 +91,10 @@ var Submit = React.createClass ({
               </Card>
             </div>
             :
-            <span>LOGGED IN</span>
+            <div>
+              <span>LOGGED IN</span>
+              <Admin lang={this.props.lang}/>
+            </div>
             }
           </div>
         );
