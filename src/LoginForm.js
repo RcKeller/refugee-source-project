@@ -44,9 +44,8 @@ const styles = {
       margin: 0, padding: 0
     },
     button: {
-      position: 'absolute',
-      top: '50%',
-      left: '50%'
+      width: '100%',
+      marginTop: 25
     }
 };
 var LoginForm = React.createClass ({
@@ -81,22 +80,24 @@ var LoginForm = React.createClass ({
         return (
             <Container>
                 <Row>
-                    <h5 style={styles.header}>
-                      Administration - Staff Access
-                    </h5>
-                    <Col sm={12} md={6} lg={4}>
+                    <h4 style={styles.header}>
+                      Staff Login
+                    </h4>
+                    <Col sm={12} md={4}>
                         <TextField
                             onChange={this.checkUser}
                             floatingLabelText="Admin E-Mail"
+                            fullWidth={true}
                           />
                     </Col>
-                    <Col sm={12} md={6} lg={4}>
-                        <TextField
+                    <Col sm={12} md={4}>
+                        <TextField type='password'
                             onChange={this.checkPassword}
                             floatingLabelText="Password"
+                            fullWidth={true}
                           />
                     </Col>
-                    <Col sm={12} lg={4}>
+                    <Col sm={12} md={4}>
                       <FlatButton
                         secondary={true}
                         label="Login"
