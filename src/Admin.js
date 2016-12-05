@@ -32,12 +32,12 @@ var Admin = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
         return {
-            submissions: []
+            submissions: {}
         };
     },
     componentWillMount: function() {
         var ref = firebase.database().ref('submissions/' + this.props.lang);
-        this.bindAsArray(ref, 'submissions');
+        this.bindAsObject(ref, 'submissions');
     },
   
     approve: function(e) {
@@ -54,34 +54,41 @@ var Admin = React.createClass ({
         var listings = this.state.submissions;
         return (
             <div>
-                {listings.map((listing, i) => (
-                    <Card>
-                      <CardText>
-                        <Listing key={i}
-                            isRTL={false}
-                            listing={listing}
-                            phoneTitle={": "}
-                            websiteTitle={'Website:'}
-                            />
-                      </CardText>
-                      <CardActions>
-                        <FlatButton
-                          icon={<CheckCircle color={'green'} />}
-                          onTouchTap={this.approve}
-                          id={listing.key}
-                        />
-                        <FlatButton
-                          icon={<Delete color={'red'} />}
-                          onTouchTap={this.delete}
-                          id={listing.key}
-                        />
-                      </CardActions>
-                    </Card>
+              {}
+                {Object.keys(this.state.submissions).map((e) => (
+                    <span>{e}</span>
                     )
                 )}
             </div>
         );
     }
 });
+
+//  Object.keys(obj).map((e) => console.log(`key=${e}  value=${obj[e]}`));
+//                {Object.keys.map((listing, i) => (
+
+//<Card>
+//  <CardText>
+//    <Listing key={i}
+//      isRTL={false}
+//      listing={listing}
+//      phoneTitle={": "}
+//      websiteTitle={'Website:'}
+//      />
+//  </CardText>
+//  <CardActions>
+//    <FlatButton
+//      icon={<CheckCircle color={'green'} />}
+//      onTouchTap={this.approve}
+//      id={listing.key}
+//      />
+//    <FlatButton
+//      icon={<Delete color={'red'} />}
+//      onTouchTap={this.delete}
+//      id={listing.key}
+//      />
+//  </CardActions>
+//</Card>
+
 
 export default Admin;
