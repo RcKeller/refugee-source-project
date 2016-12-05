@@ -32,12 +32,12 @@ var Admin = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
         return {
-            submissions: {}
+            submissions: []
         };
     },
     componentWillMount: function() {
         var ref = firebase.database().ref('submissions/' + this.props.lang);
-        this.bindAsObject(ref, 'submissions');
+        this.bindAsArray(ref, 'submissions');
     },
   
     approve: function(e) {
@@ -49,20 +49,27 @@ var Admin = React.createClass ({
   
 //  https://github.com/firebase/reactfire/issues/37
 // We will have to bind this as an object, not array, and then iterate through all keys.  
+  // Wait!: https://firebase.googleblog.com/2015/07/reactfire-050_74.html
     
     render:function() {
         var listings = this.state.submissions;
         return (
             <div>
-              {}
-                {Object.keys(this.state.submissions).map((e) => (
-                    <span>{e}</span>
+            {listings.map((listing, i) => (
+              <div>
+                      <span>KEY: "{listing['.key']}"</span>
+                      <br></br>
+                      <hr></hr>
+                    </div>
                     )
-                )}
+                  )
+                }
             </div>
         );
     }
 });
+
+//  <span>KEY: "{listing['.key']}"</span>
 
 //  Object.keys(obj).map((e) => console.log(`key=${e}  value=${obj[e]}`));
 //                {Object.keys.map((listing, i) => (
