@@ -22,7 +22,7 @@ import firebase from 'firebase';
 //    /////
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 
 
 //    /////
@@ -38,6 +38,10 @@ const styles = {
     submit: {
         marginTop: 30,
         marginBottom: 30
+    },
+    button: {
+      position: 'absolute',
+      right: 0
     }
 };
 var AddForm = React.createClass ({
@@ -160,30 +164,25 @@ var AddForm = React.createClass ({
 
     render:function() {
         return (
-            <Container style={styles.form}>
+            <Container>
                 <Row>
                     <Col sm={12} md={6} lg={4}>
                         <TextField
                             onChange={this.checkHours}
                             floatingLabelText="Admin E-Mail"
-                            fullWidth={true}
                           />
                     </Col>
                     <Col sm={12} md={6} lg={4}>
                         <TextField
                             onChange={this.checkPhone}
                             floatingLabelText="Password"
-                            fullWidth={true}
                           />
                     </Col>
                     <Col sm={12} lg={4}>
-                      <RaisedButton
+                      <FlatButton
                         secondary={true}
                         label="Login"
                         onTouchTap={this.submit}
-                        primary={true}
-                        fullWidth={true}
-                        style={styles.submit}
                       />
                     </Col>
                 </Row>

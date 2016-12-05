@@ -49,14 +49,8 @@ var Listing = React.createClass ({
                     <FlatButton secondary={true}
                         icon={<Directions />}
                         label="Placeholder"
-                        href={"#"}/>
-                    {this.props.listing.hours &&
-                        <FlatButton secondary={true}
-                            disabled={true}
-                            icon={<HourglassEmpty/>}
-                            label={this.props.listing.hours}
-                             />
-                    }
+                        href={"#"}
+                    />  
                     {this.props.listing.link &&
                         <FlatButton secondary={true}
                             icon={<Link />}
@@ -68,6 +62,13 @@ var Listing = React.createClass ({
                             icon={<Phone />}
                             label={this.props.listing.phone}
                             href={"tel:" + this.props.listing.phone}/>
+                    }
+                    {this.props.listing.hours &&
+                      <FlatButton secondary={true}
+                        disabled={true}
+                        icon={<HourglassEmpty/>}
+                        label={this.props.listing.hours}
+                        />
                     }
                 </CardActions>
                 <CardText expandable={true}>
