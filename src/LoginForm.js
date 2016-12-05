@@ -39,9 +39,14 @@ const styles = {
         marginTop: 30,
         marginBottom: 30
     },
+    header: {
+      textAlign: 'center',
+      margin: 0, padding: 0
+    },
     button: {
       position: 'absolute',
-      right: 0
+      top: '50%',
+      left: '50%'
     }
 };
 var LoginForm = React.createClass ({
@@ -76,6 +81,9 @@ var LoginForm = React.createClass ({
         return (
             <Container>
                 <Row>
+                    <h5 style={styles.header}>
+                      Administration - Staff Access
+                    </h5>
                     <Col sm={12} md={6} lg={4}>
                         <TextField
                             onChange={this.checkUser}
@@ -93,6 +101,7 @@ var LoginForm = React.createClass ({
                         secondary={true}
                         label="Login"
                         onTouchTap={this.submit}
+                        style={styles.button}
                       />
                     </Col>
                 </Row>

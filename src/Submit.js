@@ -39,6 +39,7 @@ var Submit = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
         return({
+            user: false,
             content: {
                 title: '',
                 description: '',
@@ -55,28 +56,44 @@ var Submit = React.createClass ({
         this.bindAsObject(ref, 'content');
     },
   
-  login:function(credentials) {
-    console.log("CREDS:", credentials);
+  login:function(creds) {
+    console.log("CREDS:", creds);
+    firebase.auth().signInWithEmailAndPassword(creds.form.email, creds.form.password)
+    .then(function() {
+      console.log("AUTH:", firebase.auth());
+      if (firebase.auth()) {
+        this.setState({user: true}).bind(this);
+      }
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
   },
 
     render:function() {
         return (
           <div>
-            <Card>
-                <CardTitle title={this.state.content.title}
-                    style={styles.center}/>
+            {!this.state.user ?
+            <div>
+              <Card>
+                  <CardTitle title={this.state.content.title}
+                      style={styles.center}/>
+                  <CardText>
+                      {this.state.content.description}
+                      <Paper>
+                          <AddForm />
+                      </Paper>
+                  </CardText>
+              </Card>
+              <Card>
                 <CardText>
-                    {this.state.content.description}
-                    <Paper>
-                        <AddForm />
-                    </Paper>
+                  <LoginForm login={this.login}/>
                 </CardText>
-            </Card>
-            <Card>
-              <CardText>
-                <LoginForm login={this.login}/>
-              </CardText>
-            </Card>
+              </Card>
+            </div>
+            :
+            <span>LOGGED IN</span>
+            }
           </div>
         );
     }
