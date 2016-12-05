@@ -59,15 +59,13 @@ var Submit = React.createClass ({
   login:function(creds) {
     console.log("CREDS:", creds);
     firebase.auth().signInWithEmailAndPassword(creds.form.email, creds.form.password)
-    .then(function() {
+    .then(() => {
       console.log("AUTH:", firebase.auth());
       if (firebase.auth()) {
-        this.setState({user: true}).bind(this);
+        this.setState({user: true});
       }
     })
-    .catch(function(error) {
-      console.log(error);
-    });
+    .catch((e) => console.log(e));
   },
 
     render:function() {
