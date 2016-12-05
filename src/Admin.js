@@ -16,6 +16,12 @@ import React from 'react';
 import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
+import {Card, CardTitle, CardText, CardActions} from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
+
+import CheckCircle from 'material-ui/svg-icons/action/check-circle';
+import Delete from 'material-ui/svg-icons/action/delete';
+
 import Listing from './Listing';
 
 
@@ -41,13 +47,26 @@ var Admin = React.createClass ({
                 <p>
                     Admin View
                 </p>
-                {listings.map((listing, i) =>
-                    <Listing key={i}
-                        isRTL={false}
-                        listing={listing}
-                        phoneTitle={": "}
-                        websiteTitle={'Website:'}
+                {listings.map((listing, i) => (
+                    <Card>
+                      <CardText>
+                        <Listing key={i}
+                            isRTL={false}
+                            listing={listing}
+                            phoneTitle={": "}
+                            websiteTitle={'Website:'}
+                            />
+                      </CardText>
+                      <CardActions>
+                        <FlatButton
+                          icon={<CheckCircle color={'green'} />}
                         />
+                        <FlatButton
+                          icon={<Delete color={'red'} />}
+                        />
+                      </CardActions>
+                    </Card>
+                    )
                 )}
             </div>
         );
