@@ -25,6 +25,7 @@ import Paper from 'material-ui/Paper';
 import {Card, CardTitle, CardText} from 'material-ui/Card';
 
 import AddForm from './AddForm';
+import LoginForm from './LoginForm';
 
 //    /////
 //    COMPONENT
@@ -56,6 +57,7 @@ var Submit = React.createClass ({
 
     render:function() {
         return (
+          <div>
             <Card>
                 <CardTitle title={this.state.content.title}
                     style={styles.center}/>
@@ -66,6 +68,12 @@ var Submit = React.createClass ({
                     </Paper>
                 </CardText>
             </Card>
+            <Card>
+              <CardText>
+                <LoginForm />
+              </CardText>
+            </Card>
+          </div>
         );
     }
 });
