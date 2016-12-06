@@ -16,7 +16,8 @@ import React from 'react';
 import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
-import {Card, CardTitle, CardText, CardActions} from 'material-ui/Card';
+import Paper from 'material-ui/Paper';
+import {Card, CardHeader, CardText, CardActions} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 
 import CheckCircle from 'material-ui/svg-icons/action/check-circle';
@@ -32,16 +33,31 @@ var Admin = React.createClass ({
   mixins: [ReactFireMixin],
   getInitialState:function() {
     return {
-      submissions: []
+      submissions: [],
+      originRef: '',
+      destinationRef: ''
     };
   },
   componentWillMount: function() {
-    var ref = firebase.database().ref('submissions/' + this.props.lang);
-    this.bindAsArray(ref, 'submissions');
+    var origin = 'submissions/' + this.props.lang;
+    var destination = 'resources/' + this.props.lang;
+    this.setState({
+      origin: origin,
+      destination: destination
+    });
+    
+    var originRef = firebase.database().ref(origin);
+    this.bindAsArray(originRef, 'submissions');
   },
   
   approve: function(key) {
-    console.log(key);
+    console.log("KEY", key);
+//    var ref = firebase.database().ref(this.origin + '/' + key);
+//    var childNode = originRef.child(key);
+//    ref.once('value').then(function(snapshot) {
+//      var value = snapshot.val();
+//      console.log(value);
+//    });
   },
   delete: function(key) {
     console.log(key);
@@ -50,9 +66,13 @@ var Admin = React.createClass ({
   render:function() {
     var listings = this.state.submissions;
     return (
-      <div>
+      <Paper>
+        <h1>Directory Submissions for Approval</h1>
         {listings.map((listing, i) => (
           <Card key={i}>
+            <CardHeader
+              title={'Submission language: ' + this.props.lang }
+              />
             <CardText>
               <Listing key={i}
                 isRTL={false}
@@ -74,7 +94,7 @@ var Admin = React.createClass ({
           </Card>
         )
                      )}
-      </div>
+      </Paper>
     );
   }
 });
