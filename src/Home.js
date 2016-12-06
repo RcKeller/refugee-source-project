@@ -22,11 +22,8 @@ import ReactFireMixin from 'reactfire';
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
-import {Tabs, Tab} from 'material-ui/Tabs';
-//  Removed Swipeable Views for compatibility.
 import Paper from 'material-ui/Paper';
 
-import ServiceMap from './ServiceMap';
 import Directory from './Directory';
 
 
@@ -84,32 +81,15 @@ var Home = React.createClass ({
         };
         return (    
             <Row>
-                <Col sm={12}>
-                    <Tabs style={{direction: 'ltr'}} isRtl={false}>
-                        <Tab label={this.state.content.map.title}>
-                            <Col sm={12}>
-                                <Paper style={adaptiveDirection}>
-                                    <ServiceMap 
-                                        lang={this.props.lang}
-                                        isRTL={this.props.isRTL}
-                                        content={this.state.content.map}
-                                        filters={this.state.filters}  />
-                                </Paper>
-                            </Col>
-                        </Tab>
-                        <Tab label={this.state.content.directory.title}>
-                            <Col sm={12}>
-                                <Paper style={adaptiveDirection}>
-                                    <Directory 
-                                        lang={this.props.lang}
-                                        isRTL={this.props.isRTL}
-                                        content={this.state.content.directory}
-                                        filters={this.state.filters}  />
-                                </Paper>
-                            </Col>
-                        </Tab>
-                    </Tabs>
-                </Col>
+              <Col sm={12}>
+                  <Paper style={adaptiveDirection}>
+                      <Directory 
+                          lang={this.props.lang}
+                          isRTL={this.props.isRTL}
+                          content={this.state.content.directory}
+                          filters={this.state.filters}  />
+                  </Paper>
+              </Col>
             </Row>            
         );
     }

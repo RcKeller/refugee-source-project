@@ -22,6 +22,16 @@ import Listing from './Listing';
 //    /////
 //    COMPONENT
 //    /////
+
+const styles = {
+  header: {
+    textAlign: 'center'
+  },
+  description: {
+    padding: 20
+  }
+};
+
 var Directory = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
@@ -38,8 +48,9 @@ var Directory = React.createClass ({
         var listings = this.state.resources;
         return (
             <div>
-                <p>
-                    {this.props.content.description}
+                <h2 style={styles.header}>{this.props.content.title}</h2>
+                <p style={styles.description}>  
+                  {this.props.content.description}
                 </p>
                 {listings.map((listing, i) =>
                     <Listing key={i}
