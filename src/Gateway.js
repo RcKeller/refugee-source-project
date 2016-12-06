@@ -24,8 +24,12 @@ import RaisedButton from 'material-ui/RaisedButton';
 //    /////
 const styles = {
     card: {
+        maxWidth: 600,
         marginTop: 100,
         textAlign: 'center'
+    },
+    button: {
+      margin: 10
     }
     
 };
@@ -39,31 +43,34 @@ var Gateway = React.createClass ({
             <Card style={styles.card}>
                 <CardTitle title="Language" />
                 <CardActions>
-                    <RaisedButton secondary={true} label="English"
-                        onTouchTap={() => this.props.setLang('en')} />
-                    <RaisedButton secondary={true} label="Arabic"
-                        onTouchTap={function() {
-                            this.props.setLang('ar');
-                            this.props.setRTL();
-                        }.bind(this)}/>
-                  <RaisedButton secondary={true} label="español"
-                    disabled={true}
-                        onTouchTap={() => this.props.setLang('sp')} />
-                  <RaisedButton secondary={true} label="Chinese"
+                  <RaisedButton label="English"
+                    style={styles.button} secondary={true}
+                    onTouchTap={() => this.props.setLang('en')} />
+                  <RaisedButton label="Arabic"
+                    style={styles.button} secondary={true}
+                    onTouchTap={function() {
+                      this.props.setLang('ar');
+                      this.props.setRTL();
+                    }.bind(this)}/>
+                  <RaisedButton label="español"
+                    style={styles.button} secondary={true} 
+                    onTouchTap={() => this.props.setLang('sp')} />
+                  <RaisedButton label="Chinese"
+                    style={styles.button} secondary={true}
                     disabled={true}
                     onTouchTap={() => this.props.setLang('ch')} />
-                  <RaisedButton secondary={true}
-                    label="Khmer"
+                  <RaisedButton label="Khmer"
+                    style={styles.button} secondary={true}
                     disabled={true}
-                        onTouchTap={() => this.props.setLang('kh')} />
-                  <RaisedButton secondary={true}  
-                    label="Somali"
+                    onTouchTap={() => this.props.setLang('kh')} />
+                  <RaisedButton label="Somali"
+                    style={styles.button} secondary={true}
                     disabled={true}
-                        onTouchTap={() => this.props.setLang('sm')} />
-                    <RaisedButton secondary={true} 
-                      label="Russian"
-                      disabled={true}
-                        onTouchTap={() => this.props.setLang('rs')} />
+                    onTouchTap={() => this.props.setLang('sm')} />
+                  <RaisedButton label="Russian"
+                    style={styles.button} secondary={true}
+                    disabled={true}
+                    onTouchTap={() => this.props.setLang('rs')} />
                 </CardActions>
             </Card>
         );
