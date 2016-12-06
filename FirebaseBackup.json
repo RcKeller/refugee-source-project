@@ -36,7 +36,187 @@
         "title" : "List your Service Center"
       }
     },
+    "ch" : {
+      "about" : {
+        "description" : "The Emerald Refugee Project is a group of students in the Informatics Program at the University of Washington who hope to empower refugees coming into this country to be able to get the same opportunities as those born in this country. Finding resources for how to get a driver’s license, citizenship, enrolling your child into school and other social services can be hard to find when there’s no central information database. That’s what the Emerald Refugee Project hopes to accomplish. By compiling all resources that refugees may need and putting them in one centralized database, we hope to reduce the stress and frustration people may have when searching for what they need to find.",
+        "image" : {
+          "description" : "Description",
+          "source" : "URL",
+          "title" : "Image"
+        },
+        "title" : "About Project Emerald"
+      },
+      "app" : {
+        "disclaimer" : "Disclaimer: This is a student project, not a fully secured website",
+        "header" : "Project Emerald",
+        "nav" : {
+          "about" : "About Us",
+          "home" : "Home",
+          "language" : "Language",
+          "submission" : "Submit Resource"
+        }
+      },
+      "home" : {
+        "directory" : {
+          "description" : "Below is a list of resettlement resource centers in Washington State.",
+          "phone" : "Phone",
+          "title" : "Directory",
+          "website" : "Website"
+        }
+      },
+      "submit" : {
+        "description" : "Please enter in information about your service center, in every language possible. Administrators will promptly review and incorporate your information.",
+        "form" : {
+          "field1" : "Placeholder"
+        },
+        "title" : "List your Service Center"
+      }
+    },
     "en" : {
+      "about" : {
+        "description" : "The Emerald Refugee Project is a group of students in the Informatics Program at the University of Washington who hope to empower refugees coming into this country to be able to get the same opportunities as those born in this country. Finding resources for how to get a driver’s license, citizenship, enrolling your child into school and other social services can be hard to find when there’s no central information database. That’s what the Emerald Refugee Project hopes to accomplish. By compiling all resources that refugees may need and putting them in one centralized database, we hope to reduce the stress and frustration people may have when searching for what they need to find.",
+        "image" : {
+          "description" : "Description",
+          "source" : "URL",
+          "title" : "Image"
+        },
+        "title" : "About Project Emerald"
+      },
+      "app" : {
+        "disclaimer" : "Disclaimer: This is a student project, not a fully secured website",
+        "header" : "Project Emerald",
+        "nav" : {
+          "about" : "About Us",
+          "home" : "Home",
+          "language" : "Language",
+          "submission" : "Submit Resource"
+        }
+      },
+      "home" : {
+        "directory" : {
+          "description" : "Below is a list of resettlement resource centers in Washington State.",
+          "phone" : "Phone",
+          "title" : "Directory",
+          "website" : "Website"
+        }
+      },
+      "submit" : {
+        "description" : "Please enter in information about your service center, in every language possible. Administrators will promptly review and incorporate your information.",
+        "form" : {
+          "field1" : "Placeholder"
+        },
+        "title" : "List your Service Center"
+      }
+    },
+    "kh" : {
+      "about" : {
+        "description" : "The Emerald Refugee Project is a group of students in the Informatics Program at the University of Washington who hope to empower refugees coming into this country to be able to get the same opportunities as those born in this country. Finding resources for how to get a driver’s license, citizenship, enrolling your child into school and other social services can be hard to find when there’s no central information database. That’s what the Emerald Refugee Project hopes to accomplish. By compiling all resources that refugees may need and putting them in one centralized database, we hope to reduce the stress and frustration people may have when searching for what they need to find.",
+        "image" : {
+          "description" : "Description",
+          "source" : "URL",
+          "title" : "Image"
+        },
+        "title" : "About Project Emerald"
+      },
+      "app" : {
+        "disclaimer" : "Disclaimer: This is a student project, not a fully secured website",
+        "header" : "Project Emerald",
+        "nav" : {
+          "about" : "About Us",
+          "home" : "Home",
+          "language" : "Language",
+          "submission" : "Submit Resource"
+        }
+      },
+      "home" : {
+        "directory" : {
+          "description" : "Below is a list of resettlement resource centers in Washington State.",
+          "phone" : "Phone",
+          "title" : "Directory",
+          "website" : "Website"
+        }
+      },
+      "submit" : {
+        "description" : "Please enter in information about your service center, in every language possible. Administrators will promptly review and incorporate your information.",
+        "form" : {
+          "field1" : "Placeholder"
+        },
+        "title" : "List your Service Center"
+      }
+    },
+    "rs" : {
+      "about" : {
+        "description" : "The Emerald Refugee Project is a group of students in the Informatics Program at the University of Washington who hope to empower refugees coming into this country to be able to get the same opportunities as those born in this country. Finding resources for how to get a driver’s license, citizenship, enrolling your child into school and other social services can be hard to find when there’s no central information database. That’s what the Emerald Refugee Project hopes to accomplish. By compiling all resources that refugees may need and putting them in one centralized database, we hope to reduce the stress and frustration people may have when searching for what they need to find.",
+        "image" : {
+          "description" : "Description",
+          "source" : "URL",
+          "title" : "Image"
+        },
+        "title" : "About Project Emerald"
+      },
+      "app" : {
+        "disclaimer" : "Disclaimer: This is a student project, not a fully secured website",
+        "header" : "Project Emerald",
+        "nav" : {
+          "about" : "About Us",
+          "home" : "Home",
+          "language" : "Language",
+          "submission" : "Submit Resource"
+        }
+      },
+      "home" : {
+        "directory" : {
+          "description" : "Below is a list of resettlement resource centers in Washington State.",
+          "phone" : "Phone",
+          "title" : "Directory",
+          "website" : "Website"
+        }
+      },
+      "submit" : {
+        "description" : "Please enter in information about your service center, in every language possible. Administrators will promptly review and incorporate your information.",
+        "form" : {
+          "field1" : "Placeholder"
+        },
+        "title" : "List your Service Center"
+      }
+    },
+    "sm" : {
+      "about" : {
+        "description" : "The Emerald Refugee Project is a group of students in the Informatics Program at the University of Washington who hope to empower refugees coming into this country to be able to get the same opportunities as those born in this country. Finding resources for how to get a driver’s license, citizenship, enrolling your child into school and other social services can be hard to find when there’s no central information database. That’s what the Emerald Refugee Project hopes to accomplish. By compiling all resources that refugees may need and putting them in one centralized database, we hope to reduce the stress and frustration people may have when searching for what they need to find.",
+        "image" : {
+          "description" : "Description",
+          "source" : "URL",
+          "title" : "Image"
+        },
+        "title" : "About Project Emerald"
+      },
+      "app" : {
+        "disclaimer" : "Disclaimer: This is a student project, not a fully secured website",
+        "header" : "Project Emerald",
+        "nav" : {
+          "about" : "About Us",
+          "home" : "Home",
+          "language" : "Language",
+          "submission" : "Submit Resource"
+        }
+      },
+      "home" : {
+        "directory" : {
+          "description" : "Below is a list of resettlement resource centers in Washington State.",
+          "phone" : "Phone",
+          "title" : "Directory",
+          "website" : "Website"
+        }
+      },
+      "submit" : {
+        "description" : "Please enter in information about your service center, in every language possible. Administrators will promptly review and incorporate your information.",
+        "form" : {
+          "field1" : "Placeholder"
+        },
+        "title" : "List your Service Center"
+      }
+    },
+    "sp" : {
       "about" : {
         "description" : "The Emerald Refugee Project is a group of students in the Informatics Program at the University of Washington who hope to empower refugees coming into this country to be able to get the same opportunities as those born in this country. Finding resources for how to get a driver’s license, citizenship, enrolling your child into school and other social services can be hard to find when there’s no central information database. That’s what the Emerald Refugee Project hopes to accomplish. By compiling all resources that refugees may need and putting them in one centralized database, we hope to reduce the stress and frustration people may have when searching for what they need to find.",
         "image" : {
@@ -85,6 +265,17 @@
         "services" : "إعادة التوطين، التعليم"
       }
     },
+    "ch" : {
+      "-KYLCisFV94fhKn8f4zm" : {
+        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
+        "description" : "Provide individuals and families who are in need with food and access to a network of community resources that helps them achieve self-sufficiency.",
+        "hours" : "Mon 9am - 3pm Tue 2pm - 8pm Thu 2pm - 8pm Fri 9am - 3pm",
+        "link" : "http://www.udistrictfoodbank.org/",
+        "name" : "University District Food Bank",
+        "phone" : "(206) 523-7060",
+        "services" : "Food"
+      }
+    },
     "en" : {
       "-KYLCisFV94fhKn8f4zm" : {
         "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
@@ -95,6 +286,15 @@
         "phone" : "(206) 523-7060",
         "services" : "Food"
       },
+      "-KYLFWVIocUfjRCfPpaA" : {
+        "address" : "100 South King Street, Suite 570 Seattle, WA 98104",
+        "description" : "Support and social services for refugees, different types of events and classes.",
+        "hours" : "",
+        "link" : "https://www.rescue.org/united-states/seattle-wa",
+        "name" : "International Rescue Committee - Seattle",
+        "phone" : "(206) 623-2105",
+        "services" : ""
+      },
       "Catholic Community Services of Western Washington" : {
         "address" : "1610 South King Street, Seattle, WA 98144",
         "description" : "Catholic services available in King County",
@@ -103,6 +303,50 @@
         "name" : "Catholic Community Services of Western Washington",
         "phone" : 2063233152,
         "services" : "Resettlement, Education"
+      }
+    },
+    "kh" : {
+      "-KYLCisFV94fhKn8f4zm" : {
+        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
+        "description" : "Provide individuals and families who are in need with food and access to a network of community resources that helps them achieve self-sufficiency.",
+        "hours" : "Mon 9am - 3pm Tue 2pm - 8pm Thu 2pm - 8pm Fri 9am - 3pm",
+        "link" : "http://www.udistrictfoodbank.org/",
+        "name" : "University District Food Bank",
+        "phone" : "(206) 523-7060",
+        "services" : "Food"
+      }
+    },
+    "rs" : {
+      "-KYLCisFV94fhKn8f4zm" : {
+        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
+        "description" : "Provide individuals and families who are in need with food and access to a network of community resources that helps them achieve self-sufficiency.",
+        "hours" : "Mon 9am - 3pm Tue 2pm - 8pm Thu 2pm - 8pm Fri 9am - 3pm",
+        "link" : "http://www.udistrictfoodbank.org/",
+        "name" : "University District Food Bank",
+        "phone" : "(206) 523-7060",
+        "services" : "Food"
+      }
+    },
+    "sm" : {
+      "-KYLCisFV94fhKn8f4zm" : {
+        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
+        "description" : "Provide individuals and families who are in need with food and access to a network of community resources that helps them achieve self-sufficiency.",
+        "hours" : "Mon 9am - 3pm Tue 2pm - 8pm Thu 2pm - 8pm Fri 9am - 3pm",
+        "link" : "http://www.udistrictfoodbank.org/",
+        "name" : "University District Food Bank",
+        "phone" : "(206) 523-7060",
+        "services" : "Food"
+      }
+    },
+    "sp" : {
+      "-KYLCisFV94fhKn8f4zm" : {
+        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
+        "description" : "Provide individuals and families who are in need with food and access to a network of community resources that helps them achieve self-sufficiency.",
+        "hours" : "Mon 9am - 3pm Tue 2pm - 8pm Thu 2pm - 8pm Fri 9am - 3pm",
+        "link" : "http://www.udistrictfoodbank.org/",
+        "name" : "University District Food Bank",
+        "phone" : "(206) 523-7060",
+        "services" : "Food"
       }
     }
   },
@@ -118,51 +362,15 @@
         "services" : "Mah Service"
       }
     },
-    "en" : {
-      "-KY69JFNt0lrhks3unfa" : {
-        "address" : "100 South King Street, Suite 570 Seattle, WA 98104",
-        "description" : "The International Rescue Committee provides opportunities for refugees, asylees, victims of human trafficking, survivors of torture, and other immigrants to thrive in America. Each year, thousands of people, forced to flee violence and persecution, are welcomed by the people of the United States into the safety and freedom of America. These individuals have survived against incredible odds. The IRC works with government bodies, civil society actors, and local volunteers to help them translate their past experiences into assets that are valuable to their new communities. In Seattle and other offices across the country, the IRC helps them to rebuild their lives.",
-        "hours" : "N/A",
-        "link" : "https://www.rescue.org/united-states/seattle-wa",
-        "name" : "International Rescue Committee - Seattle",
-        "phone" : "(206) 623-2105",
-        "services" : "Healthcare, Education, Resettlement"
-      },
-      "-KYKvZ7UKS-aYL042Q6q" : {
-        "address" : "100 South King Street, Suite 570 Seattle, WA 98104",
-        "description" : "Support and social services for refugees, different types of events and classes.",
-        "hours" : "",
-        "link" : "https://www.rescue.org/united-states/seattle-wa",
-        "name" : "International Rescue Committee - Seattle",
-        "phone" : "(206) 623-2105",
-        "services" : ""
-      },
-      "-KYKv_J6Nin-ihpKRd-7" : {
-        "address" : "100 South King Street, Suite 570 Seattle, WA 98104",
-        "description" : "Support and social services for refugees, different types of events and classes.",
-        "hours" : "",
-        "link" : "https://www.rescue.org/united-states/seattle-wa",
-        "name" : "International Rescue Committee - Seattle",
-        "phone" : "(206) 623-2105",
-        "services" : ""
-      },
-      "-KYKw0cGXD1HvMKVZOKh" : {
-        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
-        "description" : "Provide individuals and families who are in need with food and access to a network of community resources that helps them achieve self-sufficiency.",
-        "hours" : "Mon 9am - 3pm Tue 2pm - 8pm Thu 2pm - 8pm Fri 9am - 3pm",
-        "link" : "http://www.udistrictfoodbank.org/",
-        "name" : "University District Food Bank",
-        "phone" : "(206) 523-7060",
-        "services" : "Food"
-      },
-      "-KYKw3MguU87B8u2QLjq" : {
-        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
-        "description" : "Provide individuals and families who are in need with food and access to a network of community resources that helps them achieve self-sufficiency.",
-        "hours" : "Mon 9am - 3pm Tue 2pm - 8pm Thu 2pm - 8pm Fri 9am - 3pm",
-        "link" : "http://www.udistrictfoodbank.org/",
-        "name" : "University District Food Bank",
-        "phone" : "(206) 523-7060",
-        "services" : "Food"
+    "kh" : {
+      "-KYLZ7ip4QajZ5BvqPky" : {
+        "address" : "add add add add add ",
+        "description" : "DescribeMeDescribeMeDescribeMeDescribeMeDescribeMeDescribeMeDescribeMeDescribeMeDescribeMeDescribeMeDescribeMeDescribeMeDescribeMeDescribeMeDescribeMeDescribeMeDescribeMe",
+        "hours" : "Hours",
+        "link" : "linkylink",
+        "name" : "Khmer test",
+        "phone" : "phoooone",
+        "services" : "Nuthin"
       }
     }
   }

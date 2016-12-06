@@ -167,15 +167,40 @@ var AddForm = React.createClass ({
                             defaultSelected="en"
                             onChange={this.checkLang}>
                             <RadioButton
-                                value="en"
-                                label="English"
-                                style={styles.radioButton}
-                                />
+                              value="en"
+                              label="English"
+                              style={styles.radioButton}
+                              />
                             <RadioButton
-                                value="ar"
-                                label="Arabic"
-                                style={styles.radioButton}
-                                />
+                              value="ar"
+                              label="Arabic"
+                              style={styles.radioButton}
+                              />
+                            <RadioButton
+                              value="sp"
+                              label="Spanish"
+                              style={styles.radioButton}
+                              />
+                            <RadioButton
+                              value="ch"
+                              label="Chinese"
+                              style={styles.radioButton}
+                              />
+                            <RadioButton
+                              value="kh"
+                              label="Khmer (Cambodian)"
+                              style={styles.radioButton}
+                              />
+                            <RadioButton
+                              value="sm"
+                              label="Somali"
+                              style={styles.radioButton}
+                              />
+                            <RadioButton
+                              value="rs"
+                              label="Russian"
+                              style={styles.radioButton}
+                              />
                         </RadioButtonGroup>
                     </Col>
                 </Row>
