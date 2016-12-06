@@ -56,17 +56,20 @@ var Admin = React.createClass ({
   },
   
   approve: function(key) {
-    console.log("KEY", key);
-    var ref = firebase.database().ref(this.state.origin + '/' + key);
-    ref.once('value').then((snapshot) => {
+    var childNode = firebase.database().ref(this.state.origin + '/' + key);
+    childNode.once('value').then((snapshot) => {
       var approval = snapshot.val();
-      console.log(approval);
+      console.log("Approving:", approval);
       //firebaseRefs refers to nodes bound by reactfire.
-      this.firebaseRefs.approvals.push(approval);
+      this.firebaseRefs.approvals.push(approval).then(() => {
+        this.delete(key);
+      });
     });
   },
   delete: function(key) {
-    console.log(key);
+    console.log("Deleting:", key);
+    var ref = firebase.database().ref(this.state.origin);
+    ref.child(key).remove();
   },
 
   render:function() {
