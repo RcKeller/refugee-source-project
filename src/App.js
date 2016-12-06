@@ -39,8 +39,21 @@ import Nav from './Nav';
 //    /////
 //    COMPONENT
 //    /////
+
+const backgroundPhoto = 'https://firebasestorage.googleapis.com/v0/b/refugeproject-90082.appspot.com/o/SelectLang.jpg?alt=media&token=b4394063-819b-4f04-b2b3-9faa58eb65e8'
 const styles = {
     //The following appBar styles could not be applied by MUItheme.
+    background: {
+      backgroundImage: 'url(' + backgroundPhoto + ')',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center center',  
+      textAlign: 'center',
+      position: 'absolute',
+      height: '100%',
+      width: '100%',
+      top: 0
+    },
     appBar: {
         height: 65,
         position: 'fixed',
@@ -135,11 +148,11 @@ var App = React.createClass ({
         return (
             <div>
                 {!this.state.lang ?
-                    <Container>
-                        <Gateway
-                            setLang={this.setLang}
-                            setRTL={this.setRTL}/>
-                    </Container>
+                  <div style={styles.background}>
+                    <Gateway
+                        setLang={this.setLang}
+                        setRTL={this.setRTL}/>
+                  </div>
                 :
                 <div>
                     <AppBar

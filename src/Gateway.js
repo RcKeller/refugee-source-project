@@ -24,12 +24,18 @@ import RaisedButton from 'material-ui/RaisedButton';
 //    /////
 const styles = {
     card: {
+        display: 'inline-block',
+        textAlign: 'center',
         maxWidth: 600,
-        marginTop: 100,
-        textAlign: 'center'
+        margin: 100,
+        //  slight transparency
+        opacity: 0.95,
+        filter: 'alpha(opacity=95)',
+        //  clearer text
+        fontWeight: 'bold'
     },
     button: {
-      margin: 10
+      margin: 5
     }
     
 };
@@ -41,7 +47,7 @@ var Gateway = React.createClass ({
     render:function() {
         return (
             <Card style={styles.card}>
-                <CardTitle title="Language" />
+                <CardTitle title="Welcome" />
                 <CardActions>
                   <RaisedButton label="English"
                     style={styles.button} secondary={true}
