@@ -31,7 +31,6 @@ const directions = 'https://www.google.com/maps/dir//'
 //    COMPONENT
 //    /////
 var Listing = React.createClass ({
-    
     render:function() {
         var adaptiveDirection = {
             direction: (this.props.isRTL ? 'rtl' : 'inherit'),
