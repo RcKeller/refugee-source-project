@@ -51,9 +51,6 @@ var Admin = React.createClass ({
     var listings = this.state.submissions;
     return (
       <div>
-        <p>
-          Admin View
-        </p>
         {listings.map((listing, i) => (
           <Card key={i}>
             <CardText>

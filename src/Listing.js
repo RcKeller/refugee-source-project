@@ -25,6 +25,7 @@ import HourglassEmpty from 'material-ui/svg-icons/action/hourglass-empty';
 import Link from 'material-ui/svg-icons/content/link';
 import Phone from 'material-ui/svg-icons/communication/phone';
 
+const directions = 'https://www.google.com/maps/dir//'
 
 //    /////
 //    COMPONENT
@@ -48,8 +49,7 @@ var Listing = React.createClass ({
                 <CardActions>
                     <FlatButton secondary={true}
                         icon={<Directions />}
-                        label="Placeholder"
-                        href={"#"}
+                        href={directions + this.props.listing.address}
                     />  
                     {this.props.listing.link &&
                         <FlatButton secondary={true}
