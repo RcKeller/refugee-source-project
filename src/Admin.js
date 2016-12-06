@@ -34,30 +34,36 @@ var Admin = React.createClass ({
   getInitialState:function() {
     return {
       submissions: [],
-      originRef: '',
-      destinationRef: ''
+      approvals: [],
+      origin: '',
+      destination: ''
     };
   },
   componentWillMount: function() {
     var origin = 'submissions/' + this.props.lang;
     var destination = 'resources/' + this.props.lang;
+    //Set paths for future reference and creating unique paths.
     this.setState({
       origin: origin,
       destination: destination
     });
-    
+    //Binding two firebase nodes
     var originRef = firebase.database().ref(origin);
+    var destinationRef = firebase.database().ref(destination);
     this.bindAsArray(originRef, 'submissions');
+    this.bindAsArray(destinationRef, 'approvals');
+    
   },
   
   approve: function(key) {
     console.log("KEY", key);
-//    var ref = firebase.database().ref(this.origin + '/' + key);
-//    var childNode = originRef.child(key);
-//    ref.once('value').then(function(snapshot) {
-//      var value = snapshot.val();
-//      console.log(value);
-//    });
+    var ref = firebase.database().ref(this.state.origin + '/' + key);
+    ref.once('value').then((snapshot) => {
+      var approval = snapshot.val();
+      console.log(approval);
+      //firebaseRefs refers to nodes bound by reactfire.
+      this.firebaseRefs.approvals.push(approval);
+    });
   },
   delete: function(key) {
     console.log(key);
