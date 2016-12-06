@@ -71,13 +71,17 @@ var Listing = React.createClass ({
                     }
                 </CardActions>
                 <CardText expandable={true}>
-                    {this.props.listing.hours}
                     <Divider />
                     <p><em>
                         {this.props.listing.description}
                     </em></p>
-                    <Divider />
-                    {this.props.listing.services}
+                    {this.props.listing.services &&
+                      <div>
+                        <Divider />
+                        <br></br>
+                        <span>{this.props.listing.services}</span>
+                      </div>
+                    }
                 </CardText>
             </Card>
         );
