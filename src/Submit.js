@@ -47,7 +47,8 @@ var Submit = React.createClass ({
                 form: {
                     field1: ''
                 }
-            }
+            },
+            languages: ['en', 'ar']
         });
     },
 
@@ -92,7 +93,11 @@ var Submit = React.createClass ({
             </div>
             :
             <div>
-              <Admin lang={this.props.lang}/>
+              {this.state.languages.map((language, i) => (
+                <Card key={i}>
+                  <Admin lang={language}/>
+                </Card>
+              ))}
             </div>
             }
           </div>
