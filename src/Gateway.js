@@ -41,20 +41,29 @@ var Gateway = React.createClass ({
                 <CardActions>
                     <RaisedButton secondary={true} label="English"
                         onTouchTap={() => this.props.setLang('en')} />
-                    <RaisedButton secondary={true} label="العربية"
+                    <RaisedButton secondary={true} label="Arabic"
                         onTouchTap={function() {
                             this.props.setLang('ar');
                             this.props.setRTL();
                         }.bind(this)}/>
-                    <RaisedButton secondary={true} label="Language-C" disabled={true}
-                        onTouchTap={() => this.props.setLang('cc')} />
-                    <RaisedButton secondary={true} label="Language-D" disabled={true}
-                        onTouchTap={() => this.props.setLang('dd')} />
-                    <RaisedButton secondary={true} id='fr' label="français" disabled={true}
-                        onTouchTap={() => this.props.setLang('fr')} />
-                    <RaisedButton secondary={true} id='sp' label="español" disabled={true}
+                  <RaisedButton secondary={true} label="español"
+                    disabled={true}
                         onTouchTap={() => this.props.setLang('sp')} />
-                    
+                  <RaisedButton secondary={true} label="Chinese"
+                    disabled={true}
+                    onTouchTap={() => this.props.setLang('ch')} />
+                  <RaisedButton secondary={true}
+                    label="Khmer"
+                    disabled={true}
+                        onTouchTap={() => this.props.setLang('kh')} />
+                  <RaisedButton secondary={true}  
+                    label="Somali"
+                    disabled={true}
+                        onTouchTap={() => this.props.setLang('sm')} />
+                    <RaisedButton secondary={true} 
+                      label="Russian"
+                      disabled={true}
+                        onTouchTap={() => this.props.setLang('rs')} />
                 </CardActions>
             </Card>
         );

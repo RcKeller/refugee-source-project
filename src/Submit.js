@@ -48,7 +48,7 @@ var Submit = React.createClass ({
                     field1: ''
                 }
             },
-            languages: ['en', 'ar']
+            languages: ['en', 'ar', 'sp', 'ch', 'kh', 'sm', 'rs']
         });
     },
 
