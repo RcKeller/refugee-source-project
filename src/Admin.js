@@ -81,32 +81,36 @@ var Admin = React.createClass ({
   render:function() {
     var listings = this.state.submissions;
     return (
-      <Card style={styles.card}>
-        <CardTitle title={'Directory Submissions for Approval: ' + this.props.lang} />
-        {listings.map((listing, i) => (
-          <Card key={i} style={styles.card}>
-            <CardText>
-              <Listing key={i}
-                isRTL={false}
-                listing={listing}
-                phoneTitle={": "}
-                websiteTitle={'Website:'}
-                />
-            </CardText>
-            <CardActions>
-              <FlatButton
-                icon={<CheckCircle color={'green'} />}
-                onTouchTap={this.approve.bind(this, listing['.key'])}
-                />
-              <FlatButton
-                icon={<Delete color={'red'} />}
-                onTouchTap={this.delete.bind(this, listing['.key'])}
-                />
-            </CardActions>
-          </Card>
-        )
-                     )}
-      </Card>
+      <div>
+      {listings.length > 0 &&
+        <Card style={styles.card}>
+          <CardTitle title={'Directory Submissions for Approval: ' + this.props.lang} />
+          {listings.map((listing, i) => (
+            <Card key={i} style={styles.card}>
+              <CardText>
+                <Listing key={i}
+                  isRTL={false}
+                  listing={listing}
+                  phoneTitle={": "}
+                  websiteTitle={'Website:'}
+                  />
+              </CardText>
+              <CardActions>
+                <FlatButton
+                  icon={<CheckCircle color={'green'} />}
+                  onTouchTap={this.approve.bind(this, listing['.key'])}
+                  />
+                <FlatButton
+                  icon={<Delete color={'red'} />}
+                  onTouchTap={this.delete.bind(this, listing['.key'])}
+                  />
+              </CardActions>
+            </Card>
+            )
+          )}
+        </Card>
+      }
+      </div>
     );
   }
 });

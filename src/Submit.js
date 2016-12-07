@@ -91,10 +91,15 @@ var Submit = React.createClass ({
             </div>
             :
             <div>
+              <Card>
+                <CardTitle title='Administrator View'
+                  subtitle='Submissions for Approval'
+                  style={styles.center}/>
+              </Card>
               {this.state.languages.map((language, i) => (
-                <Card key={i}>
+                <div key={i}>
                   <Admin lang={language}/>
-                </Card>
+                </div>
               ))}
             </div>
             }
