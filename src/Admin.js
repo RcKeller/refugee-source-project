@@ -16,9 +16,9 @@ import React from 'react';
 import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
-import Paper from 'material-ui/Paper';
 import {Card, CardTitle, CardText, CardActions} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import CircularProgress from 'material-ui/CircularProgress';
 
 import CheckCircle from 'material-ui/svg-icons/action/check-circle';
 import Delete from 'material-ui/svg-icons/action/delete';
@@ -82,7 +82,7 @@ var Admin = React.createClass ({
     var listings = this.state.submissions;
     return (
       <div>
-      {listings.length > 0 &&
+      {listings.length > 0 ?
         <Card style={styles.card}>
           <CardTitle title={'Directory Submissions for Approval: ' + this.props.lang} />
           {listings.map((listing, i) => (
@@ -109,6 +109,10 @@ var Admin = React.createClass ({
             )
           )}
         </Card>
+        :
+        <div>
+          <CircularProgress size={80} thickness={7} style={{display: 'inline-block'}}/>
+        </div>
       }
       </div>
     );

@@ -166,6 +166,7 @@ var AddForm = React.createClass ({
                         <RadioButtonGroup name="Language" 
                             defaultSelected="en"
                             onChange={this.checkLang}>
+                          <Col sm={6}>
                             <RadioButton
                               value="en"
                               label="English"
@@ -186,6 +187,8 @@ var AddForm = React.createClass ({
                               label="Chinese"
                               style={styles.radioButton}
                               />
+                          </Col>
+                          <Col sm={6}>
                             <RadioButton
                               value="kh"
                               label="Khmer (Cambodian)"
@@ -201,6 +204,7 @@ var AddForm = React.createClass ({
                               label="Russian"
                               style={styles.radioButton}
                               />
+                          </Col>
                         </RadioButtonGroup>
                     </Col>
                 </Row>

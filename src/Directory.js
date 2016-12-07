@@ -16,7 +16,6 @@ import React from 'react';
 import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
-import {Card, CardTitle, CardText} from 'material-ui/Card';
 import CircularProgress from 'material-ui/CircularProgress';
 
 import Listing from './Listing';
@@ -27,11 +26,11 @@ import Listing from './Listing';
 //    /////
 
 const styles = {
-  header: {
+  loader: {
     textAlign: 'center'
   },
-  description: {
-    padding: 20
+  progress: {
+    display: 'inline-block'
   }
 };
 
@@ -63,9 +62,9 @@ var Directory = React.createClass ({
                   )}
                 </div>
               :
-              <div style={{textAlign: 'center'}}>
-                <CircularProgress size={80} thickness={7} style={{display: 'inline-block'}}/>
-              </div>
+                <div style={styles.loader}>
+                  <CircularProgress size={80} thickness={7} style={styles.progress}/>
+                </div>
               }
           </div>
                 

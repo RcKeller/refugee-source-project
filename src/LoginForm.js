@@ -12,7 +12,7 @@ document:false, window:false, console:false, alert:false, user:false
 //    IMPORT DEPENDENCIES
 //    /////
 import React from 'react';
-import {Container, Row, Col} from 'react-grid-system';
+import {Row, Col} from 'react-grid-system';
 
 //    /////
 //    MATERIAL-UI COMPONENTS

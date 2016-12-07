@@ -22,7 +22,6 @@ import {fade} from 'material-ui/utils/colorManipulator';
 import spacing from 'material-ui/styles/spacing';
 import {
     green500, green700, grey400,
-    blueA100, blueA200, blueA400,
     grey300,
     white, darkBlack, fullBlack
 } from 'material-ui/styles/colors';
