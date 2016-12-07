@@ -63,19 +63,15 @@ var Gateway = React.createClass ({
                     onTouchTap={() => this.props.setLang('sp')} />
                   <RaisedButton label="Chinese"
                     style={styles.button} secondary={true}
-                    disabled={true}
                     onTouchTap={() => this.props.setLang('ch')} />
                   <RaisedButton label="Khmer"
                     style={styles.button} secondary={true}
-                    disabled={true}
                     onTouchTap={() => this.props.setLang('kh')} />
                   <RaisedButton label="Somali"
                     style={styles.button} secondary={true}
-                    disabled={true}
                     onTouchTap={() => this.props.setLang('sm')} />
                   <RaisedButton label="Russian"
                     style={styles.button} secondary={true}
-                    disabled={true}
                     onTouchTap={() => this.props.setLang('rs')} />
                 </CardActions>
             </Card>

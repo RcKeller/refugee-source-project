@@ -174,7 +174,7 @@ var App = React.createClass ({
                             lang={this.state.lang}
                             content={this.state.content.nav}/>
 
-                        <Paper zDepth={5} style={styles.footer}>
+                        <Paper style={styles.footer}>
                             <em>
                                 {this.state.content.disclaimer}
                             </em>
