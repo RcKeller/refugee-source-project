@@ -56,8 +56,6 @@ var Directory = React.createClass ({
                       <Listing key={i}
                           isRTL={this.props.isRTL}
                           listing={listing}
-                          phoneTitle={this.props.content.phone + ": "}
-                          websiteTitle={this.props.content.website}
                           />
                   )}
                 </div>

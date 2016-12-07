@@ -12,7 +12,6 @@ document:false, window:false, console:false, alert:false, user:false
 //    IMPORT DEPENDENCIES
 //    /////
 import React from 'react';
-import {Row, Col} from 'react-grid-system';
 
 
 import firebase from 'firebase';
@@ -43,16 +42,16 @@ var Home = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
         return({
-            slideIndex: 0,      //Which tab you're on
             content: {
-                map: {},
-                directory: {}
-            }
+              title: '',
+              description: ''
+            },
+            directory: {}
             
         });
     },
     componentWillMount: function() {
-        var path = "main/" + this.props.lang + "/home";
+        var path = "main/" + this.props.lang + "/home/directory";
         var ref = firebase.database().ref(path);
         this.bindAsObject(ref, 'content');
     },
@@ -68,25 +67,19 @@ var Home = React.createClass ({
         var adaptiveDirection = {
             direction: (this.props.isRTL ? 'rtl' : 'inherit')
         };
-        return (    
-            <Row>
-              <Col sm={12}>
-                    <Card style={adaptiveDirection}>
-                      <CardTitle title={this.state.content.directory.title}
-                        style={styles.header} />
-                      <CardText>
-                        <p>
-                          {this.state.content.directory.description}
-                        </p>
-                      <Directory 
-                          lang={this.props.lang}
-                          isRTL={this.props.isRTL}
-                          content={this.state.content.directory}
-                      />
-                      </CardText>
-                </Card>
-              </Col>
-            </Row>            
+        return (
+            <Card style={adaptiveDirection}>
+              <CardTitle title={this.state.content.title}
+                style={styles.header} />
+              <CardText>
+                  {this.state.content.description}
+              </CardText>
+              <Directory 
+                  lang={this.props.lang}
+                  isRTL={this.props.isRTL}
+              />
+              
+        </Card>          
         );
     }
 });
