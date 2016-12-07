@@ -46,6 +46,11 @@ var Nav = React.createClass ({
       },
     
     render:function() {
+        /*
+        Submission is only available in english.
+        It is not available in other languages, both for content reasons
+        and because every service center supports english.
+        */
         return (
             <List style={styles.list}>
                 <ListItem primaryText={this.props.content.language}
@@ -58,11 +63,13 @@ var Nav = React.createClass ({
                         leftIcon={<Home color={iconColor}/>}
                         />
                 </Link>
-                <Link to="/submit" style={styles.link}>
-                    <ListItem primaryText={this.props.content.submission}
-                        leftIcon={<ContentPaste color={iconColor}/>}
-                        />
-                </Link>
+                {(this.props.lang === 'en') &&
+                  <Link to="/submit" style={styles.link}>
+                      <ListItem primaryText={this.props.content.submission}
+                          leftIcon={<ContentPaste color={iconColor}/>}
+                          />
+                  </Link>
+                }
                 <Link to="/about" style={styles.link}>
                     <ListItem primaryText={this.props.content.about}
                         leftIcon={<Portrait color={iconColor}/>} />
