@@ -18,7 +18,6 @@ import ReactFireMixin from 'reactfire';
 
 import {Card, CardTitle, CardText, CardActions} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
-import CircularProgress from 'material-ui/CircularProgress';
 
 import CheckCircle from 'material-ui/svg-icons/action/check-circle';
 import Delete from 'material-ui/svg-icons/action/delete';
@@ -82,9 +81,13 @@ var Admin = React.createClass ({
     var listings = this.state.submissions;
     return (
       <div>
-      {listings.length > 0 ?
+      {listings.length > 0 &&
         <Card style={styles.card}>
-          <CardTitle title={'Directory Submissions for Approval: ' + this.props.lang} />
+          <CardTitle
+            title={'Directory Submissions for Approval: ' + this.props.lang}
+            showExpandableButton={true}
+          />
+          <CardText expandable={true}>
           {listings.map((listing, i) => (
             <Card key={i} style={styles.card}>
               <CardText>
@@ -108,11 +111,8 @@ var Admin = React.createClass ({
             </Card>
             )
           )}
+          </CardText>
         </Card>
-        :
-        <div>
-          <CircularProgress size={80} thickness={7} style={{display: 'inline-block'}}/>
-        </div>
       }
       </div>
     );

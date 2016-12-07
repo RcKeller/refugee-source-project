@@ -32,12 +32,6 @@ const directions = 'https://www.google.com/maps/dir//'
 //    COMPONENT
 //    /////
 const styles = {
-  actions: {
-    textAlign: 'center'
-  },
-  iconButton: {
-    width: 50
-  },
     phoneNumber: {
         textDecoration: 'none',
         color: green500
@@ -49,8 +43,7 @@ var Listing = React.createClass ({
     render:function() {
         var adaptiveDirection = {
             direction: (this.props.isRTL ? 'rtl' : 'inherit'),
-            marginTop: 10, marginBottom: 10,
-            marginRight: 30, marginLeft: 30
+            margin: 10
         };
         return (
             <Card style={adaptiveDirection}>
@@ -88,15 +81,15 @@ var Listing = React.createClass ({
                       label={this.props.listing.hours}
                       />
                   }
-                    <Divider />
-                    <p><em>
+                    <hr></hr>
+                    <p>
                         {this.props.listing.description}
-                    </em></p>
+                    </p>
                     {this.props.listing.services &&
                       <div>
                         <Divider />
                         <br></br>
-                        <span>{this.props.listing.services}</span>
+                        <em>{this.props.listing.services}</em>
                       </div>
                     }
                 </CardText>

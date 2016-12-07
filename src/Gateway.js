@@ -26,7 +26,7 @@ const styles = {
     card: {
         display: 'inline-block',
         textAlign: 'center',
-        maxWidth: 600,
+        maxWidth: 500,
         margin: 100,
         //  slight transparency
         opacity: 0.95,
