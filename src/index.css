@@ -3,6 +3,10 @@
 }
 
 body {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/refugeproject-90082.appspot.com/o/SelectLang.jpg?alt=media&token=b4394063-819b-4f04-b2b3-9faa58eb65e8');
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
 }

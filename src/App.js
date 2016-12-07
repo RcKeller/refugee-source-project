@@ -44,10 +44,6 @@ const backgroundPhoto = 'https://firebasestorage.googleapis.com/v0/b/refugeproje
 const styles = {
     //The following appBar styles could not be applied by MUItheme.
     background: {
-      backgroundImage: 'url(' + backgroundPhoto + ')',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center center',  
       textAlign: 'center',
       position: 'absolute',
       height: '100%',
