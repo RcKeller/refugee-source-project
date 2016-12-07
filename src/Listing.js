@@ -50,7 +50,8 @@ var Listing = React.createClass ({
     render:function() {
         var adaptiveDirection = {
             direction: (this.props.isRTL ? 'rtl' : 'inherit'),
-            margin: 10
+            marginTop: 10, marginBottom: 10,
+            marginRight: 30, marginLeft: 30
         };
         return (
             <Card style={adaptiveDirection}>

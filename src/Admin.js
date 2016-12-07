@@ -17,7 +17,7 @@ import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
 import Paper from 'material-ui/Paper';
-import {Card, CardHeader, CardText, CardActions} from 'material-ui/Card';
+import {Card, CardTitle, CardText, CardActions} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 
 import CheckCircle from 'material-ui/svg-icons/action/check-circle';
@@ -29,6 +29,12 @@ import Listing from './Listing';
 //    /////
 //    COMPONENT
 //    /////
+const styles = {
+  card: {
+    margin: 30
+  }
+}
+
 var Admin = React.createClass ({
   mixins: [ReactFireMixin],
   getInitialState:function() {
@@ -75,10 +81,10 @@ var Admin = React.createClass ({
   render:function() {
     var listings = this.state.submissions;
     return (
-      <Paper>
-        <CardHeader title={'Directory Submissions for Approval:' + this.props.lang} />
+      <Card style={styles.card}>
+        <CardTitle title={'Directory Submissions for Approval: ' + this.props.lang} />
         {listings.map((listing, i) => (
-          <Card key={i}>
+          <Card key={i} style={styles.card}>
             <CardText>
               <Listing key={i}
                 isRTL={false}
@@ -100,7 +106,7 @@ var Admin = React.createClass ({
           </Card>
         )
                      )}
-      </Paper>
+      </Card>
     );
   }
 });
