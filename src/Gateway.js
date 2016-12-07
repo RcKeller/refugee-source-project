@@ -13,6 +13,9 @@ document:false, window:false, console:false, alert:false, user:false
 //    /////
 import React from 'react';
 
+import firebase from 'firebase';
+import ReactFireMixin from 'reactfire';
+
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
@@ -40,37 +43,58 @@ const styles = {
 
 };
 var Gateway = React.createClass ({
+    mixins: [ReactFireMixin],
+    getInitialState:function() {
+      return {
+        text: {
+          'en': 'English',
+          'ar': 'Arabic',
+          'sp': 'Spanish',
+          'ch': 'Chinese (Simplified)',
+          'kh': 'Khmer (Cambodia)',
+          'sm': 'Somali',
+          'rs': 'Russian'
+        }
+      }
+    },
+  
+    componentWillMount: function() {
+        var ref = firebase.database().ref('languages');
+        this.bindAsObject(ref, 'text');
+    },
+  
     /*
     Material-UI is a bit weird. You can't pass args for buttons.
     Thus, separate anonymous functions
     */
     render:function() {
+      console.log(this.state);
         return (
             <Card style={styles.card}>
                 <CardTitle title="Welcome to Emerald Refuge" />
                 <CardActions>
-                  <RaisedButton label="English"
+                  <RaisedButton label={this.state.text.en}
                     style={styles.button} secondary={true}
                     onTouchTap={() => this.props.setLang('en')} />
-                  <RaisedButton label="Arabic"
+                  <RaisedButton label={this.state.text.ar}
                     style={styles.button} secondary={true}
                     onTouchTap={function() {
                       this.props.setLang('ar');
                       this.props.setRTL();
                     }.bind(this)}/>
-                  <RaisedButton label="español"
+                  <RaisedButton label={this.state.text.sp}
                     style={styles.button} secondary={true}
                     onTouchTap={() => this.props.setLang('sp')} />
-                  <RaisedButton label="Chinese 简体中文"
+                  <RaisedButton label={this.state.text.ch}
                     style={styles.button} secondary={true}
                     onTouchTap={() => this.props.setLang('ch')} />
-                  <RaisedButton label="Khmer"
+                  <RaisedButton label={this.state.text.kh}
                     style={styles.button} secondary={true}
                     onTouchTap={() => this.props.setLang('kh')} />
-                  <RaisedButton label="Somali"
+                  <RaisedButton label={this.state.text.sm}
                     style={styles.button} secondary={true}
                     onTouchTap={() => this.props.setLang('sm')} />
-                  <RaisedButton label="Russian"
+                  <RaisedButton label={this.state.text.rs}
                     style={styles.button} secondary={true}
                     onTouchTap={() => this.props.setLang('rs')} />
                 </CardActions>
