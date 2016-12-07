@@ -50,23 +50,23 @@ var Directory = React.createClass ({
     render:function() {
         var listings = this.state.resources;
         return (
-            <Card>
-                <CardTitle title={this.props.content.title}
-                  style={styles.header} />
-                <CardText>
-                    <p>  
-                      {this.props.content.description}
-                    </p>
-                    {listings.map((listing, i) =>
-                        <Listing key={i}
-                            isRTL={this.props.isRTL}
-                            listing={listing}
-                            phoneTitle={this.props.content.phone + ": "}
-                            websiteTitle={this.props.content.website}
-                            />
-                    )}
-                </CardText>
-            </Card>
+            <div>
+              {listings.length > 0 ?
+                <div>
+                  {listings.map((listing, i) =>
+                      <Listing key={i}
+                          isRTL={this.props.isRTL}
+                          listing={listing}
+                          phoneTitle={this.props.content.phone + ": "}
+                          websiteTitle={this.props.content.website}
+                          />
+                  )}
+                </div>
+              :
+              <span>Loading...</span>
+              }
+          </div>
+                
         );
     }
 });

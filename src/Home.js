@@ -18,6 +18,8 @@ import {Row, Col} from 'react-grid-system';
 import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
+import {Card, CardTitle, CardText} from 'material-ui/Card';
+
 
 //    /////
 //    MATERIAL-UI COMPONENTS
@@ -28,6 +30,15 @@ import Directory from './Directory';
 //    /////
 //    COMPONENT
 //    /////
+const styles = {
+  header: {
+    textAlign: 'center'
+  },
+  description: {
+    padding: 20
+  }
+};
+
 var Home = React.createClass ({
     mixins: [ReactFireMixin],
     getInitialState:function() {
@@ -60,13 +71,20 @@ var Home = React.createClass ({
         return (    
             <Row>
               <Col sm={12}>
-                  <div style={adaptiveDirection}>
+                    <Card style={adaptiveDirection}>
+                      <CardTitle title={this.state.content.directory.title}
+                        style={styles.header} />
+                      <CardText>
+                        <p>
+                          {this.state.content.directory.description}
+                        </p>
                       <Directory 
                           lang={this.props.lang}
                           isRTL={this.props.isRTL}
                           content={this.state.content.directory}
                       />
-                  </div>
+                      </CardText>
+                </Card>
               </Col>
             </Row>            
         );
