@@ -21,6 +21,7 @@ import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import Divider from 'material-ui/Divider';
 
+import {green500} from 'material-ui/styles/colors';
 import Directions from 'material-ui/svg-icons/maps/directions';
 import HourglassEmpty from 'material-ui/svg-icons/action/hourglass-empty';
 import Link from 'material-ui/svg-icons/content/link';
@@ -37,8 +38,13 @@ const styles = {
   },
   iconButton: {
     width: 50
-  }
+  },
+    phoneNumber: {
+        textDecoration: 'none',
+        color: green500
+    }
 }
+const iconColor = green500;
 
 var Listing = React.createClass ({
     render:function() {
@@ -58,18 +64,18 @@ var Listing = React.createClass ({
                 />
                 <CardActions>
                     <FlatButton secondary={true}
-                        icon={<Directions />}
+                        icon={<Directions color={iconColor} />}
                         href={directions + this.props.listing.address}
                     />  
                     {this.props.listing.link &&
                         <FlatButton secondary={true}
-                            icon={<Link />}
+                            icon={<Link color={iconColor} />}
                             href={this.props.listing.link}/>
                     }
                     {this.props.listing.phone &&
                         <FlatButton secondary={true}
-                            icon={<Phone />}
-                            label={this.props.listing.phone}
+                            icon={<Phone color={iconColor} />}
+                            label={<span style={styles.phoneNumber}>{this.props.listing.phone}</span>}
                             href={"tel:" + this.props.listing.phone}/>
                     }
                     

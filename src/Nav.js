@@ -19,7 +19,7 @@ import {Link} from 'react-router';
 //    /////
 import {List, ListItem} from 'material-ui/List';
 
-import {blueA400} from 'material-ui/styles/colors';
+import {green500} from 'material-ui/styles/colors';
 
 import Home from 'material-ui/svg-icons/action/home';
 import ContentPaste from 'material-ui/svg-icons/content/content-paste';
@@ -38,7 +38,7 @@ const styles = {
     }
 };
 
-const iconColor = blueA400;
+const iconColor = green500;
 
 var Nav = React.createClass ({
     refresh: function () {
