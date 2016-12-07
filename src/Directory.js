@@ -16,6 +16,9 @@ import React from 'react';
 import firebase from 'firebase';
 import ReactFireMixin from 'reactfire';
 
+import {Card, CardTitle, CardText} from 'material-ui/Card';
+
+
 import Listing from './Listing';
 
 
@@ -47,20 +50,23 @@ var Directory = React.createClass ({
     render:function() {
         var listings = this.state.resources;
         return (
-            <div>
-                <h2 style={styles.header}>{this.props.content.title}</h2>
-                <p style={styles.description}>  
-                  {this.props.content.description}
-                </p>
-                {listings.map((listing, i) =>
-                    <Listing key={i}
-                        isRTL={this.props.isRTL}
-                        listing={listing}
-                        phoneTitle={this.props.content.phone + ": "}
-                        websiteTitle={this.props.content.website}
-                        />
-                )}
-            </div>
+            <Card>
+                <CardTitle title={this.props.content.title}
+                  style={styles.header} />
+                <CardText>
+                    <p>  
+                      {this.props.content.description}
+                    </p>
+                    {listings.map((listing, i) =>
+                        <Listing key={i}
+                            isRTL={this.props.isRTL}
+                            listing={listing}
+                            phoneTitle={this.props.content.phone + ": "}
+                            websiteTitle={this.props.content.website}
+                            />
+                    )}
+                </CardText>
+            </Card>
         );
     }
 });

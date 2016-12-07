@@ -12,6 +12,7 @@ document:false, window:false, console:false, alert:false, user:false
 //    IMPORT DEPENDENCIES
 //    /////
 import React from 'react';
+import {Row, Col} from 'react-grid-system';
 
 //    /////
 //    MATERIAL-UI COMPONENTS
@@ -30,6 +31,15 @@ const directions = 'https://www.google.com/maps/dir//'
 //    /////
 //    COMPONENT
 //    /////
+const styles = {
+  actions: {
+    textAlign: 'center'
+  },
+  iconButton: {
+    width: 50
+  }
+}
+
 var Listing = React.createClass ({
     render:function() {
         var adaptiveDirection = {
@@ -62,15 +72,16 @@ var Listing = React.createClass ({
                             label={this.props.listing.phone}
                             href={"tel:" + this.props.listing.phone}/>
                     }
-                    {this.props.listing.hours &&
-                      <FlatButton secondary={true}
-                        disabled={true}
-                        icon={<HourglassEmpty/>}
-                        label={this.props.listing.hours}
-                        />
-                    }
+                    
                 </CardActions>
                 <CardText expandable={true}>
+                  {this.props.listing.hours &&
+                    <FlatButton secondary={true}
+                      disabled={true}
+                      icon={<HourglassEmpty/>}
+                      label={this.props.listing.hours}
+                      />
+                  }
                     <Divider />
                     <p><em>
                         {this.props.listing.description}

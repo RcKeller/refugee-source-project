@@ -14,13 +14,10 @@ document:false, window:false, console:false, alert:false, user:false
 import React from 'react';
 import {Container, Row, Col} from 'react-grid-system';
 
-import firebase from 'firebase';
-// Reactfire is used for binding content references, but since this component is push-only, we don't need the reactfire mixin - firebase methods suffice.
-
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
-import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
+import {Card, CardTitle, CardText} from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 
@@ -29,19 +26,15 @@ import FlatButton from 'material-ui/FlatButton';
 //    COMPONENT
 //    /////
 const styles = {
-    form: {
-        margin: 30
-    },
-    radioButton: {
-        margin: 15,
-    },
-    submit: {
-        marginTop: 30,
-        marginBottom: 30
+    card: {
+      marginTop: 50, padding: 0
     },
     header: {
       textAlign: 'center',
       margin: 0, padding: 0
+    },
+    content: {
+      margin: 0, padding: 5
     },
     button: {
       width: '100%',
@@ -78,11 +71,10 @@ var LoginForm = React.createClass ({
 
     render:function() {
         return (
-            <Container>
+            <Card style={styles.card}>
+            <CardTitle title='Staff Login' style={styles.header}/>
+              <CardText style={styles.content}>
                 <Row>
-                    <h4 style={styles.header}>
-                      Staff Login
-                    </h4>
                     <Col sm={12} md={4}>
                         <TextField
                             onChange={this.checkUser}
@@ -106,7 +98,8 @@ var LoginForm = React.createClass ({
                       />
                     </Col>
                 </Row>
-            </Container>
+            </CardText>
+            </Card>
         );
     }
 });

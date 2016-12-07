@@ -76,7 +76,7 @@ var Admin = React.createClass ({
     var listings = this.state.submissions;
     return (
       <Paper>
-        <h1>Directory Submissions for Approval: {this.props.lang}</h1>
+        <CardHeader title={'Directory Submissions for Approval:' + this.props.lang} />
         {listings.map((listing, i) => (
           <Card key={i}>
             <CardText>

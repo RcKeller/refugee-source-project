@@ -40,7 +40,6 @@ import Nav from './Nav';
 //    COMPONENT
 //    /////
 
-const backgroundPhoto = 'https://firebasestorage.googleapis.com/v0/b/refugeproject-90082.appspot.com/o/SelectLang.jpg?alt=media&token=b4394063-819b-4f04-b2b3-9faa58eb65e8'
 const styles = {
     //The following appBar styles could not be applied by MUItheme.
     background: {

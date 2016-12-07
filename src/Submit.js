@@ -85,11 +85,9 @@ var Submit = React.createClass ({
                       </Paper>
                   </CardText>
               </Card>
-              <Card>
-                <CardText>
+              <div>
                   <LoginForm login={this.login}/>
-                </CardText>
-              </Card>
+              </div>
             </div>
             :
             <div>

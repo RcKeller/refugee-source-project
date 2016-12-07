@@ -22,8 +22,6 @@ import ReactFireMixin from 'reactfire';
 //    /////
 //    MATERIAL-UI COMPONENTS
 //    /////
-import Paper from 'material-ui/Paper';
-
 import Directory from './Directory';
 
 
@@ -38,26 +36,6 @@ var Home = React.createClass ({
             content: {
                 map: {},
                 directory: {}
-            },
-            filters: {
-                stateside: false,
-//                citizen: false,
-//                nationality: [''],  //Multiple nationalities.
-//                gender: '',
-//                lowIncome: true,
-//                service: {          //Seeking these services:
-//                    food: true,
-//                    shelter: true,
-//                    housing: true,
-//                    immigration: true,
-//                    resettlement: true,
-//                    esl: true,
-//                    employment: true,
-//                    childcare: true,
-//                    healthcare: true,
-//                    mental: true,
-//                    addiction: true,
-//                }
             }
             
         });
@@ -82,13 +60,13 @@ var Home = React.createClass ({
         return (    
             <Row>
               <Col sm={12}>
-                  <Paper style={adaptiveDirection}>
+                  <div style={adaptiveDirection}>
                       <Directory 
                           lang={this.props.lang}
                           isRTL={this.props.isRTL}
                           content={this.state.content.directory}
-                          filters={this.state.filters}  />
-                  </Paper>
+                      />
+                  </div>
               </Col>
             </Row>            
         );
