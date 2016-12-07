@@ -37,7 +37,7 @@ const styles = {
     button: {
       margin: 5
     }
-    
+
 };
 var Gateway = React.createClass ({
     /*
@@ -47,7 +47,7 @@ var Gateway = React.createClass ({
     render:function() {
         return (
             <Card style={styles.card}>
-                <CardTitle title="Welcome" />
+                <CardTitle title="Welcome to Emerald Refuge" />
                 <CardActions>
                   <RaisedButton label="English"
                     style={styles.button} secondary={true}
@@ -59,9 +59,9 @@ var Gateway = React.createClass ({
                       this.props.setRTL();
                     }.bind(this)}/>
                   <RaisedButton label="español"
-                    style={styles.button} secondary={true} 
+                    style={styles.button} secondary={true}
                     onTouchTap={() => this.props.setLang('sp')} />
-                  <RaisedButton label="Chinese"
+                  <RaisedButton label="Chinese 简体中文"
                     style={styles.button} secondary={true}
                     onTouchTap={() => this.props.setLang('ch')} />
                   <RaisedButton label="Khmer"
