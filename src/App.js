@@ -43,11 +43,7 @@ import Nav from './Nav';
 const styles = {
     //The following appBar styles could not be applied by MUItheme.
     background: {
-      textAlign: 'center',
-      position: 'absolute',
-      height: '100%',
-      width: '100%',
-      top: 0
+      textAlign: 'center'
     },
     appBar: {
         height: 65,

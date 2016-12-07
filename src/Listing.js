@@ -18,9 +18,7 @@ import React from 'react';
 //    /////
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
-import Divider from 'material-ui/Divider';
 
-import {green500} from 'material-ui/styles/colors';
 import Directions from 'material-ui/svg-icons/maps/directions';
 import HourglassEmpty from 'material-ui/svg-icons/action/hourglass-empty';
 import Link from 'material-ui/svg-icons/content/link';
@@ -33,12 +31,9 @@ const directions = 'https://www.google.com/maps/dir//'
 //    /////
 const styles = {
     phoneNumber: {
-        textDecoration: 'none',
-        color: green500
+        textDecoration: 'none'
     }
 }
-const iconColor = green500;
-
 var Listing = React.createClass ({
     render:function() {
         var adaptiveDirection = {
@@ -46,28 +41,27 @@ var Listing = React.createClass ({
             margin: 10
         };
         return (
+          <div>
+          {this.props.listing ?
             <Card style={adaptiveDirection}>
                 <CardHeader
                     title={this.props.listing.name}
-                    subtitle={
-                        <span style={{direction: 'ltr'}}> {this.props.listing.address}
-                        </span>
-                    }
+                    subtitle={this.props.listing.address}
                     showExpandableButton={true}
                 />
                 <CardActions>
                     <FlatButton secondary={true}
-                        icon={<Directions color={iconColor} />}
+                        icon={<Directions />}
                         href={directions + this.props.listing.address}
                     />  
                     {this.props.listing.link &&
                         <FlatButton secondary={true}
-                            icon={<Link color={iconColor} />}
+                            icon={<Link />}
                             href={this.props.listing.link}/>
                     }
                     {this.props.listing.phone &&
                         <FlatButton secondary={true}
-                            icon={<Phone color={iconColor} />}
+                            icon={<Phone />}
                             label={<span style={styles.phoneNumber}>{this.props.listing.phone}</span>}
                             href={"tel:" + this.props.listing.phone}/>
                     }
@@ -81,19 +75,15 @@ var Listing = React.createClass ({
                       label={this.props.listing.hours}
                       />
                   }
-                    <hr></hr>
-                    <p>
-                        {this.props.listing.description}
-                    </p>
-                    {this.props.listing.services &&
-                      <div>
-                        <Divider />
-                        <br></br>
-                        <em>{this.props.listing.services}</em>
-                      </div>
-                    }
+                  <p>
+                      {this.props.listing.description}
+                  </p>
                 </CardText>
             </Card>
+           :
+           <div></div>
+            }
+          </div>
         );
     }
 });
