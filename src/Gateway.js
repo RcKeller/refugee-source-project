@@ -51,6 +51,7 @@ var Gateway = React.createClass ({
           'ar': 'Arabic',
           'sp': 'Spanish',
           'ch': 'Chinese (Simplified)',
+          
           'kh': 'Khmer (Cambodia)',
           'sm': 'Somali',
           'rs': 'Russian'
