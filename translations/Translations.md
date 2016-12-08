@@ -8,11 +8,18 @@ About Us:
 
 About us
 
+
 	The Emerald Refugee Project is a group of students in the Informatics Program at the University of Washington who hope to empower refugees coming into this country to be able to get the same opportunities as those born in this country. Finding resources for how to get a driver’s license, citizenship, enrolling your child into school and other social services can be hard to find when there’s no central information database. That’s what the Emerald Refugee Project hopes to accomplish. By compiling all resources that refugees may need and putting them in one centralized database, we hope to reduce the stress and frustration people may have when searching for what they need to find.
 
-About us关于我们绿宝石避难所课题是由4位华盛顿大学信息技术专业的学生开展的，旨意帮助初到美国的难民们寻找多种多样的机会，让他们在美国感受到家的感觉。寻找资源例如如何拿到驾照，成为美国公民，送孩子进学校等很多难以得到答案的问题。 绿宝石避难所网站就是为了解决这个问题。通过把所有相关的资源集中到一个数据库，我们希望让更多的难民得到支持和帮助。
+About us
+关于我们
 
-Disclaimer: This is a student project, not a fully secured website声名：这是一个学生课题作业，不是一个完全安全的网站。
+
+绿宝石避难所课题是由4位华盛顿大学信息技术专业的学生开展的，旨意帮助初到美国的难民们寻找多种多样的机会，让他们在美国感受到家的感觉。寻找资源例如如何拿到驾照，成为美国公民，送孩子进学校等很多难以得到答案的问题。 绿宝石避难所网站就是为了解决这个问题。通过把所有相关的资源集中到一个数据库，我们希望让更多的难民得到支持和帮助。
+
+Disclaimer: This is a student project, not a fully secured website
+声名：这是一个学生课题作业，不是一个完全安全的网站。
+
 مشروع لاجئ الزمرد هي مجموعة من الطلاب في برنامج المعلوماتية في جامعة واشنطن الذين يأملون في تمكين اللاجئين القادمين إلى هذا البلد للقدرة على الحصول على نفس الفرص المتاحة لؤلائك الذين ولدوا في هذا البلد. يمكن العثور على موارد لكيفية الحصول على رخصة القيادة والجنسية وتسجيل طفلك في المدرسة وغيرها من الخدمات الاجتماعية مما يكون من الصعب العثور عليها. هذا ما تأمل مشروع (لاجئ الزمرد) إلى تحقيقه. من خلال تجميع كافة الموارد التي قد يحتاجها اللاجئين ووضعها في قاعدة بيانات مركزية واحدة، ونحن نأمل الحد من التوتر وتسهيل عملية البحث عن ما يحتاجونه في العثور عليها.
 
 

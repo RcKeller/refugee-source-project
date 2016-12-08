@@ -58,11 +58,8 @@ var Submit = React.createClass ({
         this.bindAsObject(ref, 'content');
     },
   
-  login:function(creds) {
-    console.log("CREDS:", creds);
-    firebase.auth().signInWithEmailAndPassword(creds.form.email, creds.form.password)
+  login:function(creds) {  firebase.auth().signInWithEmailAndPassword(creds.form.email, creds.form.password)
     .then(() => {
-      console.log("AUTH:", firebase.auth());
       if (firebase.auth()) {
         this.setState({user: true});
       }

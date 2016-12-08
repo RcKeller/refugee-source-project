@@ -69,7 +69,6 @@ var Gateway = React.createClass ({
     Thus, separate anonymous functions
     */
     render:function() {
-      console.log(this.state);
         return (
             <Card style={styles.card}>
                 <CardTitle title="Welcome to Emerald Refuge" />

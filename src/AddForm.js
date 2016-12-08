@@ -68,8 +68,6 @@ var AddForm = React.createClass ({
     },
     
     submit:function() {
-        console.log("Submitting:", this.state.form);
-        console.log("Selected Lang:", this.state.formLanguage);
         var path = "submissions/" + this.state.formLanguage;
         var ref = firebase.database().ref(path);
         ref.push(this.state.form);

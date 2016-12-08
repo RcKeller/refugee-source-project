@@ -53,7 +53,6 @@ var LoginForm = React.createClass ({
     },
     
     submit:function() {
-      console.log("submitting login!")
       this.props.login(this.state);
     },
   

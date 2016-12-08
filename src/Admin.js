@@ -64,7 +64,6 @@ var Admin = React.createClass ({
     var childNode = firebase.database().ref(this.state.origin + '/' + key);
     childNode.once('value').then((snapshot) => {
       var approval = snapshot.val();
-      console.log("Approving:", approval);
       //firebaseRefs refers to nodes bound by reactfire.
       this.firebaseRefs.approvals.push(approval).then(() => {
         this.delete(key);
@@ -72,7 +71,6 @@ var Admin = React.createClass ({
     });
   },
   delete: function(key) {
-    console.log("Deleting:", key);
     var ref = firebase.database().ref(this.state.origin);
     ref.child(key).remove();
   },

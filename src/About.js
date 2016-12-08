@@ -52,8 +52,6 @@ var About = React.createClass ({
     },
 
     render:function() {
-        console.log("ABOUT STATE", this.state);
-        console.log("ABOUT PROPS:", this.props);
         return (
             <Card>
                 <CardTitle title={this.state.content.title}
