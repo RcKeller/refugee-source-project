@@ -49,6 +49,16 @@ We have less than 10 days left.
 * Miranda Lin - User Research & Data
 
 ---------------------------
+## Group Member Accomplishment
+
+* Ryan Keller 
+* Yuxing Wu 
+* Muhammad Hussain 
+* Ali Shubber 
+* McKaulay Kolakowski 
+* Sarah Phillips 
+* Miranda Lin 
+---------------------------
 
 ### Git Basics
 
@@ -91,10 +101,5 @@ Questions? Call me, text me, e-mail, facebook, slack, rest assured I'm making my
 One other aside, on paper - our group is heavily UX-leaning. Almost everyone else in our group is an aspiring UX designer. That's great. One thing to keep in mind (speaking from experience) is that when there are a lot of UX professionals, managers or SME's in a development project, conflicting scopes can and will derail and kill projects, fast. So, for this reason, I encourage you all to get together, discuss scopes, wireframe, and talk to me. If we have individual sidebars, our vision will begin to waver.
 
 Another good thing to consider is prioritizing interactions, and making sure that they are feasible with our current data flow in mind. React uses a one-way (or top down) data flow, which makes interacting with separate components that are not necessarily parent or child, incredibly cumbersome.
-
----------------------------
-
-McKaulay, again, fill in whatever is missing here.
-test
 
 ---------------------------
