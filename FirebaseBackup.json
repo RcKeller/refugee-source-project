@@ -1,4 +1,13 @@
 {
+  "languages" : {
+    "ar" : "العربية",
+    "ch" : "中文",
+    "en" : "English",
+    "kh" : "ភាសាខ្មែរ",
+    "rs" : "русский",
+    "sm" : "Soomaali",
+    "sp" : "Español"
+  },
   "main" : {
     "ar" : {
       "about" : {
@@ -38,29 +47,29 @@
     },
     "ch" : {
       "about" : {
-        "description" : "The Emerald Refugee Project is a group of students in the Informatics Program at the University of Washington who hope to empower refugees coming into this country to be able to get the same opportunities as those born in this country. Finding resources for how to get a driver’s license, citizenship, enrolling your child into school and other social services can be hard to find when there’s no central information database. That’s what the Emerald Refugee Project hopes to accomplish. By compiling all resources that refugees may need and putting them in one centralized database, we hope to reduce the stress and frustration people may have when searching for what they need to find.",
+        "description" : "绿宝石避难所课题是由4位华盛顿大学信息技术专业的学生开展的，旨意帮助初到美国的难民们寻找多种多样的机会，让他们在美国感受到家的感觉。寻找资源例如如何拿到驾照，成为美国公民，送孩子进学校等很多难以得到答案的问题。 绿宝石避难所网站就是为了解决这个问题。通过把所有相关的资源集中到一个数据库，我们希望让更多的难民得到支持和帮助。",
         "image" : {
           "description" : "Description",
           "source" : "URL",
           "title" : "Image"
         },
-        "title" : "About Project Emerald"
+        "title" : "关于我们"
       },
       "app" : {
-        "disclaimer" : "Disclaimer: This is a student project, not a fully secured website",
-        "header" : "Project Emerald",
+        "disclaimer" : "声名：这是一个学生课题作业，不是一个完全安全的网站。",
+        "header" : "绿宝石避难所",
         "nav" : {
-          "about" : "About Us",
-          "home" : "Home",
-          "language" : "Language",
+          "about" : "关于我们",
+          "home" : "主页",
+          "language" : "语言",
           "submission" : "Submit Resource"
         }
       },
       "home" : {
         "directory" : {
-          "description" : "Below is a list of resettlement resource centers in Washington State.",
+          "description" : "以下是华盛顿州的安置资源：",
           "phone" : "Phone",
-          "title" : "Directory",
+          "title" : "资源目录",
           "website" : "Website"
         }
       },
@@ -266,14 +275,23 @@
       }
     },
     "ch" : {
-      "-KYLCisFV94fhKn8f4zm" : {
-        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
-        "description" : "Provide individuals and families who are in need with food and access to a network of community resources that helps them achieve self-sufficiency.",
-        "hours" : "Mon 9am - 3pm Tue 2pm - 8pm Thu 2pm - 8pm Fri 9am - 3pm",
-        "link" : "http://www.udistrictfoodbank.org/",
-        "name" : "University District Food Bank",
-        "phone" : "(206) 523-7060",
-        "services" : "Food"
+      "-KYQfqHwd9wGmPKGgm78" : {
+        "address" : "100号 South King Street, Suite 570 Seattle, WA 98104",
+        "description" : "国际救援委员会应对世界上最严重的人道主义危机，帮助那些生活和生计受到冲突和灾难破坏的人们生存，恢复和帮助chong jian他们的未来。",
+        "hours" : "",
+        "link" : "https://www.rescue.org/united-states/seattle-wa",
+        "name" : "国际救援委员会 - 西雅图",
+        "phone" : "(206) 623-2105",
+        "services" : "安置，就业，医疗保健，家庭，移民"
+      },
+      "-KYQvrx7v3AuMuV8ttxd" : {
+        "address" : "7050 32nd Ave S, Seattle, WA 98118",
+        "description" : "东非社区服务致力于提供文化反应的第12教育计划，保持我们的青年安全，并帮助他们在学校和生活中取得成功。 我们提供适应美国生活的工具，并参与广泛和综合的社区生活。",
+        "hours" : "周一 -周五  上午9:00 - 下午6:00",
+        "link" : "http://www.eastafricancs.org/",
+        "name" : "东非社区服务",
+        "phone" : "(206) 721-1119",
+        "services" : "家庭，移民，教育"
       }
     },
     "en" : {
@@ -738,26 +756,17 @@
       }
     },
     "kh" : {
-      "-KYLCisFV94fhKn8f4zm" : {
-        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
-        "description" : "Provide individuals and families who are in need with food and access to a network of community resources that helps them achieve self-sufficiency.",
-        "hours" : "Mon 9am - 3pm Tue 2pm - 8pm Thu 2pm - 8pm Fri 9am - 3pm",
-        "link" : "http://www.udistrictfoodbank.org/",
-        "name" : "University District Food Bank",
-        "phone" : "(206) 523-7060",
-        "services" : "Food"
+      "-KYQx8XaaO_gNoFImq8B" : {
+        "address" : "1610 South King Street, Seattle, WA 98144",
+        "description" : "ភូមិភាគនៃការិយាល័យតាំងទីលំនៅជនភៀសខ្លួន Olympia ជួយជនភៀសខ្លួននិង asylees សម្រេចបាននូវភាពគ្រប់គ្រាន់ខ្លួនឯងនៃសេដ្ឋកិច្ច។ បេសកកម្មរបស់យើងត្រូវបានសម្រេចតាមរយៈការតាំងលំនៅថ្មី, សកម្មភាពការស្វែងរកការងារ, និងកម្មវិធីអភិវឌ្ឍអាជីវកម្មដែលលើកកម្ពស់ខ្លួនឯងការងារ។",
+        "hours" : "ច័ន្ទ - សុក្រ: ម៉ោង 10 ព្រឹក - ម៉ោង 4 រសៀល",
+        "link" : "http://www.dioceserroseattle.org/",
+        "name" : "គ្រឹស្តសាសនាភូមិភាគនៃការិយាល័យតាំងទីលំនៅជនភៀសខ្លួន Olympia",
+        "phone" : "(206) 323-3152",
+        "services" : "ការតាំងទីលំនៅថ្មី, អន្តោប្រវេសន៍, ភាសាអង់គ្លេសគ្រប់, ការងារ, គ្រួសារ"
       }
     },
     "rs" : {
-      "-KYLCisFV94fhKn8f4zm" : {
-        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
-        "description" : "Provide individuals and families who are in need with food and access to a network of community resources that helps them achieve self-sufficiency.",
-        "hours" : "Mon 9am - 3pm Tue 2pm - 8pm Thu 2pm - 8pm Fri 9am - 3pm",
-        "link" : "http://www.udistrictfoodbank.org/",
-        "name" : "University District Food Bank",
-        "phone" : "(206) 523-7060",
-        "services" : "Food"
-      },
       "-KYPzQZ-zxFbMs2nHJv4" : {
         "address" : "3102 W. Fort George Wright Drive, Spokane, WA 99224",
         "description" : "В течение 50 лет SNAP служил Спокан регион как ведущий голос на бедность. Как лидер сообщества действий района Спокана, SNAP берет на себя ведущую роль в обучении и расширение прав и возможностей наших соседей с низким уровнем дохода. Миссия: Для обеспечения доступа и подключения к ресурсам, которые создают возможности, с чувством собственного достоинства, для людей с низким уровнем дохода.",
@@ -940,31 +949,279 @@
       }
     },
     "sm" : {
-      "-KYLCisFV94fhKn8f4zm" : {
-        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
-        "description" : "Provide individuals and families who are in need with food and access to a network of community resources that helps them achieve self-sufficiency.",
-        "hours" : "Mon 9am - 3pm Tue 2pm - 8pm Thu 2pm - 8pm Fri 9am - 3pm",
-        "link" : "http://www.udistrictfoodbank.org/",
-        "name" : "University District Food Bank",
-        "phone" : "(206) 523-7060",
-        "services" : "Food"
+      "-KYQvdohIScaX685PpzU" : {
+        "address" : "1610 South King Street, Seattle, WA 98144",
+        "description" : "Catholic Immigration Services Legal (CILS) waxay bixisaa caawimaad socdaalka sharci oo tayo leh si ay dadka deegaanka dakhligoodu hooseeyo ee Washington. Currently, CILS bixisaa dhalashada free / N-400 gargaarka codsiga dadka oo haatan ku jira manfacyada dadweynaha ama ku nool magaalada Seattle, iyo dhalashada lacag la'aan ah iyo kaalmada kaadhka cagaaran in ay qaxootiga iyo magangelyo doone kuwaas oo Maraykanka ka yar shan sano. CILS ayaa laba goobood xafiiska: Seattle iyo Mt. Vernon.",
+        "hours" : "",
+        "link" : "http://www.ccsww.org/site/PageServer?pagename=refugeeimmigration_index",
+        "name" : "Adeegyada Bulshada Catholic of Western Washington",
+        "phone" : "(206) 323-6336",
+        "services" : "Dejinta, Qoyska, Waayeelka, Caafimaadka, Church"
+      },
+      "-KYQveu_NaFOpp-Xy5nK" : {
+        "address" : "1610 South King Street, Seattle, WA 98144",
+        "description" : "The Sheeko of Xafiiska dejinta Qaxootiga Olympia ee ka caawisaa qaxootiga iyo magangelyo doone waa loo gaaro isku-filnaanshaha dhaqaalaha. Our mission dhammaaday iyada oo loo marayo dib u dejinta, hawlaha shaqo, iyo barnaamijyada horumarinta ganacsiga in kor loogu qaado is-shaqada.",
+        "hours" : "Isniin - Jimco: 10am - 4pm",
+        "link" : "http://www.dioceserroseattle.org/",
+        "name" : "Episcopal Sheeko of Xafiiska dejinta Qaxootiga Olympia",
+        "phone" : "(206) 323-3152",
+        "services" : "Dejinta, Socdaalka, ESL, shaqada, Qoyska"
+      },
+      "-KYQvkNXIhqb32nKkZw5" : {
+        "address" : "100 South King Street, Suite 570 Seattle, WA 98104",
+        "description" : "Guddiga Caalamiga ah ee Badbaadinta ayaa jawaab u falada ugu daran aduunka ee bini'aadanimo iyo dadka ka caawiya, kuwaas oo noloshooda iyo hab-nololeedka waxaa lagu soo daalay dagaalada iyo musiibooyinka si ay u noolaadaan, ka soo kabsado, iyo gacanta ay mustaqbalka.",
+        "hours" : "",
+        "link" : "https://www.rescue.org/united-states/seattle-wa",
+        "name" : "Guddiga Caalamiga ah ee Badbaadinta - Seattle",
+        "phone" : "(206) 623-2105",
+        "services" : "Dejinta, shaqada, caafimaadka, qoyska, Immigration"
+      },
+      "-KYQvmf9HkZ_Bpt6Z2hl" : {
+        "address" : "1601 16th Avenue, Seattle, WA 98122-4000",
+        "description" : "Beesha Yuhuudda fahamsan waxa ay u eg yahay inuu ka tago mid ka mid ah ee guriga iyo dejinta dal qalaad. Taasi waayo-aragnimo shidaalka taariikhi naga doonayaan in la caawiyo qaxootiga iyo muhaajiriinta ka dhigi gudbid guul si ay isku-filnaanshaha. Our shaqaalaha dhaqamada kala duwan waxaa si toos ah loo qorto ka bulshooyinka qowmiyadaha aannu u adeegnaa. JFS adeegta shaqsiyaadka iyo qoysaska ka King iyo Snohomish Degmooyinka. Dhammaan barnaamijyada waxaa lagu bixiyaa lacag la'aan ah si ay ka qaybgalayaashu.",
+        "hours" : "",
+        "link" : "http://www.jfsseattle.org/services/refugees-immigrants/",
+        "name" : "Adeegga Yuhuudda Qoyska Qaxootiga iyo Adeega Socdaalka",
+        "phone" : "(206) 461-3240",
+        "services" : "Dejinta, ESL, shaqada, caafimaadka, Socdaalka, Qoyska"
+      },
+      "-KYQvnH72zWsalVrpSTQ" : {
+        "address" : "115 NE 100th Street, Suite 200, Seattle, WA 98125-8099",
+        "description" : "Waxaan kaa caawin qaxootiga iyo muhaajiriinta helaan khayraadka iyo xirfadaha faa'iido in ay si guul leh u gudbaan bulshooyinka cusub ay, gaadhaan isku filnaanta iyo bilaabaan nolosha rajo cusub oo loo ballanqaaday.",
+        "hours" : "Isniin - Khamiis 8:30 am - 5:00 pm, Jimce 8:30 am - 3:00 pm",
+        "link" : "http://www.lcsnw.org/services.html",
+        "name" : "Community Lutheran Services",
+        "phone" : "(206) 694-5700",
+        "services" : "Caafimaadka, Qoyska, Seniors"
+      },
+      "-KYQvneWOM4bB8czDvrC" : {
+        "address" : "841 Central Ave N Suite C106, Kent, WA 98032",
+        "description" : "World Relief Seattle ayaa ka shaqeyneysey ilaa 1979 in la xoojiyo kaniisadda maxalliga ah in ay u adeegaan qaxootiga iyo doolka ee Greater Seattle Area ah. Asal ahaan la aasaasay si ay u daryeelaan kuwa dagaal ka cararaya in Southeast Asia, waannu tan koray in qaxootiga ka dhowaad 50 dal dejinta. Waxaan dhiirigelinayaa by kaniisadaha badan, ganacsiga, iyo shaqsiyaadka isticmaala khayraadka iyo xariif si kor loogu qaado nolosha qaxootiga iyo muhaajiriinta oo dhan Western Washington.",
+        "hours" : "Isniin, Talaado, Khamiis 9:00 am - 4:00 pm, Jimce 9:00 am - 3:00 pm, Guursada ballan",
+        "link" : "http://worldreliefseattle.org/",
+        "name" : "World Relief Seattle",
+        "phone" : "(253) 277-1121",
+        "services" : "Dejinta, shaqada, ESL, Socdaalka, Church"
+      },
+      "-KYQvs_bzqLaBcrQgUve" : {
+        "address" : "4714 Rainier Ave S Suite 105, Seattle, WA 98118",
+        "description" : "Horn of Africa Services waa doon ah oo u adeegaya waddanka u soo guurey ee Bariga Afrika iyo bulshada qaxootiga ah ee Seattle. Waxaan u adeegi shaqsiyaadka iyo qoysaska ka Jabuuti, Eritrea, Ethiopia, Sudan, Soomaaliya, iyo dalalka deriska ah in ku nool yihiin ee degaanka Greater Seattle. Adeegyada Our ka mid ah adeegyada bulshada, kaalmada waxbarashada, barnaamijyada dhalinyarada, iyo awood dhaqaale si wax looga qabto baahida bulshada.",
+        "hours" : "",
+        "link" : "http://www.hoas.org/",
+        "name" : "Horn of Africa Services",
+        "phone" : "(206) 760-0550",
+        "services" : "Dejinta, socdaalka, shaqada, Qoyska, Waxbarashada"
+      },
+      "-KYQvtE7mcfrN6qs-XVX" : {
+        "address" : "7101 Martin Luther King Jr. Way S, Suite 214, Seattle, WA 98118",
+        "description" : "Hay'adda Shaqada adeega baahiyaha kala duwan ee bulshada qaxootiga / soo galootiga ah. shaqaalaha Luqadood / dhaqana waxaa ka go'an in ay shaqooyin ku aaddan danaha macaamiisha iyo awoodaha helo. RFSC sidoo kale bixisaa tababar xirfadaha Golaha Electronic la taageero ESL iyo barnaamij ballaaran oo adeegyada bulshada.",
+        "hours" : "Isniin - Jimco 8:30 am - 5:00 pm",
+        "link" : "http://rfsc.org/",
+        "name" : "Refugee Service Center Federation",
+        "phone" : "(206) 725-9181",
+        "services" : "Employment, ESL"
+      },
+      "-KYQvtf8ubs5CmaGzmBV" : {
+        "address" : "4008 Martin Luther King, Jr. Way S, Seattle, WA 98108",
+        "description" : "ReWA waa aan macaash, urur multi-qowmiyadaha in kor u noqoshada, madax-bannaanida, hoggaanka shakhsi, iyo bulshooyinka xoog by siinta qaxootiga iyo soo galootiga ah haweenka iyo qoysaskooda adeegyada dhaqan iyo luqad ahaan ku habboon. ReWA u dooda caddaaladda bulshada, isbedelka siyaasadda guud, oo u qalma adeegyada la ixtiraamaa qiimaha dhaqanka iyo xaq u leeyihiin inay aayo-ka.",
+        "hours" : "Isniin - Jimco 9:00 subaxnimo - 5:00 pm",
+        "link" : "http://www.rewa.org/",
+        "name" : "Isbahaysiga Haweenka Qaxootiga ee",
+        "phone" : "(206) 721-0243",
+        "services" : "Caafimaadka, Qoyska, ESL, dejinta, Socdaalka, Waayeelka, Waxbarashada"
+      },
+      "-KYQvxAiG0gpTVlf3iOZ" : {
+        "address" : "7050 32nd Ave S, Seattle, WA 98118",
+        "description" : "Adeegyada Bulshada Bariga Afrika waxaa ka go'an in bixinta barnaamijyada waxbarashada K-12-dhaqan dhawra yaraantayadii ammaan ah iyo caawin iyaga ku guuleystaan ​​dugsiga iyo nolosha. Waxaan ku siin qalabka si ay ula qabsadaan nolosha cusub ee Maraykanka iyo ka qayb nolosha ballaadhan oo isku dhafan bulshada.",
+        "hours" : "Isniin - Jimco 9:00 subaxnimo - 6:00 pm",
+        "link" : "http://www.eastafricancs.org/",
+        "name" : "Adeegyada Bulshada Bariga Afrika",
+        "phone" : "(206) 721-1119",
+        "services" : "Qoyska, Socdaalka, Waxbarashada"
+      },
+      "-KYQvxiESW6NHQaElVkw" : {
+        "address" : "3102 W. Fort George Wright Drive, Spokane, WA 99224",
+        "description" : "Waayo, 50 sano SNAP ayaa u adeegi jireen gobolka Spokane sida cod hoggaamineed ee saboolnimada. Hogaamiye Action Community deegaanka Spokane ee, SNAP oo hoggaanka u qabatay waxbaridda iyo awoodgelinta our deriska dakhligoodu hooseeyo. Mission: Si aad u bixiyaan helitaanka iyo xidhiidhada khayraadka in la abuuro fursado, si sharaf leh, loogu talagalay dadka dakhligoodu hooseeyo.",
+        "hours" : "Isniin - Jimco 8:00 subaxnimo - 4:30 pm",
+        "link" : "https://www.snapwa.org/",
+        "name" : "Spokane Neighborhood Action Partners",
+        "phone" : "(509) 456-7627",
+        "services" : "Employment, dejinta, Waxbarashada"
+      },
+      "-KYQvyMTC1TArR-YcLAw" : {
+        "address" : "1830 9th Avenue, Seattle, WA 98101",
+        "description" : "Awoodsiinta Haweenka guri la'aan, carruurta iyo qoysaska si ay u hanato noloshooda by bixinta hoyga, cuntada, khayraadka, caafimaad iyo rajadii bulshada dhexdeeda nabad ah.",
+        "hours" : "Isniin - Jimco 8:30 am - 4:30 pm",
+        "link" : "http://www.marysplaceseattle.org/",
+        "name" : "Place Mary ee",
+        "phone" : "(206) 621-8474",
+        "services" : "Dejinta, Caafimaadka, Church"
+      },
+      "-KYQvyyfUBxScgLKWCkz" : {
+        "address" : "949 E Main St, Othello, Washington 99344",
+        "description" : "Othello Bank Cuntada furan yahay laba maalmood usbuucii, Talaadada iyo Khamiista 1-3 pm. U adeegtaa macaamiisha ku nool code 99344 zip ah. Ma u baahan tahay aqoonsi sawir leh iyo wax caddeynaayo cinwaanka marka diiwaangelinta.",
+        "hours" : "Tue, Thu: 1:00 pm - 3:00 pm",
+        "link" : "http://www.foodpantries.org/li/othello-food-bank",
+        "name" : "Othello Food Bank",
+        "phone" : "(509) 488-6044",
+        "services" : "Cuntada"
+      },
+      "-KYQvzL8h7dWbF8PhKi1" : {
+        "address" : "1600 12th St, Bremerton, Washington 98337",
+        "description" : "Bixinta gargaar cunto iyo adeegyo kale si loo yareeyo gaajada iyo horumarinta isku-filnaanshaha kuwa bulshada dhexdeeda.",
+        "hours" : "Isniin - Jimco: 10:00 am - 1:45 pm",
+        "link" : "http://bremertonfoodline.org/",
+        "name" : "Bremerton Foodline",
+        "phone" : "(360) 479-6188",
+        "services" : "Cuntada"
+      },
+      "-KYQwwI6H6zem7TyHkIA" : {
+        "address" : "8810 Renton Ave South Seattle, WA 98118",
+        "description" : "Ujeedada ururku waa inay: Ku caawi xubnaha bulshada in loo helo macluumaadka lagama maarmaanka ah si ay u noqdaan kuwo isku filan oo kor loo qaado tayada guud ee nolosha. Ku caawi carruurta qaxootiga African kor u sii kordhaya ee Maraykanka in ay dib u bartaan oo la joogteeyo ay dhaxal ahaan qowmiyadaha iyo aqoonsiga iyo kobcinta dareenka caafimaad. horumar Advocate deegaanka ku nool bulshada. isu keeno bulshada iyo xoojinta xiriirka bulshada dhex carwooyinka dhaqanka iyo waxbarashada. xarunta hay'adda ayaa waxa uu ku yaalaa meesha Rainier Beach, halkaas oo inta badan qaxootiga Bariga Afrika deggan. kafeega kulul Free la heli karo inta lagu jiro saacadaha shaqada.",
+        "hours" : "Isniin - Jimco 9:00 subaxnimo - 4:00 pm",
+        "link" : "http://www.somcss.net/",
+        "name" : "Adeegyada Bulshada Soomaaliyeed ee Seattle",
+        "phone" : "(206) 760-1181",
+        "services" : "Dejinta, Waayeelka, Qoyska, Shaqada"
+      },
+      "-KYQwwhZGeiE4ZpgSYi1" : {
+        "address" : "4520 North Crestline Street, Spokane, Washington 99207 ",
+        "description" : "caawimaad ka bangiga maxaliga this cunto Hel si ay u quudiyaan qoyskaaga. Fadlan marka hore soo wac si loo xaqiijiyo saac & adeegyada. U adeegtaa Zip Codes 99207 & 99217",
+        "hours" : "Isniin - Tue, Thu: 9:00 am - 11:00 am",
+        "link" : "http://www.nwconnect.org/",
+        "name" : "Waqooyi Cuntada bakhaar",
+        "phone" : "(509) 290-5691",
+        "services" : "Cuntada, Church"
+      },
+      "-KYQwxFqYdu_e0JRyFQN" : {
+        "address" : "3543 E McKinley Ave, Tacoma, Washington 98404",
+        "description" : "Karinta Pot Bank Cuntada Eloise in ay bulshooyinka Bariga iyo Koonfurta Tacoma, Washington wuxuu bixiyaa cuntada tayada.",
+        "hours" : "Tue, Jimco: 11:30 am - 4:30 pm, Thu: 9:00 am - 5:00 pm, Sat: 10:30 am - 3:30 pm",
+        "link" : "http://www.themadf.org/Eloise-s-Cooking-Pot-Food-Bank.html",
+        "name" : "Eloise Karinta Pot",
+        "phone" : "(253) 426-1994",
+        "services" : "Cuntada"
+      },
+      "-KYQwxpiuCE1RHl6j0n0" : {
+        "address" : "9050 16th Ave S.W., Seattle, WA 98106",
+        "description" : "qayb Evangelical ee Christian Church caalamiga ah in ay gargaar la-dejinta",
+        "hours" : "",
+        "link" : "http://seattlewhitecenter.salvationarmy.org/",
+        "name" : "Salvation Army: Seattle White Center",
+        "phone" : "(206) 767-3150",
+        "services" : "Dejinta, Cuntada, Church, Waxbarashada, Waayeelka, Qoyska"
+      },
+      "-KYQwyBXs8KdEpp_A1Ty" : {
+        "address" : "5830 Evergreen Way, Everett, WA 98203",
+        "description" : "Housing Hope bixisaa kala duwan oo ay ka buuxaan doorasho la awoodi karo guryaha oo dhan County Snohomish. noocyada Housing waxaa ka mid ah hoy degdeg ah, guryaha KMG ah, unugyada awoodi-kirada iyo fursadaha HomeOwnetship.",
+        "hours" : "Isniin - Jimce: 9:00 am - 5:00 pm",
+        "link" : "http://www.housinghope.org/",
+        "name" : "Housing Hope",
+        "phone" : "(425) 347-6556",
+        "services" : "Dejinta, waxbarashada, shaqada, Qoyska"
+      },
+      "-KYQwyW9UeDYtVrpmaEY" : {
+        "address" : "221 E Martin Luther King Jr Blvd, Yakima, WA 98901",
+        "description" : "Waxaan at Sunrise Outreach ka go'an in ay codsanaya xal dhaqanka wanaagsan ee gaajo, guri iyo arxandarro loo marayo abaabulka bulshada, ka qayb qaadashada xaafadda iyo macluumaad is-dhaafsiga shebekadaha.",
+        "hours" : "Isniin - Jimce: 9:00 am - 4:00 pm",
+        "link" : "http://www.socyakima.com/",
+        "name" : "Sunrise Outreach",
+        "phone" : "(509) 225-9310",
+        "services" : "Cuntada, dejinta, Church"
+      },
+      "-KYQx1023hXww5pvex7W" : {
+        "address" : "7782 Northern State Road PO Box 819 Sedro-Woolley, WA 98284",
+        "description" : "Job Corps waa waxbarasho lacag la'aan ah iyo barnaamijka tababarka taas oo ka caawisa dadka dhalinyarada bartaan xirfado, kasban shahaadada dugsiga sare ama GED, Oo waxaad heli doontaa oo sii shaqo fiican. Waayo, dadka dhallinyarada ah u qalma ugu yaraan 16 sano jir in qalanto dakhliga yar, Job Corps bixisaa oo dhan-agagaarka xirfadaha loo baahan yahay inay ku guuleystaan ​​xirfado iyo nolosha.",
+        "hours" : "",
+        "link" : "http://www.jobcorps.gov/Home.aspx",
+        "name" : "Job Corps",
+        "phone" : "(360) 854-3400",
+        "services" : "Shaqada, waxbarashada"
+      },
+      "-KYQx1V_j5ooruRHocJ5" : {
+        "address" : "700 Dearborn Place S Seattle, WA 98144",
+        "description" : "Abuuridda fursado tababar. Shaqooyinka beddesho noloshooda by bixinta hab lagu noqon madax banaan, amaan iyo kalsooni. Taasi waa sababta niyad samida tababar shaqo iyo barnaamijyada waxbarashada dadka ee bulshada, sidoo kale lagaaga caawiyo helidda shaqada. All si buuxda free.",
+        "hours" : "Waxbarashada, Shaqada",
+        "link" : "http://seattlegoodwill.org/job-training-and-education",
+        "name" : "Job Corps",
+        "phone" : "(206) 860-5791",
+        "services" : "Isniin - Jimce: 8:00 am - 5:00 pm"
+      },
+      "-KYQx1oHAZRO8VzGnQZI" : {
+        "address" : "800 W Canal Dr, Kennewick, WA 99336",
+        "description" : "Grace Clinic waxay bixisaa adeegyo caafimaad oo la xiriira lacag la'aan ah dadka aan caymiska lahayn ee-Tri Cities marayo hab guud. Waxaan doonaya in ay daboolaan baahida qofka oo dhan by adeegyada sida daryeelka caafimaadka, daawooyinka, daryeelka ilkaha oo degdeg ah, la talinta caafimaadka maskaxda, iyo daryeelka ruuxiga ah.",
+        "hours" : "Tue, Thu - Jimco: 8:00 am - 5:00 pm, Sat: 8:00 am - 2:00 pm",
+        "link" : "http://www.gracecliniconline.org/",
+        "name" : "Grace Clinic",
+        "phone" : "(509) 735-2300",
+        "services" : "Daryeelka caafimaadka"
+      },
+      "-KYQx2bJ4ibpKwtwvhN9" : {
+        "address" : "Upper Valley MENDPO Box 772, 347 Division St. Leavenworth WA 98826",
+        "description" : "Upper Valley Wanaajiya \"Shirka kasta u baahan tahay ku Duqoow\" waa urur dallad adeegyada aadanaha ah ka go'an in ay ka qabashada baahida guryaha, gaajo iyo daryeel caafimaad ee dadka degaanka iyo transients in Upper Wenatchee Valley.",
+        "hours" : "Isniin - Jimce: 9:00 am - 4:00 pm",
+        "link" : "http://uvmend.org/",
+        "name" : "Wanaajiya Valley MEND",
+        "phone" : "(509)548-0408",
+        "services" : "Daryeelka caafimaadka"
+      },
+      "-KYQx2w-4uzE8SUHxPSM" : {
+        "address" : "777 North Fifth Avenue, Suite 109 P.O. Box 3434, Sequim, WA 98382",
+        "description" : "Locally loo yaqaan Sequim Clinic Free The, Dhakhaatiir mutaddawiciin ah our, shaqaalaha kalkaalinta iyo taageero siiyaan adeegyada aasaasiga ah Urgent Care niman caymis iyo-caymis ka yar iyo haweenka ee bulshada. Intaa waxaa dheer, bukaan oo qaba arrimaha daryeelka caafimaadka ee joogtada ah waxaa lagu arki karaa at Clinics Healthcare our Chronic bixiyeen dhowr jeer todobaadkii, waxaa doortay.",
+        "hours" : "Mon, Thu, 4:45 pm, Tue: 1:00 pm - 6:00 pm ballan",
+        "link" : "http://sequimfreeclinic.org/",
+        "name" : "Dungeness Valley Caafimaadka iyo Fayo-Clinic",
+        "phone" : "(360) 582-0218",
+        "services" : "Daryeelka caafimaadka"
+      },
+      "-KYQx3UhvdCI4nmjqS0R" : {
+        "address" : "4100 Plomondon St Vancouver, WA 98661",
+        "description" : "Hawlgalka of Clinic Free of Southwest Washington waa in ay bixiso oo loo fududeeyo helitaanka, daryeelka caafimaadka naxariista, oo tayo leh oo bilaash ah ee caruurta iyo dadka waaweyn ee kuwa kale ee aan awoodin in ay helaan adeegyada sida.",
+        "hours" : "Isniin - Jimce: 8:30 am - 4:30 pm",
+        "link" : "http://freeclinics.org/",
+        "name" : "Free Clinic of Southwest Washington",
+        "phone" : "(360) 313-1390",
+        "services" : "(360) 313-1390"
+      },
+      "-KYQx5q3nea67Yjx1Io2" : {
+        "address" : "4100 Plomondon St Vancouver, WA 98661",
+        "description" : "Hawlgalka of Clinic Free of Southwest Washington waa in ay bixiso oo loo fududeeyo helitaanka, daryeelka caafimaadka naxariista, oo tayo leh oo bilaash ah ee caruurta iyo dadka waaweyn ee kuwa kale ee aan awoodin in ay helaan adeegyada sida.",
+        "hours" : "Isniin - Jimce: 8:30 am - 4:30 pm",
+        "link" : "http://freeclinics.org/",
+        "name" : "Free Clinic of Southwest Washington",
+        "phone" : "(360) 313-1390",
+        "services" : "Daryeelka caafimaadka"
+      },
+      "-KYQx6JmoPq6LARuxcjw" : {
+        "address" : "1230 7th Ave Module H Longview, WA 98632",
+        "description" : "Partners Health Community waa 501 (c) (3) waa urur aan macaash-ka go'an in wanaajinta helitaanka daryeel caafimaad oo loogu talagalay caymis ee Washington iyo Oregon ah.",
+        "hours" : "",
+        "link" : "http://www.chpwa.org/",
+        "name" : "Partners Health Coummunity",
+        "phone" : "(360) 442-4165",
+        "services" : "Daryeelka caafimaadka"
+      },
+      "-KYQx6aAIgTnWvVYc2oe" : {
+        "address" : "1911 Cooks Hill Road Centralia, WA 98531",
+        "description" : "Waxaan u adeegaan dadka underprivileged iyo go'doon of County Lewis by bixinta guud, daryeelka caafimaadka iyo hanuun oo tayo leh in magaca Ciise Masiix.",
+        "hours" : "Tue: 5:30 pm - 8:30 pm",
+        "link" : "http://healthhopemedical.appspot.com/",
+        "name" : "Caafimaadka iyo Hope Medical Outreach",
+        "phone" : "(360) 623-1485",
+        "services" : "Daryeelka caafimaadka"
+      },
+      "-KYQx6yclkTblb2Zcrh9" : {
+        "address" : "825 SE Bishop Blvd. Suite #140 Pullman, WA 99163",
+        "description" : "Waxaan ku siin daryeelka aasaasiga ah ee xaaladaha ba'an iyo chronic qof kasta oo iyada oo albaabada rugta socdaaye. dadka Our diirada u yahay dadka degan gobolka Palouse ah; Si kastaba ha ahaatee, waxaan hadda ma u baahan tahay si ay u siiyaan bukaanada caddeynta deegaanka.",
+        "hours" : "Tue: 6:00 pm - 8:00 pm",
+        "link" : "http://palousefreeclinic.org/",
+        "name" : "Palouse Free Clinic",
+        "phone" : "",
+        "services" : "Daryeelka caafimaadka"
       }
     },
     "sp" : {
-      "-KYLCisFV94fhKn8f4zm" : {
-        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
-        "description" : "Provide individuals and families who are in need with food and access to a network of community resources that helps them achieve self-sufficiency.",
-        "hours" : "Mon 9am - 3pm Tue 2pm - 8pm Thu 2pm - 8pm Fri 9am - 3pm",
-        "link" : "http://www.udistrictfoodbank.org/",
-        "name" : "University District Food Bank",
-        "phone" : "(206) 523-7060",
-        "services" : "Food"
-      }
-    }
-  },
-  "submissions" : {
-    "sp" : {
-      "-KYQNQEIeLo2Hb7f1glE" : {
+      "-KYQvAev1hbCx4vaF0iD" : {
         "address" : "1610 South Street King, Seattle, WA 98144",
         "description" : "Catholic Servicios Legales de Inmigración (CILS) proporciona asistencia legal de inmigración calidad a los residentes de bajos ingresos de Washington. Actualmente, CILS ofrece la ciudadanía libre / N-400 asistencia para la aplicación a las personas que se encuentran actualmente en beneficios públicos o que viven en la ciudad de Seattle, y la ciudadanía libre y la asistencia tarjeta de residencia a los refugiados y asilados que han estado en los EE.UU. menos de cinco años. CILS tiene dos oficinas: Seattle y Mt. Vernon.",
         "hours" : "",
@@ -973,7 +1230,7 @@
         "phone" : "(206) 323-6336",
         "services" : "Reasentamiento, Familia, Mayores, Salud, Iglesia"
       },
-      "-KYQNp86eEXBfr-dBfQa" : {
+      "-KYQvBIiuHY8W7SVJYTU" : {
         "address" : "1610 South Street King, Seattle, WA 98144",
         "description" : "Catholic Servicios Legales de Inmigración (CILS) proporciona asistencia legal de inmigración calidad a los residentes de bajos ingresos de Washington. Actualmente, CILS ofrece la ciudadanía libre / N-400 asistencia para la aplicación a las personas que se encuentran actualmente en beneficios públicos o que viven en la ciudad de Seattle, y la ciudadanía libre y la asistencia tarjeta de residencia a los refugiados y asilados que han estado en los EE.UU. menos de cinco años. CILS tiene dos oficinas: Seattle y Mt. Vernon.",
         "hours" : "Lunes - Viernes: 10 a.m.-4 p.m.",
@@ -982,7 +1239,7 @@
         "phone" : "(206) 323-3152",
         "services" : "Reasentamiento, Inmigración, ESL, Empleo, Familia"
       },
-      "-KYQOQYXp6-7YoswkdPN" : {
+      "-KYQvC3Sv0-cWU7W_JL0" : {
         "address" : "100 South King Street, Suite 570 Seattle, WA 98104",
         "description" : "El Comité Internacional de Rescate responde a las peores crisis humanitarias del mundo y ayuda a las personas cuyas vidas y medios de vida destrozada por conflictos y desastres para sobrevivir, recuperarse y hacerse con el control de su futuro.",
         "hours" : "",
@@ -991,7 +1248,7 @@
         "phone" : "(206) 623-2105",
         "services" : "Reasentamiento, Empleo, Salud, Familia, Inmigración"
       },
-      "-KYQOcLr8cv96rFu4Q7P" : {
+      "-KYQvCaNvV6KPrb1d3xW" : {
         "address" : "1601 16th Avenue, Seattle, WA 98122-4000",
         "description" : "La comunidad judía entiende lo que se siente al salir de su casa y reasentarse en un país extranjero. Esa experiencia histórica alimenta nuestro deseo de ayudar a los refugiados y los inmigrantes a hacer una transición exitosa a la autosuficiencia. Nuestro personal culturalmente diverso es reclutado directamente de las comunidades étnicas que servimos. JFS atiende a personas y familias de King y Snohomish. Todos los programas se ofrecen sin costo alguno para los participantes.",
         "hours" : "",
@@ -1000,7 +1257,7 @@
         "phone" : "(206) 461-3240",
         "services" : "Reasentamiento, ESL, Empleo, Salud, Inmigración, Familia"
       },
-      "-KYQOqv_lQe13SM5nVcy" : {
+      "-KYQvD-UZEK-cr8WuY8a" : {
         "address" : "115 NE 100th Street, Suite 200, Seattle, WA 98125-8099",
         "description" : "Ayudamos a los refugiados y los inmigrantes acceder a los recursos y capacidades de ganancia para una transición exitosa a sus nuevas comunidades, lograr la autosuficiencia y comenzar nueva vida de esperanza y promesa.",
         "hours" : "Lunes - jueves 8:30 am - 5:00 pm; Vie 8:30 am - 3:00 pm",
@@ -1009,7 +1266,7 @@
         "phone" : "(206) 694-5700",
         "services" : "Salud, Familia, Mayores"
       },
-      "-KYQPA2kvhSaRs4X2DiL" : {
+      "-KYQvDPB_PTkezaGqiV5" : {
         "address" : "841 Central Ave N Suite C106, Kent, WA 98032",
         "description" : "Ayuda Mundial Seattle ha trabajado desde 1979 para facultar a la iglesia local para servir a los refugiados e inmigrantes en el área metropolitana de Seattle. fundada originalmente para atender a las personas que huyen de la guerra en el sudeste asiático, desde entonces hemos crecido a reasentar a los refugiados de casi 50 países. Estamos animados por las muchas iglesias, las empresas y los individuos que utilizan sus recursos y el ingenio para mejorar la vida de los refugiados y los inmigrantes en todo el oeste de Washington.",
         "hours" : "Lunes, martes, jueves las 9:00 am - 4:00 pm; Vie 9:00 am - 3:00 pm; Conducido por el nombramiento",
@@ -1018,7 +1275,7 @@
         "phone" : "(253) 277-1121",
         "services" : "Reasentamiento, Empleo, ESL, Inmigración, Iglesia"
       },
-      "-KYQPNmYO547OfKtiAO_" : {
+      "-KYQvDmY0V0CLd2i9kbX" : {
         "address" : "3102 W. Fort George Wright Drive, Spokane, WA 99224",
         "description" : "Desde hace 50 años SNAP ha servido a la región de Spokane como una voz líder en la pobreza. Como líder de Acción Comunitaria del área de Spokane, SNAP toma la iniciativa en educar y capacitar a nuestros vecinos de bajos ingresos. Misión: Proveer acceso y conexiones a los recursos que crean oportunidades, con dignidad, para las personas de bajos ingresos.",
         "hours" : "Lun - Vie 8:00 am - 4:30 pm",
@@ -1027,7 +1284,7 @@
         "phone" : "(509) 456-7627",
         "services" : "Empleo, reasentamiento, Educación"
       },
-      "-KYQQAfGK4TMcVaM0LsJ" : {
+      "-KYQvE9Uo8-zCpdHiFBE" : {
         "address" : "4714 Rainier Ave S Suite 105, Seattle, WA 98118",
         "description" : "Cuerno de África Servicios es una organización no lucrativa que sirve a los inmigrantes del África Oriental y la comunidad de refugiados en Seattle. Servimos a individuos y familias de Djibouti, Eritrea, Etiopía, Sudán, Somalia y los países vecinos que viven en el área metropolitana de Seattle. Nuestros servicios incluyen los servicios sociales, asistencia educativa, programas juveniles, y la potenciación económica para hacer frente a las necesidades de la comunidad.",
         "hours" : "",
@@ -1036,7 +1293,7 @@
         "phone" : "(206) 760-0550",
         "services" : "Reasentamiento, Inmigración, Empleo, Familia, Educación"
       },
-      "-KYQQao_7_4yQDtz22KF" : {
+      "-KYQvEXxgGa_eqfSK7G5" : {
         "address" : "7101 Martin Luther King Jr Way S, Suite 214, Seattle, WA 98118",
         "description" : "Bolsa de trabajo satisfacer las diversas necesidades de las comunidades de refugiados / inmigrantes. personal bilingüe / bicultural se ha comprometido a encontrar puestos de trabajo que responden a los intereses y capacidades de los clientes. RFSC también ofrece capacitación Formación de metales con el apoyo de ESL y un programa de servicio social integral.",
         "hours" : "Lunes - Viernes 8:30 am - 5:00 pm",
@@ -1045,7 +1302,7 @@
         "phone" : "(206) 725-9181",
         "services" : "Empleo, ESL"
       },
-      "-KYQQsoIKlsjqT5YEGLd" : {
+      "-KYQvEtj4M6e9KnDSv9a" : {
         "address" : "4008 Martin Luther King, Jr. Way S, Seattle, WA 98108",
         "description" : "REWA es una organización sin ánimo de lucro, organización multiétnica que promueve la inclusión, la independencia, el liderazgo personal y comunidades fuertes proporcionando a las mujeres refugiadas e inmigrantes y sus familias con los servicios cultural y lingüísticamente apropiados. REWA aboga por la justicia social, cambios en las políticas públicas, y el acceso equitativo a los servicios, respetando los valores culturales y el derecho a la libre determinación.",
         "hours" : "Lunes - Viernes 9:00 am - 5:00 pm",
@@ -1054,7 +1311,7 @@
         "phone" : "(206) 721-0243",
         "services" : "Cuidado de la salud, familiares, ESL, el reasentamiento, la inmigración, la tercera edad, Educación"
       },
-      "-KYQR5XHEFYrNAh1xZMJ" : {
+      "-KYQvFgH6sbHT4Avl33B" : {
         "address" : "8810 Renton Ave South Seattle, WA 98118",
         "description" : "El propósito de la organización es: Ayudar a los miembros de la comunidad en la obtención de la información necesaria para llegar a ser autosuficientes y mejorar la calidad de vida en general. Ayudar a los niños refugiados africanos que crece en los EE.UU. que volver a aprender y mantener su herencia étnica y la identidad y promover el crecimiento emocional saludable. Abogado mejora de condiciones de vida para la comunidad. Unir a la comunidad y fortalecer los lazos de la comunidad a través de ferias culturales y la educación. Las instalaciones de la agencia está situada en la zona de playa más lluviosa donde la mayoría de los refugiados del este de África residen. Libre café caliente disponible durante el horario comercial.",
         "hours" : "Lunes - Viernes 9:00 am - 4:00 pm",
@@ -1063,7 +1320,7 @@
         "phone" : "(206) 760-1181",
         "services" : "Reasentamiento, la tercera edad, Familia, Empleo"
       },
-      "-KYQRHBk2zDRG4iRkqzX" : {
+      "-KYQvGA0yGNqgaVRSmGP" : {
         "address" : "1830 9th Avenue, Seattle, WA 98101",
         "description" : "Fortalecer a las mujeres sin hogar, los niños y las familias a recuperar sus vidas al proporcionar refugio, alimentación, recursos, salud y esperanza en una comunidad segura.",
         "hours" : "Lunes - Viernes 8:30 am - 4:30 pm",
@@ -1072,7 +1329,7 @@
         "phone" : "(206) 621-8474",
         "services" : "Reasentamiento, Salud, Iglesia"
       },
-      "-KYQRJaqzx8BVmbEAD9A" : {
+      "-KYQvGWhz1w3F3kapoAH" : {
         "address" : "1830 9th Avenue, Seattle, WA 98101",
         "description" : "Fortalecer a las mujeres sin hogar, los niños y las familias a recuperar sus vidas al proporcionar refugio, alimentación, recursos, salud y esperanza en una comunidad segura.",
         "hours" : "Lunes - Viernes 8:30 am - 4:30 pm",
@@ -1081,7 +1338,7 @@
         "phone" : "(206) 621-8474",
         "services" : "Reasentamiento, Salud, Iglesia"
       },
-      "-KYQRX51FHtjcEmf9m1b" : {
+      "-KYQvGuXo_5Ffm9CVUVa" : {
         "address" : "949 E Main St, Othello, Washington 99344",
         "description" : "Otelo Banco de Alimentos está abierto dos días a la semana, martes y jueves 1-3 pm. Sirve a los clientes que viven en el código postal 99344. Necesidad de identidad con fotografía y comprobante de domicilio al registrarse.",
         "hours" : "Martes, jueves: 13:00-15:00",
@@ -1090,7 +1347,7 @@
         "phone" : "(509) 488-6044",
         "services" : "Comida"
       },
-      "-KYQRnMkmPxC7LOSpi43" : {
+      "-KYQvHSc_DBW2M4K0ur-" : {
         "address" : "1600 12th St, Bremerton, Washington 98337",
         "description" : "La prestación de asistencia alimentaria y otros servicios para reducir el hambre y mejorar la autosuficiencia para aquellos dentro de nuestra comunidad.",
         "hours" : "Lunes - Viernes: 10:00 - 13:45",
@@ -1099,7 +1356,7 @@
         "phone" : "(360) 479-6188",
         "services" : "Comida"
       },
-      "-KYQS03pfO0BRFUDH-E9" : {
+      "-KYQvHyuXRtkK56YCtRV" : {
         "address" : "4520 North Crestline Street, Spokane, Washington 99207 ",
         "description" : "Obtener ayuda de este banco de alimentos local para alimentar a su familia. Por favor, llame primero para verificar las horas y los servicios. Sirve a los códigos postales 99207 y 99217",
         "hours" : "Lun - Mar, Jue: 09 a.m.-11 a.m.",
@@ -1108,7 +1365,7 @@
         "phone" : "(509) 290-5691",
         "services" : "Alimentos, Iglesia"
       },
-      "-KYQSBa5Lt4bWN5yClxG" : {
+      "-KYQvIL6ndTgIBF0FLhe" : {
         "address" : "3543 E McKinley Ave, Tacoma, Washington 98404",
         "description" : "Cocinar el crisol Banco de Alimentos de Eloise proporciona alimentos de calidad a las comunidades del este y el sur de Tacoma, Washington.",
         "hours" : "Mar, Vie: 11:30 am - 4:30 pm; Jue: 9:00 am - 5:00 pm; Sa: 10:30 am - 3:30 pm",
@@ -1117,7 +1374,7 @@
         "phone" : "(253) 426-1994",
         "services" : "Comida"
       },
-      "-KYQSPWCFl-dF_qIgF13" : {
+      "-KYQvImmn0RXxMaRJtuj" : {
         "address" : "9050 16th Ave S.W., Seattle, WA 98106",
         "description" : "parte evangélica de la Iglesia universal cristiana que ayuda a la reinstalación",
         "hours" : "",
@@ -1126,7 +1383,7 @@
         "phone" : "(206) 767-3150",
         "services" : "Reasentamiento, alimentos, Iglesia, Educación, Mayores, Familia"
       },
-      "-KYQS_3zH-ZgJbAKFsRc" : {
+      "-KYQvJ69P4fpuxrpfkxy" : {
         "address" : "5830 Evergreen Way, Everett, WA 98203",
         "description" : "Vivienda Hope ofrece una gama completa de opciones de vivienda asequible en todo el condado de Snohomish. tipos de vivienda incluyen refugio de emergencia, vivienda transitoria, unidades asequibles-renta y oportunidades de vivienda.",
         "hours" : "Lunes - Viernes: 9:00 am - 5:00 pm",
@@ -1135,7 +1392,7 @@
         "phone" : "(425) 347-6556",
         "services" : "Reasentamiento, Educación, Empleo, Familia"
       },
-      "-KYQSmWV2URErYRpWwTQ" : {
+      "-KYQvJShsLH12ld1otk5" : {
         "address" : "221 E Martin Luther King Jr Blvd, Yakima, WA 98901",
         "description" : "Nosotros, en la salida del sol de Extensión comprometemos a aplicar las mejores soluciones prácticas para el hambre, la falta de vivienda y la apatía mediante la movilización comunitaria, la participación del vecindario y el intercambio de información en red.",
         "hours" : "Lunes - Viernes: 9:00 am - 4:00 pm",
@@ -1144,7 +1401,7 @@
         "phone" : "(509) 225-9310",
         "services" : "Alimentos, reasentamiento, Iglesia"
       },
-      "-KYQT9lPZ8Qc8_xC3SUy" : {
+      "-KYQvJxLqwjCPNdaXBD6" : {
         "address" : "10675 Willows Road al noreste, sauces Creek Corporate Center suite 275, Redmond WA 98052",
         "description" : "Somos una organización sin fines de lucro que trabaja para poner fin a la pobreza en nuestra comunidad. Cada año ayudamos a más de 64.000 personas a través de programas que proporcionan estabilidad y las habilidades y conocimientos necesarios para salir de la pobreza.",
         "hours" : "Lunes - Viernes: 8:30 am - 5:00 pm",
@@ -1153,16 +1410,7 @@
         "phone" : "(425) 943-7555",
         "services" : "Alimentaria, el empleo, el reasentamiento, Educación, Familia, Empleo"
       },
-      "-KYQTLQQH_Nbu8s8w-h4" : {
-        "address" : "Job Corps es un programa de entrenamiento la educación gratuita y que ayuda a los jóvenes a aprender una carrera, obtener un diploma de escuela secundaria o GED, y encontrar y mantener un buen trabajo. Para los jóvenes elegibles por lo menos 16 años de edad que califican como de bajos ingresos, Job Corps ofrece el versátil habilidades necesarias para tener éxito en una carrera y en la vida.",
-        "description" : "Job Corps es un programa de entrenamiento la educación gratuita y que ayuda a los jóvenes a aprender una carrera, obtener un diploma de escuela secundaria o GED, y encontrar y mantener un buen trabajo. Para los jóvenes elegibles por lo menos 16 años de edad que califican como de bajos ingresos, Job Corps ofrece el versátil habilidades necesarias para tener éxito en una carrera y en la vida.",
-        "hours" : "",
-        "link" : "http://www.jobcorps.gov/Home.aspx",
-        "name" : "Job Corps",
-        "phone" : "(360) 854-3400",
-        "services" : "Empleo, Educación"
-      },
-      "-KYQT_G-5JOpHlSWdmPy" : {
+      "-KYQvM_GEej9mcZUd279" : {
         "address" : "700 Dearborn Place S Seattle, WA 98144",
         "description" : "La creación de oportunidades a través de la formación. Puestos de trabajo cambian vidas proporcionando un medio para ser independiente, seguro y confiado. Es por eso que ofrece de buena voluntad de la capacitación laboral y programas de educación a las personas en la comunidad, así como ayuda para encontrar un trabajo. Todo completamente gratis.",
         "hours" : "Lunes - Viernes: 8:00 am - 5:00 pm",
@@ -1171,7 +1419,7 @@
         "phone" : "(206) 860-5791",
         "services" : "Educación, Empleo"
       },
-      "-KYQTktO3sDdCpxNC92-" : {
+      "-KYQvNXsE295WkIxTZkf" : {
         "address" : "800 W Canal Dr, Kennewick, WA 99336",
         "description" : "Gracia clínica ofrece servicios médicos y relacionados gratuitos a las personas sin seguro médico en los Tri-Cities a través de un enfoque holístico. Buscamos satisfacer las necesidades de toda la persona por la prestación de servicios tales como asistencia médica, medicamentos, atención odontológica urgente, asesoramiento de salud mental y atención espiritual.",
         "hours" : "Mar, Jue - Vie: 8:00 am - 5:00 pm; Sab: 8:00 am - 2:00 pm",
@@ -1180,7 +1428,7 @@
         "phone" : "(509) 735-2300",
         "services" : "Cuidado de la salud"
       },
-      "-KYQTt-XicpXw3uZLH6O" : {
+      "-KYQvNzBxMywHXW3Jc02" : {
         "address" : "Upper Valley MENDPO Box 772, 347 Division St. Leavenworth WA 98826",
         "description" : "Alto Valle del MEND \"Reunión cada necesidad con Dignidad\" es una organización que agrupa los servicios humanos dedicada a satisfacer las necesidades de vivienda, el hambre y la salud de los residentes y transeúntes de la zona en el Alto Valle de Wenatchee.",
         "hours" : "Lunes - Viernes: 9:00 am - 4:00 pm",
@@ -1189,7 +1437,7 @@
         "phone" : "(509)548-0408",
         "services" : "Cuidado de la salud"
       },
-      "-KYQU0mqN5y6g6EI9ajB" : {
+      "-KYQvOPyung11t8LU_ej" : {
         "address" : "777 North Fifth Avenue, Suite 109 P.O. Box 3434, Sequim, WA 98382",
         "description" : "Localmente conocido como El Sequim Free Clinic, nuestros médicos voluntarios, personal de enfermería y de apoyo proporcionan servicios básicos de atención urgente de hombres y mujeres sin seguro o con poca cobertura en nuestra comunidad. Además, los pacientes que tienen problemas de salud crónicos se pueden ver en nuestras clínicas de salud crónicos ofrecen varias veces a la semana, con cita previa.",
         "hours" : "Lun, Jue 4:45 de la tarde; Mar: 13:00-18:00 con cita previa",
@@ -1198,7 +1446,7 @@
         "phone" : "(360) 582-0218",
         "services" : "Cuidado de la salud"
       },
-      "-KYQU8YzvuEN6ABFUSNC" : {
+      "-KYQvPCGNfkFy1rfoqD0" : {
         "address" : "4100 Plomondon St Vancouver, WA 98661",
         "description" : "Localmente conocido como El Sequim Free Clinic, nuestros médicos voluntarios, personal de enfermería y de apoyo proporcionan servicios básicos de atención urgente de hombres y mujeres sin seguro o con poca cobertura en nuestra comunidad. Además, los pacientes que tienen problemas de salud crónicos se pueden ver en nuestras clínicas de salud crónicos ofrecen varias veces a la semana, con cita previa.",
         "hours" : "Lunes - Viernes: 8:30 am - 4:30 pm",
@@ -1207,7 +1455,7 @@
         "phone" : "",
         "services" : "Cuidado de la salud"
       },
-      "-KYQUKGs6qSDAVJw8tLW" : {
+      "-KYQvPvBVciA7JOtFaqY" : {
         "address" : "1230 7th Ave Module H Longview, WA 98632",
         "description" : "Community Health Partners es una (c) (3) organización sin fines de lucro 501 ha comprometido a mejorar el acceso a servicios de salud para los no asegurados en Washington y Oregon.",
         "hours" : "",
@@ -1216,7 +1464,7 @@
         "phone" : "(360) 442-4165",
         "services" : "Cuidado de la salud"
       },
-      "-KYQUSmWJe-PA5He3wMX" : {
+      "-KYQvQRQbel0hjf1jFI1" : {
         "address" : "1911 Cooks Hill Road Centralia, WA 98531",
         "description" : "Servimos a las personas desfavorecidas y aisladas del condado de Lewis, proporcionando holístico, salud y orientación de calidad en el nombre de Jesucristo.",
         "hours" : "Mar: 17:30-20:30",
@@ -1225,7 +1473,7 @@
         "phone" : "(360) 623-1485",
         "services" : "Cuidado de la salud"
       },
-      "-KYQU_cnUfNJ39xhSxSg" : {
+      "-KYQvQr2O_hnOQ7LNB3T" : {
         "address" : "825 SE Bishop Blvd. Suite #140 Pullman, WA 99163",
         "description" : "Proporcionamos atención primaria de enfermedades agudas y crónicas para cualquier persona que camina a través de las puertas de la clínica. Nuestra población objetivo son los residentes de la región de Yakima; Sin embargo, actualmente no requieren que los pacientes proporcionar prueba de residencia.",
         "hours" : "Mar: 18:00-20:00",
@@ -1234,7 +1482,7 @@
         "phone" : "",
         "services" : "Cuidado de la salud"
       },
-      "-KYQUi2qep7wHa6BNWoA" : {
+      "-KYQvRF0cqoVs_EKT3Dw" : {
         "address" : "24437 Russell Road, Suite #220 Kent, WA 98032",
         "description" : "La Oficina de Refugiados y Asistencia al Inmigrante (ORIA) se encuentra en el estado de Washington, Departamento de Servicios Sociales y de Salud (DSHS), Servicios de Administración Económica (AEE), la División de Servicios a la Comunidad (CSD). Nuestro objetivo es que las familias e individuos refugiados e inmigrantes para tener éxito y prosperar en el estado de Washington.",
         "hours" : "",
@@ -1243,7 +1491,7 @@
         "phone" : "(253) 216-4479",
         "services" : "Reasentamiento, Educación, Familia, Medicina, inmigración, empleo, alimentos"
       },
-      "-KYQVJlxBZd5zddUQN_7" : {
+      "-KYQvTRcd2MYZwByRRTp" : {
         "address" : "N/A      ",
         "description" : "grupo de apoyo que da la bienvenida a los refugiados y prevé la interacción entre los refugiados y no refugiados.",
         "hours" : "",
@@ -1252,7 +1500,7 @@
         "phone" : "",
         "services" : "Apoyo"
       },
-      "-KYQVWFo2KCR8RtAX4kv" : {
+      "-KYQvUFidAKk-BQ2ioJ4" : {
         "address" : "1032 S. Jackson St. Ste. C Seattle, WA 98104",
         "description" : "Estos programas ayudan a los inmigrantes vietnamitas en su esfuerzo para establecerse en su nuevo país, fortalecer la comunidad vietnamita y promover la armonía cultural. Se trabaja para diversos grupos de personas, incluyendo adultos, ancianos, estudiantes, recién graduados y profesionales jóvenes que viven en el área metropolitana de Seattle.",
         "hours" : "Lun - Jue: 13:00-21:00; Vi: 13:00-18:00",
@@ -1261,7 +1509,7 @@
         "phone" : "(206) 568-5160",
         "services" : "ESL, Familia, Empleo, Educación, Inmigración"
       },
-      "-KYQVeZz-rV8f0kOybfG" : {
+      "-KYQvUiZjD8-4961Fwl4" : {
         "address" : "804 Ninth Avenue Seattle, WA 98104",
         "description" : "Santiago Asistencia al Inmigrante (anteriormente el Programa de ESL St. James) es un 501 (c) (3), no sectaria, voluntario y la organización de base comunitaria que da Inglés gratis y asistencia ciudadanía a los refugiados adultos de bajos ingresos e inmigrantes en Seattle y el condado de king, Washington.",
         "hours" : "",
@@ -1270,7 +1518,7 @@
         "phone" : "(206) 382-4511",
         "services" : "ESL, Inmigración"
       },
-      "-KYQVmCA_fCG2yI9n3sS" : {
+      "-KYQvV84LDxrQNymSQAp" : {
         "address" : "115 15th Ave. E., Suite 201 Seattle WA 98112",
         "description" : "SASG prevé individuos en comunidades conectadas por los valores comunes de la salud y el bienestar, el desarrollo personal, y el apoyo compasivo de unos a otros.",
         "hours" : "Sun - Viernes: 9:00 am - 9:00 pm; Sab: 9:00 am - 1:30 pm 17:00-21:00",
@@ -1279,7 +1527,7 @@
         "phone" : "(206) 322-2437",
         "services" : "Apoyo"
       },
-      "-KYQVxfPqSQobicYWx3J" : {
+      "-KYQvVb8lvN7AQPoh5l7" : {
         "address" : "3639 Martin Luther King Jr. Way S Seattle, WA 98144",
         "description" : "ACRS promueve la justicia social y el bienestar y la potenciación de los americanos asiáticos e isleños del Pacífico y otras comunidades marginadas - incluidos los inmigrantes, los refugiados, y nacido en Estados Unidos - mediante el desarrollo, proporcionando y abogando por innovadora, eficaz y eficiente basada en la comunidad multilingüe y multicultural servicios.",
         "hours" : "Lunes - Viernes: 8:00 am - 6:00 pm",
@@ -1288,7 +1536,7 @@
         "phone" : "(206) 695-7600",
         "services" : "Soporte, Familia, Salud, Empleo, ESL, Inmigración"
       },
-      "-KYQWIC-DilDbNJHg0sJ" : {
+      "-KYQvW2ErM6WAJFM0aj6" : {
         "address" : "611 S Lane St Seattle, WA 98104",
         "description" : "La creación de oportunidades para los inmigrantes asiáticos y sus familias tengan éxito al ayudar a hacer la transición a una nueva vida, manteniendo las generaciones posteriores en contacto con su rico patrimonio.",
         "hours" : "Lunes - Viernes: 8:30 am - 5:00 pm",
@@ -1297,7 +1545,7 @@
         "phone" : "(206) 624-5633",
         "services" : "Familia, Empleo, Salud, Apoyo"
       },
-      "-KYQWdD72IDgc0UQhRR5" : {
+      "-KYQvWNdJRofN5-_ybd8" : {
         "address" : "615 2nd Avenue Suite 400 Seattle, WA 98104",
         "description" : "Northwest Immigrant Rights Project promueve la justicia a través de la defensa y la promoción de los derechos de los inmigrantes a través de servicios directos legales, defensa sistémica, y educación de la comunidad.",
         "hours" : "Lunes - Viernes: 9:30 am - 12:00 pm; 13:00-16:00",
@@ -1306,7 +1554,7 @@
         "phone" : "(206) 587-4009",
         "services" : "Inmigración, Familia"
       },
-      "-KYQX2H49jVHZYPx7eND" : {
+      "-KYQvWxnY3Ezx5INGajL" : {
         "address" : "4410 29th Ave S, Seattle, WA 98108",
         "description" : "Rainier Vista proporciona una gama de opciones de vivienda. Inquilinos y compradores de vivienda encontrarán Rainier Vista de una comunidad que les permite vivir cerca del centro de Seattle, y en un hogar de buena calidad y el valor que se ajusta al carácter y el estilo de vida de la zona de Columbia City.",
         "hours" : "",
@@ -1314,6 +1562,100 @@
         "name" : "Rainier Vista Family Center",
         "phone" : "(206) 461-4568",
         "services" : "Vivienda, Familia"
+      },
+      "-KYQvXIWXttSQAQmDyye" : {
+        "address" : "4301 S Pine St., Suite 456 Tacoma, WA 98409",
+        "description" : "Nuestro programa de Consejería de Asia ofrece una amplia gama de atención y apoyo en los hogares de nuestros clientes, sus comunidades y en nuestras oficinas de asesoramiento asiáticos. A partir de la obtención de la ciudadanía estadounidense ayuda a tratar con trastorno de estrés postraumático (TEPT), ofrecemos una atención compasiva, culturalmente apropiada.",
+        "hours" : "",
+        "link" : "https://www.multicare.org/behavioral-health-programs-adults-asian/",
+        "name" : "Servicios de Orientación de Asia",
+        "phone" : "(253) 301-5250",
+        "services" : "Apoyo"
+      },
+      "-KYQvXju7bi9p6fm2vX3" : {
+        "address" : "1050 140th Ave NE Bellevue, WA 98005",
+        "description" : "Servicios Internacionales de Salud de la Comunidad (CISH) es un centro de salud comunitario sin fines de lucro que ofrece servicios de cuidados de salud asequibles a Seattle y Asia del Condado de King, nativo de Hawai, y las comunidades de las islas del Pacífico, y la comunidad en general. CISH proporciona atención primaria médica y dental, servicios de apoyo a la salud, la educación y la salud en siete lugares.",
+        "hours" : "Lun: 7:30 am - 7:00 pm; Mar - Viernes: 7:30 am - 6:00 pm; Sab: 8:30 am - 5:30 pm",
+        "link" : "http://www.ichs.com/",
+        "name" : "Servicios Internacionales de Salud de la Comunidad",
+        "phone" : "(425) 373-3000",
+        "services" : "Cuidado de la salud"
+      },
+      "-KYQvY2wP0KNSDJVWF3-" : {
+        "address" : "22727 Hwy 99 #107 Edmonds WA, 98026",
+        "description" : "KCSC se esfuerza para el mejoramiento de la comunidad coreana en su conjunto, así como las comunidades circundantes, proporcionando servicios comunitarios y sociales para la población coreana americana en el estado de Washington. KCSC se compromete a capacitar y educar a la juventud americana coreana inspirador y familias a través de asesoramiento, educación, y otros servicios. KCSC ofrece servicios bilingües y culturales de las familias coreanas.",
+        "hours" : "Lunes - Viernes: 10:00 am - 4:00 pm",
+        "link" : "http://www.kcscseattle.org/",
+        "name" : "Centro de Servicios de la Comunidad de Corea",
+        "phone" : "(425) 776-2400",
+        "services" : "Familia, Inmigración, Apoyo"
+      },
+      "-KYQvYQXHWG5H2M4iB9L" : {
+        "address" : "1314 South L Street Tacoma, WA 98405",
+        "description" : "Tacoma Community House es un centro de servicios basados ​​en la comunidad a nivel nacional respetado para los inmigrantes, los refugiados, y desde hace mucho tiempo los residentes del Sur de sonido que buscan el enriquecimiento y las vías hacia la autosuficiencia. Por 106 años, hemos ayudado a innumerables personas a adquirir las habilidades que necesitan para hacer la transición de la pobreza, navegar por una nueva cultura, y encontrar el éxito personal y profesional.",
+        "hours" : "Lun - Jue: 8:00 am - 8:00 pm; Vie: 9:00 am - 5:00 pm",
+        "link" : "http://www.tacomacommunityhouse.org/",
+        "name" : "Casa de la comunidad de Tacoma",
+        "phone" : "(253) 383-3951",
+        "services" : "Educación, Empleo, Inmigración"
+      },
+      "-KYQvYmMBDxz1YbpjINZ" : {
+        "address" : "3829B S. Edmunds St. Box 9, Seattle, WA 98118.",
+        "description" : "Organización que ofrece programas educativos, oportunidades de empleo y servicios de ciudadanía para los refugiados vietnamitas",
+        "hours" : "",
+        "link" : "http://www.vfaseattle.org/",
+        "name" : "Asociación de Amistad vietnamita",
+        "phone" : "(206) 760-1573",
+        "services" : "Educación, Familia, Apoyo"
+      },
+      "-KYQvZ1GvfodDX8Zda0t" : {
+        "address" : "317 17th Avenue South, Seattle, WA 98144",
+        "description" : "Los programas proporcionan ingresos inmigrantes latinos con bajos opportuntities educativas y de empleo.",
+        "hours" : "Lunes - Viernes: 7:00 am - 10:30 am; Sab: 7:00 am - 11:30 am",
+        "link" : "http://casa-latina.org/",
+        "name" : "Casa Latina",
+        "phone" : "(206) 956-0779",
+        "services" : "Educación, Empleo"
+      },
+      "-KYQvZLAMwFc2QkuY6X6" : {
+        "address" : "2407 1st Ave Seattle WA 98121",
+        "description" : "Proporciona asistencia para personas de bajos ingresos y sus familias en la búsqueda de vivienda asequible.",
+        "hours" : "Lunes - Viernes: 9:00 am - 5:00 pm",
+        "link" : "https://lihi.org/",
+        "name" : "Instituto de la Vivienda de Bajos Ingresos",
+        "phone" : "(206) 443-9935",
+        "services" : "Alojamiento"
+      },
+      "-KYQvZyJYH_VwIpFhs-f" : {
+        "address" : "1118 5th Ave. Seattle, WA 98101",
+        "description" : "Los programas que ayudan a las mujeres y sus familias superar la pobreza, la falta de vivienda y proporciona la potenciación económica.",
+        "hours" : "",
+        "link" : "http://www.ywcaworks.org/",
+        "name" : "YWCA       ",
+        "phone" : "(206) 461-4888",
+        "services" : "Reasentamiento, Empleo, Salud, Familia"
+      },
+      "-KYQv_gUvDCdDM5OBmbP" : {
+        "address" : "5017 Roosevelt Way NE Seattle, WA 98105",
+        "description" : "Walk-in banco de alimentos que proporciona alimentos, artículos de higiene personal y otras necesidades básicas. También ofrece entrega en el domicilio.",
+        "hours" : "Lun 09 a.m.-3 p.m. mar 14:00-20:00 Jue 14:00-20:00 Vie 09 a.m.-3 p.m.",
+        "link" : "http://www.udistrictfoodbank.org/",
+        "name" : "Universidad del Distrito de Bancos de Alimentos",
+        "phone" : "(206) 523-7060",
+        "services" : "Comida"
+      }
+    }
+  },
+  "submissions" : {
+    "kh" : {
+      "-KYQxJD1KnhKOmtRT4Fv" : {
+        "address" : "100 South King Street, Suite 570 Seattle, WA 98104",
+        "description" : "គណៈកម្មាធិសង្គ្រោះអន្តរជាតិឆ្លើយតបទៅនឹងវិបត្តិមនុស្សអាក្រក់បំផុតរបស់ពិភពលោកនិងជួយមនុស្សដែលមានជីវិតរស់នៅនិងជីវភាពត្រូវបានបែកខ្ចាត់ខ្ចាយគ្នាដោយជម្លោះនិងគ្រោះមហន្តរាយដើម្បីរស់ងើបឡើងវិញនិងការទទួលបានការត្រួតពិនិត្យនៃការនាពេលអនាគតរបស់ពួកគេ។",
+        "hours" : "",
+        "link" : "https://www.rescue.org/united-states/seattle-wa",
+        "name" : "គណៈកម្មាធិសង្គ្រោះអន្តរជាតិ - ទីក្រុងស៊ីថល",
+        "phone" : "(206) 623-2105",
+        "services" : "ការតាំងទីលំនៅថ្មី, ការងារ, សុខភាព, គ្រួសារ, អន្តោប្រវេសន៍"
       }
     }
   }
