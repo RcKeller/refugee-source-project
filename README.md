@@ -1,4 +1,6 @@
 # Refugee Resource Project
+please visit:
+http://students.washington.edu/rykeller/project-emerald/#/
 
 Our goal - reverse the process related to gathering information about refugee services in the State of Washington.
 * Instead of having users reach *out* for information - learn about the user. Bring the information to them
@@ -41,7 +43,6 @@ We have less than 10 days left.
 * Yuxing Wu (info343) - Front-End Engineer & User Experience
 * Muhammad Hussain (info343, info200)- Software Engineer, Front-End & UX
 * Ali Shubber (info343)- Front-End & User Research
-
 * McKaulay Kolakowski (info200)- Project Manager
 * Sarah Phillips (info200)- User Experience 
 * Miranda Lin (info200)- User Research & Data
