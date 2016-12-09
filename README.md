@@ -1,5 +1,4 @@
 # Refugee Resource Project
-(someone come up with a better title!)
 
 Our goal - reverse the process related to gathering information about refugee services in the State of Washington.
 * Instead of having users reach *out* for information - learn about the user. Bring the information to them
@@ -9,8 +8,6 @@ Our goal - reverse the process related to gathering information about refugee se
 ---------------------------
 
 ## Milestones / Timeline
-
-I (Keller) came up with this last Tuesday. McKaulay has shared a calendar with you all, but here are the details behind how things will shape up.
 
 We have less than 10 days left.
 
@@ -49,16 +46,6 @@ We have less than 10 days left.
 * Miranda Lin - User Research & Data
 
 ---------------------------
-## Group Member Accomplishment
-
-* Ryan Keller 
-* Yuxing Wu 
-* Muhammad Hussain 
-* Ali Shubber 
-* McKaulay Kolakowski 
-* Sarah Phillips 
-* Miranda Lin 
----------------------------
 
 ### Git Basics
 
@@ -83,6 +70,7 @@ To close an issue (task that has been cut to you), just add "close #(number)" to
 ---------------------------
 
 ### Development Details
+--Keller
 
 Let's keep it short and simple. The brass tacks about our website:
 
@@ -94,12 +82,7 @@ Let's keep it short and simple. The brass tacks about our website:
     - When the state of a React component changes, it triggers a few functions to re-render the component (although, it ends up only re-rendering the difference between the user view and abstraction layer).
     - Remember that firebase is a tree structure. However, we can actually bind our firebase structures as either objects or arrays. Page content is bound as objects (so DO NOT change the namespaces on firebase), whereas directory listings are bound as arrays for rapid iteration.
 * This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app), which is basically a pre-built tool for initializing "webpack", where the real magic is. NPM, Node package Manager, is how we install and import third party components. The package.json in our project root contains basic dependancy information for our project.
-* I'm using material design specifications, which are the specifications for Google's modern applications post-2014 (Gmail, Android OS, Hangouts, so on...). It's minimalistic, directs the attention of users, and reduces visual noise. The theory behind material design is it's grounded in "tactile reality", but with the possibility of magic to happen. So you have paper, cards, buttons, but to the furthest extent possible, we want to make our interactions organic, as if our page was created from real parts. This is why we don't have sliders, etc. But, you UX guys may know better than I.
-    
-Questions? Call me, text me, e-mail, facebook, slack, rest assured I'm making myself as available as possible.
+* We're using material design specifications, which are the specifications for Google's modern applications post-2014 (Gmail, Android OS, Hangouts, so on...). It's minimalistic, directs the attention of users, and reduces visual noise. The theory behind material design is it's grounded in "tactile reality", but with the possibility of magic to happen. So you have paper, cards, buttons, but to the furthest extent possible, we want to make our interactions organic, as if our page was created from real parts. This is why we don't have sliders, etc. 
 
-One other aside, on paper - our group is heavily UX-leaning. Almost everyone else in our group is an aspiring UX designer. That's great. One thing to keep in mind (speaking from experience) is that when there are a lot of UX professionals, managers or SME's in a development project, conflicting scopes can and will derail and kill projects, fast. So, for this reason, I encourage you all to get together, discuss scopes, wireframe, and talk to me. If we have individual sidebars, our vision will begin to waver.
-
-Another good thing to consider is prioritizing interactions, and making sure that they are feasible with our current data flow in mind. React uses a one-way (or top down) data flow, which makes interacting with separate components that are not necessarily parent or child, incredibly cumbersome.
 
 ---------------------------
