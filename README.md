@@ -37,13 +37,14 @@ We have less than 10 days left.
 ---------------------------
 ## Group Members
 
-* Ryan Keller - Software Engineer, Full Stack
-* Yuxing Wu - Front-End Engineer & User Experience
-* Muhammad Hussain - Software Engineer, Front-End & UX
-* Ali Shubber - Front-End & User Research
-* McKaulay Kolakowski - Project Manager
-* Sarah Phillips - User Experience 
-* Miranda Lin - User Research & Data
+* Ryan Keller (info343, info200)- Software Engineer, Full Stack
+* Yuxing Wu (info343) - Front-End Engineer & User Experience
+* Muhammad Hussain (info343, info200)- Software Engineer, Front-End & UX
+* Ali Shubber (info343)- Front-End & User Research
+
+* McKaulay Kolakowski (info200)- Project Manager
+* Sarah Phillips (info200)- User Experience 
+* Miranda Lin (info200)- User Research & Data
 
 ---------------------------
 
